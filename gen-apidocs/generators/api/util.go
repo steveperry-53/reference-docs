@@ -99,3 +99,93 @@ func IsArray(s spec.Schema) bool {
 func IsDefinition(s spec.Schema) bool {
 	return len(s.SchemaProps.Ref.GetPointer().String()) > 0
 }
+
+func PrintApiGroups(config *Config) {
+	fmt.Println()
+	fmt.Println("----------------------------")
+	fmt.Println("ApiGroups")
+
+	for _, g := range config.ApiGroups {
+		fmt.Println("   ", g)
+	}
+}
+
+func PrintOperationCategories(config *Config) {
+	fmt.Println()
+	fmt.Println("----------------------------")
+	fmt.Println("OperationCategories")
+	
+	for _, oc := range config.OperationCategories {
+		fmt.Println("   ", oc.Name)
+	}
+}
+
+func PrintResourceCategories(config *Config) {
+	fmt.Println()
+	fmt.Println("----------------------------")
+	fmt.Println("ResourceCategories")
+
+	for _, rc := range config.ResourceCategories {
+		fmt.Println("   ", rc.Name)
+	}
+}
+
+func PrintGroupMap(config *Config) {
+	fmt.Println()
+	fmt.Println("----------------------------")
+	fmt.Println("GroupMap")
+
+	fmt.Println("   GroupMap length: ", len(config.GroupMap))
+
+	for k, v := range config.GroupMap {
+		fmt.Println("   ", k, "  ", v)
+	}
+}
+
+func PrintResourcesInResourceCategory(rc ResourceCategory) {
+	fmt.Println()
+	fmt.Println("----------------------------")
+	fmt.Println("Resources in resource category")
+	fmt.Println("   ", rc.Name)
+
+	for _, r := range rc.Resources {
+		fmt.Println("      ", r.Group, " ", r.Version, " ", r.Name)
+	}
+}
+
+func PrintTypesInOperationCategory(oc OperationCategory) {
+	fmt.Println()
+	fmt.Println("----------------------------")
+	fmt.Println("Types in operation category")
+	fmt.Println("   ", oc.Name)
+	for _, t := range oc.OperationTypes {
+		fmt.Println("      ", t.Name)
+	}
+}
+
+func PrintDefinition(config *Config, gvk string) {
+	fmt.Println()
+	fmt.Println("----------------------------")
+	fmt.Println("Definition")
+	definition := config.Definitions.ByGroupVersionKind[gvk]
+	fmt.Println("   Name: ", definition.Name)
+	fmt.Println("   Group: ", definition.Group)
+	fmt.Println("   ShowGroup: ", definition.ShowGroup)
+	fmt.Println("   Version: ", definition.Version)
+	fmt.Println("   Kind: ", definition.Kind)
+	fmt.Println("   InToc: ", definition.InToc)
+	fmt.Println("   IsInlined: ", definition.IsInlined)
+	fmt.Println("   IsOldVersion: ", definition.IsOldVersion)
+	fmt.Println("   FoundInField: ", definition.FoundInField)
+	fmt.Println("   FoundInOperation: ", definition.FoundInOperation)
+}
+
+func PrintDefinitionKeys(config *Config) {
+	fmt.Println()
+	fmt.Println("----------------------------")
+	fmt.Println("Definition keys")
+
+	for k, _ := range config.Definitions.ByGroupVersionKind {
+		fmt.Println(k)
+	}
+}

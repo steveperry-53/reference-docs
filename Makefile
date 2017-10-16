@@ -1,5 +1,5 @@
-K8SIOROOT=../../../../../go/src/k8s.io/kubernetes.github.io
-K8SROOT=../../../../../go/src/k8s.io/kubernetes
+K8SIOROOT=~/src/github.com/kubernetes/kubernetes.github.io
+K8SROOT=~/src/github.com/kubernetes/kubernetes
 MINOR_VERSION=8
 
 default:

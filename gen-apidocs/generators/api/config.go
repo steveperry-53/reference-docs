@@ -84,7 +84,16 @@ func (config *Config) genConfigFromTags(specs []*loads.Document) {
 }
 
 func NewConfig() *Config {
+
 	config := loadYamlConfig()
+
+	PrintApiGroups(config)
+	PrintOperationCategories(config)
+	PrintTypesInOperationCategory(config.OperationCategories[0])
+	PrintResourceCategories(config)
+	PrintResourcesInResourceCategory(config.ResourceCategories[0])
+	PrintGroupMap(config)
+
 	specs := LoadOpenApiSpec()
 
 	// Initialize all of the operations
@@ -126,7 +135,8 @@ func NewConfig() *Config {
 		}
 		config.ResourceCategories = categories
 	}
-
+	PrintDefinitionKeys(config)
+	PrintDefinition(config, "apps.v1beta2.ReplicaSetSpec")
 	return config
 }
 
@@ -490,6 +500,15 @@ func (config *Config) setOperation(match, namespaceRep string,
 	ot *OperationType, oc *OperationCategory, definition *Definition) {
 
 	key := strings.Replace(match, "(Namespaced)?", namespaceRep, -1)
+
+	if strings.Contains(key, "readExtensionsV1beta1NamespacedDeploymentsScale") {
+		fmt.Println("--------------------------")
+		fmt.Println("setOperation")
+		fmt.Println("Scale Key: ", key)
+		fmt.Println()
+	}
+
+
 	if o, found := config.Operations[key]; found {
 		// Each operation should have exactly 1 definition
 		if o.Definition != nil {
