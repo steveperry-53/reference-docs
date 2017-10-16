@@ -28,7 +28,7 @@ func GetGroupVersionKind() {
 
 }
 
-// GetDefinitionVersionKind returns the api version and kind for the spec.  This is the primary key of a Definition.
+// GetDefinitionVersionKind returns the api group, version, and kind for the spec.  This is the primary key of a Definition.
 func GetDefinitionVersionKind(s spec.Schema) (string, string, string) {
 	// Get the reference for complex types
 	if IsDefinition(s) {
@@ -180,12 +180,58 @@ func PrintDefinition(config *Config, gvk string) {
 	fmt.Println("   FoundInOperation: ", definition.FoundInOperation)
 }
 
-func PrintDefinitionKeys(config *Config) {
+func PrintDefinitionByVersionKindKeys(config *Config) {
 	fmt.Println()
 	fmt.Println("----------------------------")
-	fmt.Println("Definition keys")
+	fmt.Println("Definition ByVersionKind keys")
 
 	for k, _ := range config.Definitions.ByGroupVersionKind {
 		fmt.Println(k)
+	}
+}
+
+func PrintDefinitionByKindKeys(config *Config) {
+	fmt.Println()
+	fmt.Println("----------------------------")
+	fmt.Println("Definition ByKind keys")
+
+	for k, _ := range config.Definitions.ByKind {
+		fmt.Println(k)
+	}
+}
+
+func PrintDefinitionSchema(d *Definition) {
+	fmt.Println()
+	fmt.Println("----------------------------")
+	fmt.Println("Definition schema")
+	fmt.Println("   Name: ", d.Name)
+
+	for p := range d.schema.Properties {
+		fmt.Println("   ", p)
+	}
+}
+
+func PrintAllDefinitionVersions(config *Config) {
+	fmt.Println()
+	fmt.Println("----------------------------")
+	fmt.Println("All definition versions")
+
+	for k, slc := range config.Definitions.ByKind {
+		fmt.Println()
+		fmt.Println("   ", k, len(slc))
+		for _, d := range slc {
+			fmt.Println("      ", d.Key())
+		}
+	}
+}
+
+func PrintDefinitionVersions(config *Config, kind string) {
+	fmt.Println()
+	fmt.Println("----------------------------")
+	fmt.Println("Definition versions")
+
+	definitions := config.Definitions.ByKind[kind]
+	for _, d := range definitions {
+		fmt.Println("   ", d.Key())
 	}
 }

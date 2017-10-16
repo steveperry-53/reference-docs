@@ -99,6 +99,9 @@ func NewConfig() *Config {
 	// Initialize all of the operations
 	config.Definitions = GetDefinitions(specs)
 
+	PrintDefinitionSchema(config.Definitions.ByGroupVersionKind["apps.v1beta2.Deployment"])
+	PrintDefinitionVersions(config, "Deployment")
+
 	if *UseTags {
 		// Initialize the config and ToC from the tags on definitions
 		config.genConfigFromTags(specs)
@@ -135,8 +138,7 @@ func NewConfig() *Config {
 		}
 		config.ResourceCategories = categories
 	}
-	PrintDefinitionKeys(config)
-	PrintDefinition(config, "apps.v1beta2.ReplicaSetSpec")
+	PrintAllDefinitionVersions(config)
 	return config
 }
 
@@ -502,9 +504,10 @@ func (config *Config) setOperation(match, namespaceRep string,
 	key := strings.Replace(match, "(Namespaced)?", namespaceRep, -1)
 
 	if strings.Contains(key, "readExtensionsV1beta1NamespacedDeploymentsScale") {
+		fmt.Println()
 		fmt.Println("--------------------------")
 		fmt.Println("setOperation")
-		fmt.Println("Scale Key: ", key)
+		fmt.Println("   Scale Key: ", key)
 		fmt.Println()
 	}
 

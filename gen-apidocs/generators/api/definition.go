@@ -54,14 +54,14 @@ func (d *Definitions) GetOtherVersions(this *Definition) []*Definition {
 	return others
 }
 
-// GetByVersionKind looks up a definition using its primary key (version,kind)
+// GetByVersionKind looks up a definition using its primary key (group.version.kind)
 func (d *Definitions) GetByVersionKind(group, version, kind string) (*Definition, bool) {
 	key := &Definition{Group: ApiGroup(group), Version: ApiVersion(version), Kind: ApiKind(kind)}
 	r, f := d.ByGroupVersionKind[key.Key()]
 	return r, f
 }
 
-// GetByKey looks up a definition from its key (version.kind)
+// GetByKey looks up a definition from its key (group.version.kind)
 func (d *Definitions) GetByKey(key string) (*Definition, bool) {
 	r, f := d.ByGroupVersionKind[key]
 	return r, f
