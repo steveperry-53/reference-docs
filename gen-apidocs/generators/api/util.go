@@ -216,11 +216,15 @@ func PrintAllDefinitionVersions(config *Config) {
 	fmt.Println("----------------------------")
 	fmt.Println("All definition versions")
 
+	count := 0
+
 	for k, slc := range config.Definitions.ByKind {
+		count = count + 1
 		fmt.Println()
-		fmt.Println("   ", k, len(slc))
+		fmt.Println("   ", k, count)
+
 		for _, d := range slc {
-			fmt.Println("      ", d.Key())
+			fmt.Println("        ", d.Key())
 		}
 	}
 }
@@ -233,5 +237,33 @@ func PrintDefinitionVersions(config *Config, kind string) {
 	definitions := config.Definitions.ByKind[kind]
 	for _, d := range definitions {
 		fmt.Println("   ", d.Key())
+	}
+}
+
+func PrintResource(r *Resource) {
+	fmt.Println()
+	fmt.Println("   -----------------------------")
+	fmt.Println("   Resource")
+	fmt.Println("      Name: ", r.Name)
+	fmt.Println("      Version: ", r.Version)
+	fmt.Println("      Group: ", r.Group)
+
+	if r.Definition != nil {
+		fmt.Println("      Definition key: ", r.Definition.Key())
+	}
+
+	for _, idef := range r.InlineDefinition {
+		fmt.Println("         InlineDefinition: ", idef) 
+	}
+}
+
+func PrintResourceCategory(rc *ResourceCategory) {
+	fmt.Println()
+	fmt.Println("-----------------------------")
+	fmt.Println("Resource category")
+	fmt.Println("   Category name: ", rc.Name)
+
+	for _, r := range rc.Resources {
+		PrintResource(r)
 	}
 }

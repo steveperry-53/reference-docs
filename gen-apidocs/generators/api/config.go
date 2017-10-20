@@ -86,21 +86,10 @@ func (config *Config) genConfigFromTags(specs []*loads.Document) {
 func NewConfig() *Config {
 
 	config := loadYamlConfig()
-
-	PrintApiGroups(config)
-	PrintOperationCategories(config)
-	PrintTypesInOperationCategory(config.OperationCategories[0])
-	PrintResourceCategories(config)
-	PrintResourcesInResourceCategory(config.ResourceCategories[0])
-	PrintGroupMap(config)
-
 	specs := LoadOpenApiSpec()
 
 	// Initialize all of the operations
 	config.Definitions = GetDefinitions(specs)
-
-	PrintDefinitionSchema(config.Definitions.ByGroupVersionKind["apps.v1beta2.Deployment"])
-	PrintDefinitionVersions(config, "Deployment")
 
 	if *UseTags {
 		// Initialize the config and ToC from the tags on definitions
@@ -139,6 +128,7 @@ func NewConfig() *Config {
 		config.ResourceCategories = categories
 	}
 	PrintAllDefinitionVersions(config)
+
 	return config
 }
 
@@ -163,7 +153,7 @@ func verifyBlacklisted(operation Operation) {
 	case strings.Contains(operation.ID, "V1beta1CertificateSigningRequestApproval"):
 	default:
 		//panic(fmt.Sprintf("No Definition found for %s [%s].  \n", operation.ID, operation.Path))
-		fmt.Printf("No Definition found for %s [%s].  \n", operation.ID, operation.Path)
+		fmt.Printf("No Definition found for %s.  \n", operation.ID)
 	}
 }
 
@@ -502,15 +492,6 @@ func (config *Config) setOperation(match, namespaceRep string,
 	ot *OperationType, oc *OperationCategory, definition *Definition) {
 
 	key := strings.Replace(match, "(Namespaced)?", namespaceRep, -1)
-
-	if strings.Contains(key, "readExtensionsV1beta1NamespacedDeploymentsScale") {
-		fmt.Println()
-		fmt.Println("--------------------------")
-		fmt.Println("setOperation")
-		fmt.Println("   Scale Key: ", key)
-		fmt.Println()
-	}
-
 
 	if o, found := config.Operations[key]; found {
 		// Each operation should have exactly 1 definition
