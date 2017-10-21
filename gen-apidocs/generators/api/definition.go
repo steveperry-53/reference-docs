@@ -21,7 +21,7 @@ import (
 	"sort"
 	"strings"
 
-	"errors"
+//	"errors"
 	"github.com/go-openapi/loads"
 	"github.com/go-openapi/spec"
 )
@@ -208,65 +208,63 @@ func (d Definition) Description() string {
 	return d.schema.Description
 }
 
-func VisitDefinitions(specs []*loads.Document, fn func(definition *Definition)) {
-	groups := map[string]string{}
+func VisitApiSpecDefinitions(specs []*loads.Document, fn func(definition *Definition)) {
+
+	//groups := map[string]string{}
+	
 	for _, spec := range specs {
-		for name, spec := range spec.Spec().Definitions {
+		for name, def := range spec.Spec().Definitions {
+
 			resource := ""
-			if r, found := spec.Extensions.GetString(resourceNameKey); found {
+			if r, found := def.Extensions.GetString(resourceNameKey); found {
 				resource = r
 			}
 
-			parts := strings.Split(name, ".")
-			if len(parts) < 4 {
-				fmt.Printf("Error: Could not find version and type for definition %s.\n", name)
-				continue
-			}
-			if strings.HasPrefix(spec.Description, "Deprecated. Please use") {
+			if strings.HasPrefix(def.Description, "Deprecated. Please use") {
 				// old 1.7 definitions
 				continue
 			}
 			if strings.Contains(name, "JSONSchemaPropsOrStringArray") {
 				continue
 			}
-			var group, version, kind string
-			if parts[len(parts)-3] == "api" {
-				// e.g. "io.k8s.apimachinery.pkg.api.resource.Quantity"
-				group = "core"
-				version = parts[len(parts)-2]
-				kind = parts[len(parts)-1]
-				groups[group] = ""
-			} else if parts[len(parts)-4] == "api" {
-				// e.g. "io.k8s.api.core.v1.Pod"
-				group = parts[len(parts)-3]
-				version = parts[len(parts)-2]
-				kind = parts[len(parts)-1]
-				groups[group] = ""
-			} else if parts[len(parts)-4] == "apis" {
-				// e.g. "io.k8s.apimachinery.pkg.apis.meta.v1.Status"
-				group = parts[len(parts)-3]
-				version = parts[len(parts)-2]
-				kind = parts[len(parts)-1]
-				groups[group] = ""
-			} else if parts[len(parts)-3] == "util" || parts[len(parts)-3] == "pkg" {
-				// e.g. io.k8s.apimachinery.pkg.util.intstr.IntOrString
-				// e.g. io.k8s.apimachinery.pkg.runtime.RawExtension
-				continue
-			} else {
-				panic(errors.New(fmt.Sprintf("Could not locate group for %s", name)))
-			}
 
-			fn(&Definition{
-				schema:    spec,
-				Name:      kind,
-				Version:   ApiVersion(version),
-				Kind:      ApiKind(kind),
-				Group:     ApiGroup(group),
-				ShowGroup: true,
-				Resource:  resource,
-			})
+			if group, version, kind, ok := GetGroupVersionKindFromApiSpec(def); ok {
+
+				fn(&Definition{
+					schema:    def,
+					Name:      kind,
+					Version:   ApiVersion(version),
+					Kind:      ApiKind(kind),
+					Group:     ApiGroup(group),
+					ShowGroup: true,
+					Resource:  resource,
+				})
+			}
 		}
 	}
+}
+
+func GetGroupVersionKindFromApiSpec(def spec.Schema) (string, string, string, bool) {
+
+	slice, ok := (def.Extensions["x-kubernetes-group-version-kind"]).([]interface{})
+	fmt.Println("   slice, ok: ", slice, ok)
+
+	if(ok) {
+		slice0, ok := (slice[0]).(map[string]interface{})
+		fmt.Println("   slice0, ok: ", slice0, ok)
+
+		if(ok) {
+			g := (slice0["group"]).(string)
+			fmt.Println("   g: ", g)
+			v := (slice0["version"]).(string)
+			fmt.Println("   v: ", v)
+			k := (slice0["kind"]).(string)
+			fmt.Println("   k: ", k)
+			return g, v, k, true
+		}
+	}
+
+	return "", "", "", false
 }
 
 func (d *Definition) GetSamples() []ExampleText {
@@ -286,7 +284,7 @@ func GetDefinitions(specs []*loads.Document) Definitions {
 		ByGroupVersionKind: map[string]*Definition{},
 		ByKind:             map[string]SortDefinitionsByVersion{},
 	}
-	VisitDefinitions(specs, func(definition *Definition) {
+	VisitApiSpecDefinitions(specs, func(definition *Definition) {
 		d.Put(definition)
 	})
 	d.InitializeFieldsForAll()
