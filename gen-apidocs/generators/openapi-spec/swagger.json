@@ -59685,6 +59685,8 @@
    }
   },
   "definitions": {
+
+
    "io.k8s.api.admissionregistration.v1alpha1.AdmissionHookClientConfig": {
     "description": "AdmissionHookClientConfig contains the information to make a TLS connection with the webhook",
     "required": [
@@ -59703,6 +59705,8 @@
      }
     }
    },
+
+
    "io.k8s.api.admissionregistration.v1alpha1.ExternalAdmissionHook": {
     "description": "ExternalAdmissionHook describes an external admission webhook and the resources and operations it applies to.",
     "required": [
@@ -59731,6 +59735,8 @@
      }
     }
    },
+
+
    "io.k8s.api.admissionregistration.v1alpha1.ExternalAdmissionHookConfiguration": {
     "description": "ExternalAdmissionHookConfiguration describes the configuration of initializers.",
     "properties": {
@@ -59764,6 +59770,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.admissionregistration.v1alpha1.ExternalAdmissionHookConfigurationList": {
     "description": "ExternalAdmissionHookConfigurationList is a list of ExternalAdmissionHookConfiguration.",
     "required": [
@@ -59798,6 +59806,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.admissionregistration.v1alpha1.Initializer": {
     "description": "Initializer describes the name and the failure policy of an initializer, and what resources it applies to.",
     "required": [
@@ -59817,6 +59827,8 @@
      }
     }
    },
+
+
    "io.k8s.api.admissionregistration.v1alpha1.InitializerConfiguration": {
     "description": "InitializerConfiguration describes the configuration of initializers.",
     "properties": {
@@ -59850,6 +59862,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.admissionregistration.v1alpha1.InitializerConfigurationList": {
     "description": "InitializerConfigurationList is a list of InitializerConfiguration.",
     "required": [
@@ -59884,6 +59898,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.admissionregistration.v1alpha1.Rule": {
     "description": "Rule is a tuple of APIGroups, APIVersion, and Resources.It is recommended to make sure that all the tuple expansions are valid.",
     "properties": {
@@ -59910,6 +59926,8 @@
      }
     }
    },
+
+
    "io.k8s.api.admissionregistration.v1alpha1.RuleWithOperations": {
     "description": "RuleWithOperations is a tuple of Operations and Resources. It is recommended to make sure that all the tuple expansions are valid.",
     "properties": {
@@ -59943,6 +59961,8 @@
      }
     }
    },
+
+
    "io.k8s.api.admissionregistration.v1alpha1.ServiceReference": {
     "description": "ServiceReference holds a reference to Service.legacy.k8s.io",
     "required": [
@@ -59960,6 +59980,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta1.ControllerRevision": {
     "description": "DEPRECATED - This group version of ControllerRevision is deprecated by apps/v1beta2/ControllerRevision. See the release notes for more information. ControllerRevision implements an immutable snapshot of state data. Clients are responsible for serializing and deserializing the objects that contain their internal state. Once a ControllerRevision has been successfully created, it can not be updated. The API Server will fail validation of all requests that attempt to mutate the Data field. ControllerRevisions may, however, be deleted. Note that, due to its use by both the DaemonSet and StatefulSet controllers for update and rollback, this object is beta. However, it may be subject to name and representation changes in future releases, and clients should not depend on its stability. It is primarily for internal use by controllers.",
     "required": [
@@ -59996,6 +60018,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta1.ControllerRevisionList": {
     "description": "ControllerRevisionList is a resource containing a list of ControllerRevision objects.",
     "required": [
@@ -60030,6 +60054,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta1.Deployment": {
     "description": "DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Deployment. See the release notes for more information. Deployment enables declarative updates for Pods and ReplicaSets.",
     "properties": {
@@ -60062,6 +60088,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta1.DeploymentCondition": {
     "description": "DeploymentCondition describes the state of a deployment at a certain point.",
     "required": [
@@ -60095,6 +60123,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta1.DeploymentList": {
     "description": "DeploymentList is a list of Deployments.",
     "required": [
@@ -60129,6 +60159,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta1.DeploymentRollback": {
     "description": "DEPRECATED. DeploymentRollback stores the information required to rollback a deployment.",
     "required": [
@@ -60168,6 +60200,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta1.DeploymentSpec": {
     "description": "DeploymentSpec is the specification of the desired behavior of the Deployment.",
     "required": [
@@ -60216,6 +60250,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta1.DeploymentStatus": {
     "description": "DeploymentStatus is the most recently observed status of the Deployment.",
     "properties": {
@@ -60265,6 +60301,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta1.DeploymentStrategy": {
     "description": "DeploymentStrategy describes how to replace existing pods with new ones.",
     "properties": {
@@ -60278,6 +60316,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta1.RollbackConfig": {
     "description": "DEPRECATED.",
     "properties": {
@@ -60301,6 +60341,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta1.RollingUpdateStatefulSetStrategy": {
     "description": "RollingUpdateStatefulSetStrategy is used to communicate parameter for RollingUpdateStatefulSetStrategyType.",
     "properties": {
@@ -60311,6 +60353,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta1.Scale": {
     "description": "Scale represents a scaling request for a resource.",
     "properties": {
@@ -60343,6 +60387,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta1.ScaleSpec": {
     "description": "ScaleSpec describes the attributes of a scale subresource",
     "properties": {
@@ -60353,6 +60399,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta1.ScaleStatus": {
     "description": "ScaleStatus represents the current status of a scale subresource.",
     "required": [
@@ -60377,6 +60425,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta1.StatefulSet": {
     "description": "DEPRECATED - This group version of StatefulSet is deprecated by apps/v1beta2/StatefulSet. See the release notes for more information. StatefulSet represents a set of pods with consistent identities. Identities are defined as:\n - Network: A single stable DNS and hostname.\n - Storage: As many VolumeClaims as requested.\nThe StatefulSet guarantees that a given network identity will always map to the same storage identity.",
     "properties": {
@@ -60408,6 +60458,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta1.StatefulSetList": {
     "description": "StatefulSetList is a collection of StatefulSets.",
     "required": [
@@ -60440,6 +60492,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta1.StatefulSetSpec": {
     "description": "A StatefulSetSpec is the specification of a StatefulSet.",
     "required": [
@@ -60486,6 +60540,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta1.StatefulSetStatus": {
     "description": "StatefulSetStatus represents the current state of a StatefulSet.",
     "required": [
@@ -60532,6 +60588,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta1.StatefulSetUpdateStrategy": {
     "description": "StatefulSetUpdateStrategy indicates the strategy that the StatefulSet controller will use to perform updates. It includes any additional parameters necessary to perform the update for the indicated strategy.",
     "properties": {
@@ -60545,6 +60603,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.ControllerRevision": {
     "description": "ControllerRevision implements an immutable snapshot of state data. Clients are responsible for serializing and deserializing the objects that contain their internal state. Once a ControllerRevision has been successfully created, it can not be updated. The API Server will fail validation of all requests that attempt to mutate the Data field. ControllerRevisions may, however, be deleted. Note that, due to its use by both the DaemonSet and StatefulSet controllers for update and rollback, this object is beta. However, it may be subject to name and representation changes in future releases, and clients should not depend on its stability. It is primarily for internal use by controllers.",
     "required": [
@@ -60581,6 +60641,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta2.ControllerRevisionList": {
     "description": "ControllerRevisionList is a resource containing a list of ControllerRevision objects.",
     "required": [
@@ -60615,6 +60677,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta2.DaemonSet": {
     "description": "DaemonSet represents the configuration of a daemon set.",
     "properties": {
@@ -60647,6 +60711,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta2.DaemonSetList": {
     "description": "DaemonSetList is a collection of daemon sets.",
     "required": [
@@ -60681,6 +60747,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta2.DaemonSetSpec": {
     "description": "DaemonSetSpec is the specification of a daemon set.",
     "required": [
@@ -60711,6 +60779,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.DaemonSetStatus": {
     "description": "DaemonSetStatus represents the current status of a daemon set.",
     "required": [
@@ -60767,6 +60837,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.DaemonSetUpdateStrategy": {
     "description": "DaemonSetUpdateStrategy is a struct used to control the update strategy for a DaemonSet.",
     "properties": {
@@ -60780,6 +60852,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.Deployment": {
     "description": "Deployment enables declarative updates for Pods and ReplicaSets.",
     "properties": {
@@ -60812,6 +60886,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta2.DeploymentCondition": {
     "description": "DeploymentCondition describes the state of a deployment at a certain point.",
     "required": [
@@ -60845,6 +60921,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.DeploymentList": {
     "description": "DeploymentList is a list of Deployments.",
     "required": [
@@ -60879,6 +60957,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta2.DeploymentSpec": {
     "description": "DeploymentSpec is the specification of the desired behavior of the Deployment.",
     "required": [
@@ -60923,6 +61003,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.DeploymentStatus": {
     "description": "DeploymentStatus is the most recently observed status of the Deployment.",
     "properties": {
@@ -60972,6 +61054,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.DeploymentStrategy": {
     "description": "DeploymentStrategy describes how to replace existing pods with new ones.",
     "properties": {
@@ -60985,6 +61069,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.ReplicaSet": {
     "description": "ReplicaSet represents the configuration of a ReplicaSet.",
     "properties": {
@@ -61017,6 +61103,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta2.ReplicaSetCondition": {
     "description": "ReplicaSetCondition describes the state of a replica set at a certain point.",
     "required": [
@@ -61046,6 +61134,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.ReplicaSetList": {
     "description": "ReplicaSetList is a collection of ReplicaSets.",
     "required": [
@@ -61080,6 +61170,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta2.ReplicaSetSpec": {
     "description": "ReplicaSetSpec is the specification of a ReplicaSet.",
     "properties": {
@@ -61103,6 +61195,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.ReplicaSetStatus": {
     "description": "ReplicaSetStatus represents the current status of a ReplicaSet.",
     "required": [
@@ -61145,6 +61239,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.RollingUpdateDaemonSet": {
     "description": "Spec to control the desired behavior of daemon set rolling update.",
     "properties": {
@@ -61167,6 +61263,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.RollingUpdateStatefulSetStrategy": {
     "description": "RollingUpdateStatefulSetStrategy is used to communicate parameter for RollingUpdateStatefulSetStrategyType.",
     "properties": {
@@ -61177,6 +61275,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.Scale": {
     "description": "Scale represents a scaling request for a resource.",
     "properties": {
@@ -61209,6 +61309,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta2.ScaleSpec": {
     "description": "ScaleSpec describes the attributes of a scale subresource",
     "properties": {
@@ -61219,6 +61321,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.ScaleStatus": {
     "description": "ScaleStatus represents the current status of a scale subresource.",
     "required": [
@@ -61274,6 +61378,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta2.StatefulSetList": {
     "description": "StatefulSetList is a collection of StatefulSets.",
     "required": [
@@ -61306,6 +61412,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.apps.v1beta2.StatefulSetSpec": {
     "description": "A StatefulSetSpec is the specification of a StatefulSet.",
     "required": [
@@ -61352,6 +61460,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.StatefulSetStatus": {
     "description": "StatefulSetStatus represents the current state of a StatefulSet.",
     "required": [
@@ -61398,6 +61508,8 @@
      }
     }
    },
+
+
    "io.k8s.api.apps.v1beta2.StatefulSetUpdateStrategy": {
     "description": "StatefulSetUpdateStrategy indicates the strategy that the StatefulSet controller will use to perform updates. It includes any additional parameters necessary to perform the update for the indicated strategy.",
     "properties": {
@@ -61411,6 +61523,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authentication.v1.TokenReview": {
     "description": "TokenReview attempts to authenticate a token to a known user. Note: TokenReview requests may be cached by the webhook token authenticator plugin in the kube-apiserver.",
     "required": [
@@ -61445,6 +61559,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.authentication.v1.TokenReviewSpec": {
     "description": "TokenReviewSpec is a description of the token authentication request.",
     "properties": {
@@ -61454,6 +61570,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authentication.v1.TokenReviewStatus": {
     "description": "TokenReviewStatus is the result of the token authentication request.",
     "properties": {
@@ -61471,6 +61589,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authentication.v1.UserInfo": {
     "description": "UserInfo holds the information about the user needed to implement the user.Info interface.",
     "properties": {
@@ -61501,6 +61621,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authentication.v1beta1.TokenReview": {
     "description": "TokenReview attempts to authenticate a token to a known user. Note: TokenReview requests may be cached by the webhook token authenticator plugin in the kube-apiserver.",
     "required": [
@@ -61535,6 +61657,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.authentication.v1beta1.TokenReviewSpec": {
     "description": "TokenReviewSpec is a description of the token authentication request.",
     "properties": {
@@ -61544,6 +61668,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authentication.v1beta1.TokenReviewStatus": {
     "description": "TokenReviewStatus is the result of the token authentication request.",
     "properties": {
@@ -61561,6 +61687,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authentication.v1beta1.UserInfo": {
     "description": "UserInfo holds the information about the user needed to implement the user.Info interface.",
     "properties": {
@@ -61591,6 +61719,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1.LocalSubjectAccessReview": {
     "description": "LocalSubjectAccessReview checks whether or not a user or group can perform an action in a given namespace. Having a namespace scoped resource makes it much easier to grant namespace scoped policy that includes permissions checking.",
     "required": [
@@ -61625,6 +61755,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.authorization.v1.NonResourceAttributes": {
     "description": "NonResourceAttributes includes the authorization attributes available for non-resource requests to the Authorizer interface",
     "properties": {
@@ -61638,6 +61770,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1.NonResourceRule": {
     "description": "NonResourceRule holds information that describes a rule for the non-resource",
     "required": [
@@ -61660,6 +61794,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1.ResourceAttributes": {
     "description": "ResourceAttributes includes the authorization attributes available for resource requests to the Authorizer interface",
     "properties": {
@@ -61693,6 +61829,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1.ResourceRule": {
     "description": "ResourceRule is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.",
     "required": [
@@ -61729,6 +61867,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1.SelfSubjectAccessReview": {
     "description": "SelfSubjectAccessReview checks whether or the current user can perform an action.  Not filling in a spec.namespace means \"in all namespaces\".  Self is a special case, because users should always be able to check whether they can perform an action",
     "required": [
@@ -61763,6 +61903,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.authorization.v1.SelfSubjectAccessReviewSpec": {
     "description": "SelfSubjectAccessReviewSpec is a description of the access request.  Exactly one of ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set",
     "properties": {
@@ -61810,6 +61952,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.authorization.v1.SelfSubjectRulesReviewSpec": {
     "properties": {
      "namespace": {
@@ -61852,6 +61996,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.authorization.v1.SubjectAccessReviewSpec": {
     "description": "SubjectAccessReviewSpec is a description of the access request.  Exactly one of ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set",
     "properties": {
@@ -61890,6 +62036,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1.SubjectAccessReviewStatus": {
     "description": "SubjectAccessReviewStatus",
     "required": [
@@ -61910,6 +62058,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1.SubjectRulesReviewStatus": {
     "description": "SubjectRulesReviewStatus contains the result of a rules check. This check can be incomplete depending on the set of authorizers the server is configured with and any errors experienced during evaluation. Because authorization rules are additive, if a rule appears in a list it's safe to assume the subject has that permission, even if that list is incomplete.",
     "required": [
@@ -61942,6 +62092,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1beta1.LocalSubjectAccessReview": {
     "description": "LocalSubjectAccessReview checks whether or not a user or group can perform an action in a given namespace. Having a namespace scoped resource makes it much easier to grant namespace scoped policy that includes permissions checking.",
     "required": [
@@ -61976,6 +62128,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.authorization.v1beta1.NonResourceAttributes": {
     "description": "NonResourceAttributes includes the authorization attributes available for non-resource requests to the Authorizer interface",
     "properties": {
@@ -61989,6 +62143,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1beta1.NonResourceRule": {
     "description": "NonResourceRule holds information that describes a rule for the non-resource",
     "required": [
@@ -62011,6 +62167,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1beta1.ResourceAttributes": {
     "description": "ResourceAttributes includes the authorization attributes available for resource requests to the Authorizer interface",
     "properties": {
@@ -62044,6 +62202,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1beta1.ResourceRule": {
     "description": "ResourceRule is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.",
     "required": [
@@ -62080,6 +62240,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1beta1.SelfSubjectAccessReview": {
     "description": "SelfSubjectAccessReview checks whether or the current user can perform an action.  Not filling in a spec.namespace means \"in all namespaces\".  Self is a special case, because users should always be able to check whether they can perform an action",
     "required": [
@@ -62114,6 +62276,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.authorization.v1beta1.SelfSubjectAccessReviewSpec": {
     "description": "SelfSubjectAccessReviewSpec is a description of the access request.  Exactly one of ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set",
     "properties": {
@@ -62127,6 +62291,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1beta1.SelfSubjectRulesReview": {
     "description": "SelfSubjectRulesReview enumerates the set of actions the current user can perform within a namespace. The returned list of actions may be incomplete depending on the server's authorization mode, and any errors experienced during the evaluation. SelfSubjectRulesReview should be used by UIs to show/hide actions, or to quickly let an end user reason about their permissions. It should NOT Be used by external systems to drive authorization decisions as this raises confused deputy, cache lifetime/revocation, and correctness concerns. SubjectAccessReview, and LocalAccessReview are the correct way to defer authorization decisions to the API server.",
     "required": [
@@ -62161,6 +62327,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.authorization.v1beta1.SelfSubjectRulesReviewSpec": {
     "properties": {
      "namespace": {
@@ -62169,6 +62337,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1beta1.SubjectAccessReview": {
     "description": "SubjectAccessReview checks whether or not a user or group can perform an action.",
     "required": [
@@ -62203,6 +62373,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.authorization.v1beta1.SubjectAccessReviewSpec": {
     "description": "SubjectAccessReviewSpec is a description of the access request.  Exactly one of ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set",
     "properties": {
@@ -62241,6 +62413,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1beta1.SubjectAccessReviewStatus": {
     "description": "SubjectAccessReviewStatus",
     "required": [
@@ -62261,6 +62435,8 @@
      }
     }
    },
+
+
    "io.k8s.api.authorization.v1beta1.SubjectRulesReviewStatus": {
     "description": "SubjectRulesReviewStatus contains the result of a rules check. This check can be incomplete depending on the set of authorizers the server is configured with and any errors experienced during evaluation. Because authorization rules are additive, if a rule appears in a list it's safe to assume the subject has that permission, even if that list is incomplete.",
     "required": [
@@ -62293,6 +62469,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v1.CrossVersionObjectReference": {
     "description": "CrossVersionObjectReference contains enough information to let you identify the referred resource.",
     "required": [
@@ -62314,6 +62492,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v1.HorizontalPodAutoscaler": {
     "description": "configuration of a horizontal pod autoscaler.",
     "properties": {
@@ -62346,6 +62526,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerList": {
     "description": "list of horizontal pod autoscaler objects.",
     "required": [
@@ -62380,6 +62562,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerSpec": {
     "description": "specification of a horizontal pod autoscaler.",
     "required": [
@@ -62408,6 +62592,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerStatus": {
     "description": "current status of a horizontal pod autoscaler",
     "required": [
@@ -62441,6 +62627,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v1.Scale": {
     "description": "Scale represents a scaling request for a resource.",
     "properties": {
@@ -62473,6 +62661,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.autoscaling.v1.ScaleSpec": {
     "description": "ScaleSpec describes the attributes of a scale subresource.",
     "properties": {
@@ -62483,6 +62673,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v1.ScaleStatus": {
     "description": "ScaleStatus represents the current status of a scale subresource.",
     "required": [
@@ -62500,6 +62692,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.CrossVersionObjectReference": {
     "description": "CrossVersionObjectReference contains enough information to let you identify the referred resource.",
     "required": [
@@ -62521,6 +62715,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.HorizontalPodAutoscaler": {
     "description": "HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, which automatically manages the replica count of any resource implementing the scale subresource based on the metrics specified.",
     "properties": {
@@ -62553,6 +62749,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.HorizontalPodAutoscalerCondition": {
     "description": "HorizontalPodAutoscalerCondition describes the state of a HorizontalPodAutoscaler at a certain point.",
     "required": [
@@ -62582,6 +62780,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.HorizontalPodAutoscalerList": {
     "description": "HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.",
     "required": [
@@ -62616,6 +62816,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.HorizontalPodAutoscalerSpec": {
     "description": "HorizontalPodAutoscalerSpec describes the desired functionality of the HorizontalPodAutoscaler.",
     "required": [
@@ -62646,6 +62848,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.HorizontalPodAutoscalerStatus": {
     "description": "HorizontalPodAutoscalerStatus describes the current status of a horizontal pod autoscaler.",
     "required": [
@@ -62690,6 +62894,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.MetricSpec": {
     "description": "MetricSpec specifies how to scale based on a single metric (only `type` and one other matching field should be set at once).",
     "required": [
@@ -62714,6 +62920,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.MetricStatus": {
     "description": "MetricStatus describes the last-read state of a single metric.",
     "required": [
@@ -62738,6 +62946,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.ObjectMetricSource": {
     "description": "ObjectMetricSource indicates how to scale on a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).",
     "required": [
@@ -62760,6 +62970,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.ObjectMetricStatus": {
     "description": "ObjectMetricStatus indicates the current value of a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).",
     "required": [
@@ -62782,6 +62994,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.PodsMetricSource": {
     "description": "PodsMetricSource indicates how to scale on a metric describing each pod in the current scale target (for example, transactions-processed-per-second). The values will be averaged together before being compared to the target value.",
     "required": [
@@ -62799,6 +63013,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.PodsMetricStatus": {
     "description": "PodsMetricStatus indicates the current value of a metric describing each pod in the current scale target (for example, transactions-processed-per-second).",
     "required": [
@@ -62816,6 +63032,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.ResourceMetricSource": {
     "description": "ResourceMetricSource indicates how to scale on a resource metric known to Kubernetes, as specified in requests and limits, describing each pod in the current scale target (e.g. CPU or memory).  The values will be averaged together before being compared to the target.  Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the \"pods\" source.  Only one \"target\" type should be set.",
     "required": [
@@ -62837,6 +63055,8 @@
      }
     }
    },
+
+
    "io.k8s.api.autoscaling.v2beta1.ResourceMetricStatus": {
     "description": "ResourceMetricStatus indicates the current value of a resource metric known to Kubernetes, as specified in requests and limits, describing each pod in the current scale target (e.g. CPU or memory).  Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the \"pods\" source.",
     "required": [
@@ -62859,6 +63079,8 @@
      }
     }
    },
+
+
    "io.k8s.api.batch.v1.Job": {
     "description": "Job represents the configuration of a single job.",
     "properties": {
@@ -62891,6 +63113,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.batch.v1.JobCondition": {
     "description": "JobCondition describes current state of a job.",
     "required": [
@@ -62924,6 +63148,8 @@
      }
     }
    },
+
+
    "io.k8s.api.batch.v1.JobList": {
     "description": "JobList is a collection of jobs.",
     "required": [
@@ -62958,6 +63184,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.batch.v1.JobSpec": {
     "description": "JobSpec describes how the job execution will look like.",
     "required": [
@@ -62998,6 +63226,8 @@
      }
     }
    },
+
+
    "io.k8s.api.batch.v1.JobStatus": {
     "description": "JobStatus represents the current state of a Job.",
     "properties": {
@@ -63035,6 +63265,8 @@
      }
     }
    },
+
+
    "io.k8s.api.batch.v1beta1.CronJob": {
     "description": "CronJob represents the configuration of a single cron job.",
     "properties": {
@@ -63067,6 +63299,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.batch.v1beta1.CronJobList": {
     "description": "CronJobList is a collection of cron jobs.",
     "required": [
@@ -63101,6 +63335,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.batch.v1beta1.CronJobSpec": {
     "description": "CronJobSpec describes how the job execution will look like and when it will actually run.",
     "required": [
@@ -63141,6 +63377,8 @@
      }
     }
    },
+
+
    "io.k8s.api.batch.v1beta1.CronJobStatus": {
     "description": "CronJobStatus represents the current state of a cron job.",
     "properties": {
@@ -63157,6 +63395,8 @@
      }
     }
    },
+
+
    "io.k8s.api.batch.v1beta1.JobTemplateSpec": {
     "description": "JobTemplateSpec describes the data a Job should have when created from a template",
     "properties": {
@@ -63170,6 +63410,8 @@
      }
     }
    },
+
+
    "io.k8s.api.batch.v2alpha1.CronJob": {
     "description": "CronJob represents the configuration of a single cron job.",
     "properties": {
@@ -63194,6 +63436,8 @@
       "$ref": "#/definitions/io.k8s.api.batch.v2alpha1.CronJobStatus"
      }
     },
+
+
     "x-kubernetes-group-version-kind": [
      {
       "group": "batch",
@@ -63236,6 +63480,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.batch.v2alpha1.CronJobSpec": {
     "description": "CronJobSpec describes how the job execution will look like and when it will actually run.",
     "required": [
@@ -63276,6 +63522,8 @@
      }
     }
    },
+
+
    "io.k8s.api.batch.v2alpha1.CronJobStatus": {
     "description": "CronJobStatus represents the current state of a cron job.",
     "properties": {
@@ -63292,6 +63540,8 @@
      }
     }
    },
+
+
    "io.k8s.api.batch.v2alpha1.JobTemplateSpec": {
     "description": "JobTemplateSpec describes the data a Job should have when created from a template",
     "properties": {
@@ -63305,6 +63555,8 @@
      }
     }
    },
+
+
    "io.k8s.api.certificates.v1beta1.CertificateSigningRequest": {
     "description": "Describes a certificate signing request",
     "properties": {
@@ -63336,6 +63588,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.certificates.v1beta1.CertificateSigningRequestCondition": {
     "required": [
      "type"
@@ -63359,6 +63613,8 @@
      }
     }
    },
+
+
    "io.k8s.api.certificates.v1beta1.CertificateSigningRequestList": {
     "required": [
      "items"
@@ -63390,6 +63646,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.certificates.v1beta1.CertificateSigningRequestSpec": {
     "description": "This information is immutable after the request is created. Only the Request and Usages fields can be set on creation, other fields are derived by Kubernetes and cannot be modified by users.",
     "required": [
@@ -63435,6 +63693,8 @@
      }
     }
    },
+
+
    "io.k8s.api.certificates.v1beta1.CertificateSigningRequestStatus": {
     "properties": {
      "certificate": {
@@ -63451,6 +63711,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.AWSElasticBlockStoreVolumeSource": {
     "description": "Represents a Persistent Disk resource in AWS.\n\nAn AWS EBS disk must exist before mounting to a container. The disk must also be in the same AWS zone as the kubelet. An AWS EBS disk can only be mounted as read/write once. AWS EBS volumes support ownership management and SELinux relabeling.",
     "required": [
@@ -63476,6 +63738,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.Affinity": {
     "description": "Affinity is a group of affinity scheduling rules.",
     "properties": {
@@ -63493,6 +63757,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.AttachedVolume": {
     "description": "AttachedVolume describes a volume attached to a node",
     "required": [
@@ -63510,6 +63776,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.AzureDiskVolumeSource": {
     "description": "AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.",
     "required": [
@@ -63543,6 +63811,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.AzureFilePersistentVolumeSource": {
     "description": "AzureFile represents an Azure File Service mount on the host and bind mount to the pod.",
     "required": [
@@ -63568,6 +63838,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.AzureFileVolumeSource": {
     "description": "AzureFile represents an Azure File Service mount on the host and bind mount to the pod.",
     "required": [
@@ -63589,6 +63861,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.Binding": {
     "description": "Binding ties one object to another; for example, a pod is bound to a node by a scheduler. Deprecated in 1.7, please use the bindings subresource of pods instead.",
     "required": [
@@ -63620,6 +63894,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.Capabilities": {
     "description": "Adds and removes POSIX capabilities from running containers.",
     "properties": {
@@ -63639,6 +63915,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.CephFSPersistentVolumeSource": {
     "description": "Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.",
     "required": [
@@ -63674,6 +63952,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.CephFSVolumeSource": {
     "description": "Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.",
     "required": [
@@ -63709,6 +63989,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.CinderVolumeSource": {
     "description": "Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.",
     "required": [
@@ -63729,6 +64011,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ClientIPConfig": {
     "description": "ClientIPConfig represents the configurations of Client IP based session affinity.",
     "properties": {
@@ -63739,6 +64023,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ComponentCondition": {
     "description": "Information about the condition of a component.",
     "required": [
@@ -63764,6 +64050,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ComponentStatus": {
     "description": "ComponentStatus (and ComponentStatusList) holds the cluster validation info.",
     "properties": {
@@ -63797,6 +64085,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.ComponentStatusList": {
     "description": "Status of all the conditions for the component as a list of ComponentStatus objects.",
     "required": [
@@ -63831,6 +64121,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.ConfigMap": {
     "description": "ConfigMap holds configuration data for pods to consume.",
     "properties": {
@@ -63862,6 +64154,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.ConfigMapEnvSource": {
     "description": "ConfigMapEnvSource selects a ConfigMap to populate the environment variables with.\n\nThe contents of the target ConfigMap's Data field will represent the key-value pairs as environment variables.",
     "properties": {
@@ -63875,6 +64169,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ConfigMapKeySelector": {
     "description": "Selects a key from a ConfigMap.",
     "required": [
@@ -63895,6 +64191,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ConfigMapList": {
     "description": "ConfigMapList is a resource containing a list of ConfigMap objects.",
     "required": [
@@ -63929,6 +64227,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.ConfigMapProjection": {
     "description": "Adapts a ConfigMap into a projected volume.\n\nThe contents of the target ConfigMap's Data field will be presented in a projected volume as files using the keys in the Data field as the file names, unless the items element is populated with specific mappings of keys to paths. Note that this is identical to a configmap volume source without the default mode.",
     "properties": {
@@ -63949,6 +64249,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ConfigMapVolumeSource": {
     "description": "Adapts a ConfigMap into a volume.\n\nThe contents of the target ConfigMap's Data field will be presented in a volume as files using the keys in the Data field as the file names, unless the items element is populated with specific mappings of keys to paths. ConfigMap volumes support ownership management and SELinux relabeling.",
     "properties": {
@@ -63974,6 +64276,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.Container": {
     "description": "A single application container that you want to run within a pod.",
     "required": [
@@ -64086,6 +64390,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ContainerImage": {
     "description": "Describe a container image",
     "required": [
@@ -64106,6 +64412,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ContainerPort": {
     "description": "ContainerPort represents a network port in a single container.",
     "required": [
@@ -64136,6 +64444,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ContainerState": {
     "description": "ContainerState holds a possible state of container. Only one of its members may be specified. If none of them is specified, the default one is ContainerStateWaiting.",
     "properties": {
@@ -64153,6 +64463,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ContainerStateRunning": {
     "description": "ContainerStateRunning is a running state of a container.",
     "properties": {
@@ -64162,6 +64474,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ContainerStateTerminated": {
     "description": "ContainerStateTerminated is a terminated state of a container.",
     "required": [
@@ -64200,6 +64514,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ContainerStateWaiting": {
     "description": "ContainerStateWaiting is a waiting state of a container.",
     "properties": {
@@ -64213,6 +64529,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ContainerStatus": {
     "description": "ContainerStatus contains details for the current status of this container.",
     "required": [
@@ -64258,6 +64576,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.DaemonEndpoint": {
     "description": "DaemonEndpoint contains information about a single Daemon endpoint.",
     "required": [
@@ -64271,6 +64591,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.DownwardAPIProjection": {
     "description": "Represents downward API info for projecting into a projected volume. Note that this is identical to a downwardAPI volume source without the default mode.",
     "properties": {
@@ -64283,6 +64605,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.DownwardAPIVolumeFile": {
     "description": "DownwardAPIVolumeFile represents information to create the file containing the pod field",
     "required": [
@@ -64308,6 +64632,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.DownwardAPIVolumeSource": {
     "description": "DownwardAPIVolumeSource represents a volume containing downward API info. Downward API volumes support ownership management and SELinux relabeling.",
     "properties": {
@@ -64325,6 +64651,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.EmptyDirVolumeSource": {
     "description": "Represents an empty directory for a pod. Empty directory volumes support ownership management and SELinux relabeling.",
     "properties": {
@@ -64338,6 +64666,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.EndpointAddress": {
     "description": "EndpointAddress is a tuple that describes single IP address.",
     "required": [
@@ -64362,6 +64692,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.EndpointPort": {
     "description": "EndpointPort is a tuple that describes a single port.",
     "required": [
@@ -64383,6 +64715,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.EndpointSubset": {
     "description": "EndpointSubset is a group of addresses with a common set of ports. The expanded set of endpoints is the Cartesian product of Addresses x Ports. For example, given:\n  {\n    Addresses: [{\"ip\": \"10.10.1.1\"}, {\"ip\": \"10.10.2.2\"}],\n    Ports:     [{\"name\": \"a\", \"port\": 8675}, {\"name\": \"b\", \"port\": 309}]\n  }\nThe resulting set of endpoints can be viewed as:\n    a: [ 10.10.1.1:8675, 10.10.2.2:8675 ],\n    b: [ 10.10.1.1:309, 10.10.2.2:309 ]",
     "properties": {
@@ -64409,6 +64743,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.Endpoints": {
     "description": "Endpoints is a collection of endpoints that implement the actual service. Example:\n  Name: \"mysvc\",\n  Subsets: [\n    {\n      Addresses: [{\"ip\": \"10.10.1.1\"}, {\"ip\": \"10.10.2.2\"}],\n      Ports: [{\"name\": \"a\", \"port\": 8675}, {\"name\": \"b\", \"port\": 309}]\n    },\n    {\n      Addresses: [{\"ip\": \"10.10.3.3\"}],\n      Ports: [{\"name\": \"a\", \"port\": 93}, {\"name\": \"b\", \"port\": 76}]\n    },\n ]",
     "required": [
@@ -64443,6 +64779,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.EndpointsList": {
     "description": "EndpointsList is a list of endpoints.",
     "required": [
@@ -64477,6 +64815,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.EnvFromSource": {
     "description": "EnvFromSource represents the source of a set of ConfigMaps",
     "properties": {
@@ -64494,6 +64834,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.EnvVar": {
     "description": "EnvVar represents an environment variable present in a Container.",
     "required": [
@@ -64514,6 +64856,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.EnvVarSource": {
     "description": "EnvVarSource represents a source for the value of an EnvVar.",
     "properties": {
@@ -64535,6 +64879,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.Event": {
     "description": "Event is a report of an event somewhere in the cluster.",
     "required": [
@@ -64596,6 +64942,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.EventList": {
     "description": "EventList is a list of events.",
     "required": [
@@ -64630,6 +64978,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.EventSource": {
     "description": "EventSource contains information for an event.",
     "properties": {
@@ -64643,6 +64993,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ExecAction": {
     "description": "ExecAction describes a \"run in container\" action.",
     "properties": {
@@ -64655,6 +65007,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.FCVolumeSource": {
     "description": "Represents a Fibre Channel volume. Fibre Channel volumes can only be mounted as read/write once. Fibre Channel volumes support ownership management and SELinux relabeling.",
     "properties": {
@@ -64687,6 +65041,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.FlexVolumeSource": {
     "description": "FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin. This is an alpha feature and may change in future.",
     "required": [
@@ -64718,6 +65074,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.FlockerVolumeSource": {
     "description": "Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.",
     "properties": {
@@ -64731,6 +65089,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.GCEPersistentDiskVolumeSource": {
     "description": "Represents a Persistent Disk resource in Google Compute Engine.\n\nA GCE PD must exist before mounting to a container. The disk must also be in the same GCE project and zone as the kubelet. A GCE PD can only be mounted as read/write once or read-only many times. GCE PDs support ownership management and SELinux relabeling.",
     "required": [
@@ -64756,6 +65116,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.GitRepoVolumeSource": {
     "description": "Represents a volume that is populated with the contents of a git repository. Git repo volumes do not support ownership management. Git repo volumes support SELinux relabeling.",
     "required": [
@@ -64776,6 +65138,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.GlusterfsVolumeSource": {
     "description": "Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.",
     "required": [
@@ -64797,6 +65161,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.HTTPGetAction": {
     "description": "HTTPGetAction describes an action based on HTTP Get requests.",
     "required": [
@@ -64828,6 +65194,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.HTTPHeader": {
     "description": "HTTPHeader describes a custom header to be used in HTTP probes",
     "required": [
@@ -64845,6 +65213,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.Handler": {
     "description": "Handler defines a specific action that should be taken",
     "properties": {
@@ -64862,6 +65232,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.HostAlias": {
     "description": "HostAlias holds the mapping between IP and hostnames that will be injected as an entry in the pod's hosts file.",
     "properties": {
@@ -64878,6 +65250,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.HostPathVolumeSource": {
     "description": "Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.",
     "required": [
@@ -64894,6 +65268,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ISCSIVolumeSource": {
     "description": "Represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.",
     "required": [
@@ -64952,6 +65328,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.KeyToPath": {
     "description": "Maps a string key to a path within a volume.",
     "required": [
@@ -64974,6 +65352,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.Lifecycle": {
     "description": "Lifecycle describes actions that the management system should take in response to container lifecycle events. For the PostStart and PreStop lifecycle handlers, management of the container blocks until the action is complete, unless the container process fails, in which case the handler is aborted.",
     "properties": {
@@ -64987,6 +65367,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.LimitRange": {
     "description": "LimitRange sets resource usage limits for each kind of resource in a Namespace.",
     "properties": {
@@ -65015,6 +65397,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.LimitRangeItem": {
     "description": "LimitRangeItem defines a min/max usage limit for any resource that matches on kind.",
     "properties": {
@@ -65059,6 +65443,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.LimitRangeList": {
     "description": "LimitRangeList is a list of LimitRange items.",
     "required": [
@@ -65093,6 +65479,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.LimitRangeSpec": {
     "description": "LimitRangeSpec defines a min/max usage limit for resources that match on kind.",
     "required": [
@@ -65108,6 +65496,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.LoadBalancerIngress": {
     "description": "LoadBalancerIngress represents the status of a load-balancer ingress point: traffic intended for the service should be sent to an ingress point.",
     "properties": {
@@ -65121,6 +65511,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.LoadBalancerStatus": {
     "description": "LoadBalancerStatus represents the status of a load-balancer.",
     "properties": {
@@ -65133,6 +65525,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.LocalObjectReference": {
     "description": "LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.",
     "properties": {
@@ -65142,6 +65536,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.LocalVolumeSource": {
     "description": "Local represents directly-attached storage with node affinity",
     "required": [
@@ -65154,6 +65550,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.NFSVolumeSource": {
     "description": "Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support ownership management or SELinux relabeling.",
     "required": [
@@ -65175,6 +65573,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.Namespace": {
     "description": "Namespace provides a scope for Names. Use of multiple namespaces is optional.",
     "properties": {
@@ -65207,6 +65607,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.NamespaceList": {
     "description": "NamespaceList is a list of Namespaces.",
     "required": [
@@ -65241,6 +65643,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.NamespaceSpec": {
     "description": "NamespaceSpec describes the attributes on a Namespace.",
     "properties": {
@@ -65294,6 +65698,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.NodeAddress": {
     "description": "NodeAddress contains information for the node's address.",
     "required": [
@@ -65311,6 +65717,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.NodeAffinity": {
     "description": "Node affinity is a group of node affinity scheduling rules.",
     "properties": {
@@ -65360,6 +65768,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.NodeConfigSource": {
     "description": "NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil.",
     "properties": {
@@ -65383,6 +65793,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.NodeDaemonEndpoints": {
     "description": "NodeDaemonEndpoints lists ports opened by daemons running on the Node.",
     "properties": {
@@ -65392,6 +65804,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.NodeList": {
     "description": "NodeList is the whole list of all Nodes which have been registered with master.",
     "required": [
@@ -65426,6 +65840,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.NodeSelector": {
     "description": "A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.",
     "required": [
@@ -65441,6 +65857,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.NodeSelectorRequirement": {
     "description": "A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.",
     "required": [
@@ -65465,6 +65883,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.NodeSelectorTerm": {
     "description": "A null or empty node selector term matches no objects.",
     "required": [
@@ -65480,6 +65900,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.NodeSpec": {
     "description": "NodeSpec describes the attributes that a node is created with.",
     "properties": {
@@ -65512,6 +65934,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.NodeStatus": {
     "description": "NodeStatus is information about the current status of a node.",
     "properties": {
@@ -65582,6 +66006,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.NodeSystemInfo": {
     "description": "NodeSystemInfo is a set of ids/uuids to uniquely identify the node.",
     "required": [
@@ -65639,6 +66065,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ObjectFieldSelector": {
     "description": "ObjectFieldSelector selects an APIVersioned field of an object.",
     "required": [
@@ -65655,6 +66083,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ObjectReference": {
     "description": "ObjectReference contains enough information to let you inspect or modify the referred object.",
     "properties": {
@@ -65688,6 +66118,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PersistentVolume": {
     "description": "PersistentVolume (PV) is a storage resource provisioned by an administrator. It is analogous to a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes",
     "properties": {
@@ -65720,6 +66152,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.PersistentVolumeClaim": {
     "description": "PersistentVolumeClaim is a user's request for and claim to a persistent volume",
     "properties": {
@@ -65752,6 +66186,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.PersistentVolumeClaimCondition": {
     "description": "PersistentVolumeClaimCondition contails details about state of pvc",
     "required": [
@@ -65783,6 +66219,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PersistentVolumeClaimList": {
     "description": "PersistentVolumeClaimList is a list of PersistentVolumeClaim items.",
     "required": [
@@ -65817,6 +66255,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.PersistentVolumeClaimSpec": {
     "description": "PersistentVolumeClaimSpec describes the common attributes of storage devices and allows a Source for provider-specific attributes",
     "properties": {
@@ -65845,6 +66285,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PersistentVolumeClaimStatus": {
     "description": "PersistentVolumeClaimStatus is the current status of a persistent volume claim.",
     "properties": {
@@ -65877,6 +66319,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PersistentVolumeClaimVolumeSource": {
     "description": "PersistentVolumeClaimVolumeSource references the user's PVC in the same namespace. This volume finds the bound PV and mounts that volume for the pod. A PersistentVolumeClaimVolumeSource is, essentially, a wrapper around another type of volume that is owned by someone else (the system).",
     "required": [
@@ -65893,6 +66337,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PersistentVolumeList": {
     "description": "PersistentVolumeList is a list of PersistentVolume items.",
     "required": [
@@ -65927,6 +66373,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.PersistentVolumeSpec": {
     "description": "PersistentVolumeSpec is the specification of a persistent volume.",
     "properties": {
@@ -66049,6 +66497,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PersistentVolumeStatus": {
     "description": "PersistentVolumeStatus is the current status of a persistent volume.",
     "properties": {
@@ -66066,6 +66516,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PhotonPersistentDiskVolumeSource": {
     "description": "Represents a Photon Controller persistent disk resource.",
     "required": [
@@ -66082,6 +66534,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.Pod": {
     "description": "Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts.",
     "properties": {
@@ -66114,6 +66568,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.PodAffinity": {
     "description": "Pod affinity is a group of inter pod affinity scheduling rules.",
     "properties": {
@@ -66172,6 +66628,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PodCondition": {
     "description": "PodCondition contains details for the current condition of this pod.",
     "required": [
@@ -66205,6 +66663,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PodList": {
     "description": "PodList is a list of Pods.",
     "required": [
@@ -66239,6 +66699,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.PodSecurityContext": {
     "description": "PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.",
     "properties": {
@@ -66270,6 +66732,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PodSpec": {
     "description": "PodSpec is a description of a pod.",
     "required": [
@@ -66412,6 +66876,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PodStatus": {
     "description": "PodStatus represents information about the status of a pod. Status may trail the actual state of a system.",
     "properties": {
@@ -66468,6 +66934,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PodTemplate": {
     "description": "PodTemplate describes a template for creating copies of a predefined pod.",
     "properties": {
@@ -66496,6 +66964,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.PodTemplateList": {
     "description": "PodTemplateList is a list of PodTemplates.",
     "required": [
@@ -66530,6 +67000,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.PodTemplateSpec": {
     "description": "PodTemplateSpec describes the data a pod should have when created from a template",
     "properties": {
@@ -66543,6 +67015,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PortworxVolumeSource": {
     "description": "PortworxVolumeSource represents a Portworx volume resource.",
     "required": [
@@ -66563,6 +67037,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.PreferredSchedulingTerm": {
     "description": "An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).",
     "required": [
@@ -66581,6 +67057,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.Probe": {
     "description": "Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.",
     "properties": {
@@ -66623,6 +67101,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ProjectedVolumeSource": {
     "description": "Represents a projected volume source",
     "required": [
@@ -66643,6 +67123,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.QuobyteVolumeSource": {
     "description": "Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.",
     "required": [
@@ -66672,6 +67154,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.RBDVolumeSource": {
     "description": "Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.",
     "required": [
@@ -66716,6 +67200,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ReplicationController": {
     "description": "ReplicationController represents the configuration of a replication controller.",
     "properties": {
@@ -66748,6 +67234,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.ReplicationControllerCondition": {
     "description": "ReplicationControllerCondition describes the state of a replication controller at a certain point.",
     "required": [
@@ -66777,6 +67265,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ReplicationControllerList": {
     "description": "ReplicationControllerList is a collection of replication controllers.",
     "required": [
@@ -66811,6 +67301,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.ReplicationControllerSpec": {
     "description": "ReplicationControllerSpec is the specification of a replication controller.",
     "properties": {
@@ -66837,6 +67329,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ReplicationControllerStatus": {
     "description": "ReplicationControllerStatus represents the current status of a replication controller.",
     "required": [
@@ -66879,6 +67373,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ResourceFieldSelector": {
     "description": "ResourceFieldSelector represents container resources (cpu, memory) and their output format",
     "required": [
@@ -66899,6 +67395,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ResourceQuota": {
     "description": "ResourceQuota sets aggregate quota restrictions enforced per namespace",
     "properties": {
@@ -66931,6 +67429,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.ResourceQuotaList": {
     "description": "ResourceQuotaList is a list of ResourceQuota items.",
     "required": [
@@ -66965,6 +67465,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.ResourceQuotaSpec": {
     "description": "ResourceQuotaSpec defines the desired hard limits to enforce for Quota.",
     "properties": {
@@ -66984,6 +67486,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ResourceQuotaStatus": {
     "description": "ResourceQuotaStatus defines the enforced hard limits and observed use.",
     "properties": {
@@ -67003,6 +67507,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ResourceRequirements": {
     "description": "ResourceRequirements describes the compute resource requirements.",
     "properties": {
@@ -67022,6 +67528,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.SELinuxOptions": {
     "description": "SELinuxOptions are the labels to be applied to the container",
     "properties": {
@@ -67043,6 +67551,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ScaleIOVolumeSource": {
     "description": "ScaleIOVolumeSource represents a persistent ScaleIO volume",
     "required": [
@@ -67093,6 +67603,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.Secret": {
     "description": "Secret holds secret data of a certain type. The total bytes of the values in the Data field must be less than MaxSecretSize bytes.",
     "properties": {
@@ -67136,6 +67648,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.SecretEnvSource": {
     "description": "SecretEnvSource selects a Secret to populate the environment variables with.\n\nThe contents of the target Secret's Data field will represent the key-value pairs as environment variables.",
     "properties": {
@@ -67149,6 +67663,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.SecretKeySelector": {
     "description": "SecretKeySelector selects a key of a Secret.",
     "required": [
@@ -67169,6 +67685,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.SecretList": {
     "description": "SecretList is a list of Secret.",
     "required": [
@@ -67203,6 +67721,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.SecretProjection": {
     "description": "Adapts a secret into a projected volume.\n\nThe contents of the target Secret's Data field will be presented in a projected volume as files using the keys in the Data field as the file names. Note that this is identical to a secret volume source without the default mode.",
     "properties": {
@@ -67223,6 +67743,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.SecretReference": {
     "description": "SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace",
     "properties": {
@@ -67236,6 +67758,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.SecretVolumeSource": {
     "description": "Adapts a Secret into a volume.\n\nThe contents of the target Secret's Data field will be presented in a volume as files using the keys in the Data field as the file names. Secret volumes support ownership management and SELinux relabeling.",
     "properties": {
@@ -67261,6 +67785,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.SecurityContext": {
     "description": "SecurityContext holds security configuration that will be applied to a container. Some fields are present in both SecurityContext and PodSecurityContext.  When both are set, the values in SecurityContext take precedence.",
     "properties": {
@@ -67295,6 +67821,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.Service": {
     "description": "Service is a named abstraction of software service (for example, mysql) consisting of local port (for example 3306) that the proxy listens on, and the selector that determines which pods will answer requests sent through the proxy.",
     "properties": {
@@ -67327,6 +67855,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.ServiceAccount": {
     "description": "ServiceAccount binds together: * a name, understood by users, and perhaps by peripheral systems, for an identity * a principal that can be authenticated and authorized * a set of secrets",
     "properties": {
@@ -67371,6 +67901,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.ServiceAccountList": {
     "description": "ServiceAccountList is a list of ServiceAccount objects",
     "required": [
@@ -67405,6 +67937,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.ServiceList": {
     "description": "ServiceList holds a list of services.",
     "required": [
@@ -67439,6 +67973,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.core.v1.ServicePort": {
     "description": "ServicePort contains information on service's port.",
     "required": [
@@ -67541,6 +68077,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.ServiceStatus": {
     "description": "ServiceStatus represents the current status of a service.",
     "properties": {
@@ -67796,6 +68334,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.VolumeMount": {
     "description": "VolumeMount describes a mounting of a Volume within a container.",
     "required": [
@@ -67825,6 +68365,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.VolumeProjection": {
     "description": "Projection that may be projected along with other supported volume types",
     "properties": {
@@ -67842,6 +68384,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.VsphereVirtualDiskVolumeSource": {
     "description": "Represents a vSphere volume resource.",
     "required": [
@@ -67866,6 +68410,8 @@
      }
     }
    },
+
+
    "io.k8s.api.core.v1.WeightedPodAffinityTerm": {
     "description": "The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)",
     "required": [
@@ -67884,6 +68430,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.AllowedHostPath": {
     "description": "defines the host volume conditions that will be enabled by a policy for pods to use. It requires the path prefix to be defined.",
     "properties": {
@@ -67893,6 +68441,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.DaemonSet": {
     "description": "DEPRECATED - This group version of DaemonSet is deprecated by apps/v1beta2/DaemonSet. See the release notes for more information. DaemonSet represents the configuration of a daemon set.",
     "properties": {
@@ -67917,6 +68467,8 @@
       "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DaemonSetStatus"
      }
     },
+
+
     "x-kubernetes-group-version-kind": [
      {
       "group": "extensions",
@@ -67959,6 +68511,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.extensions.v1beta1.DaemonSetSpec": {
     "description": "DaemonSetSpec is the specification of a daemon set.",
     "required": [
@@ -67994,6 +68548,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.DaemonSetStatus": {
     "description": "DaemonSetStatus represents the current status of a daemon set.",
     "required": [
@@ -68050,6 +68606,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.DaemonSetUpdateStrategy": {
     "properties": {
      "rollingUpdate": {
@@ -68062,6 +68620,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.Deployment": {
     "description": "DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Deployment. See the release notes for more information. Deployment enables declarative updates for Pods and ReplicaSets.",
     "properties": {
@@ -68094,6 +68654,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.extensions.v1beta1.DeploymentCondition": {
     "description": "DeploymentCondition describes the state of a deployment at a certain point.",
     "required": [
@@ -68127,6 +68689,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.DeploymentList": {
     "description": "DeploymentList is a list of Deployments.",
     "required": [
@@ -68161,6 +68725,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.extensions.v1beta1.DeploymentRollback": {
     "description": "DEPRECATED. DeploymentRollback stores the information required to rollback a deployment.",
     "required": [
@@ -68200,6 +68766,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.extensions.v1beta1.DeploymentSpec": {
     "description": "DeploymentSpec is the specification of the desired behavior of the Deployment.",
     "required": [
@@ -68249,6 +68817,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.DeploymentStatus": {
     "description": "DeploymentStatus is the most recently observed status of the Deployment.",
     "properties": {
@@ -68298,6 +68868,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.DeploymentStrategy": {
     "description": "DeploymentStrategy describes how to replace existing pods with new ones.",
     "properties": {
@@ -68311,6 +68883,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.FSGroupStrategyOptions": {
     "description": "FSGroupStrategyOptions defines the strategy type and options used to create the strategy.",
     "properties": {
@@ -68327,6 +68901,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.HTTPIngressPath": {
     "description": "HTTPIngressPath associates a path regex with a backend. Incoming urls matching the path are forwarded to the backend.",
     "required": [
@@ -68343,6 +68919,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.HTTPIngressRuleValue": {
     "description": "HTTPIngressRuleValue is a list of http selectors pointing to backends. In the example: http://\u003chost\u003e/\u003cpath\u003e?\u003csearchpart\u003e -\u003e backend where where parts of the url correspond to RFC 3986, this resource will be used to match against everything after the last '/' and before the first '?' or '#'.",
     "required": [
@@ -68358,6 +68936,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.HostPortRange": {
     "description": "Host Port Range defines a range of host ports that will be enabled by a policy for pods to use.  It requires both the start and end to be defined.",
     "required": [
@@ -68377,6 +68957,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.IDRange": {
     "description": "ID Range provides a min/max of an allowed range of IDs.",
     "required": [
@@ -68396,6 +68978,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.IPBlock": {
     "description": "IPBlock describes a particular CIDR (Ex. \"192.168.1.1/24\") that is allowed to the pods matched by a NetworkPolicySpec's podSelector. The except entry describes CIDRs that should not be included within this rule.",
     "required": [
@@ -68415,6 +68999,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.Ingress": {
     "description": "Ingress is a collection of rules that allow inbound connections to reach the endpoints defined by a backend. An Ingress can be configured to give services externally-reachable urls, load balance traffic, terminate SSL, offer name based virtual hosting etc.",
     "properties": {
@@ -68439,6 +69025,8 @@
       "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.IngressStatus"
      }
     },
+
+
     "x-kubernetes-group-version-kind": [
      {
       "group": "extensions",
@@ -68447,6 +69035,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.extensions.v1beta1.IngressBackend": {
     "description": "IngressBackend describes all endpoints for a given service and port.",
     "required": [
@@ -68464,6 +69054,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.IngressList": {
     "description": "IngressList is a collection of Ingress.",
     "required": [
@@ -68498,6 +69090,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.extensions.v1beta1.IngressRule": {
     "description": "IngressRule represents the rules mapping the paths under a specified host to the related backend services. Incoming requests are first evaluated for a host match, then routed to the backend associated with the matching IngressRuleValue.",
     "properties": {
@@ -68510,6 +69104,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.IngressSpec": {
     "description": "IngressSpec describes the Ingress the user wishes to exist.",
     "properties": {
@@ -68533,6 +69129,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.IngressStatus": {
     "description": "IngressStatus describe the current state of the Ingress.",
     "properties": {
@@ -68542,6 +69140,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.IngressTLS": {
     "description": "IngressTLS describes the transport layer security associated with an Ingress.",
     "properties": {
@@ -68558,6 +69158,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.NetworkPolicy": {
     "description": "NetworkPolicy describes what network traffic is allowed for a set of Pods",
     "properties": {
@@ -68586,6 +69188,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.extensions.v1beta1.NetworkPolicyEgressRule": {
     "description": "NetworkPolicyEgressRule describes a particular set of traffic that is allowed out of pods matched by a NetworkPolicySpec's podSelector. The traffic must match both ports and to. This type is beta-level in 1.8",
     "properties": {
@@ -68605,6 +69209,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.NetworkPolicyIngressRule": {
     "description": "This NetworkPolicyIngressRule matches traffic if and only if the traffic matches both ports AND from.",
     "properties": {
@@ -68624,6 +69230,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.NetworkPolicyList": {
     "description": "Network Policy List is a list of NetworkPolicy objects.",
     "required": [
@@ -68658,6 +69266,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.extensions.v1beta1.NetworkPolicyPeer": {
     "properties": {
      "ipBlock": {
@@ -68674,6 +69284,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.NetworkPolicyPort": {
     "properties": {
      "port": {
@@ -68686,6 +69298,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.NetworkPolicySpec": {
     "required": [
      "podSelector"
@@ -68718,6 +69332,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.PodSecurityPolicy": {
     "description": "Pod Security Policy governs the ability to make requests that affect the Security Context that will be applied to a pod and container.",
     "properties": {
@@ -68746,6 +69362,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.extensions.v1beta1.PodSecurityPolicyList": {
     "description": "Pod Security Policy List is a list of PodSecurityPolicy objects.",
     "required": [
@@ -68780,6 +69398,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.extensions.v1beta1.PodSecurityPolicySpec": {
     "description": "Pod Security Policy Spec defines the policy enforced.",
     "required": [
@@ -68877,6 +69497,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.ReplicaSet": {
     "description": "DEPRECATED - This group version of ReplicaSet is deprecated by apps/v1beta2/ReplicaSet. See the release notes for more information. ReplicaSet represents the configuration of a ReplicaSet.",
     "properties": {
@@ -68909,6 +69531,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.extensions.v1beta1.ReplicaSetCondition": {
     "description": "ReplicaSetCondition describes the state of a replica set at a certain point.",
     "required": [
@@ -68938,6 +69562,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.ReplicaSetList": {
     "description": "ReplicaSetList is a collection of ReplicaSets.",
     "required": [
@@ -68972,6 +69598,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.extensions.v1beta1.ReplicaSetSpec": {
     "description": "ReplicaSetSpec is the specification of a ReplicaSet.",
     "properties": {
@@ -68995,6 +69623,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.ReplicaSetStatus": {
     "description": "ReplicaSetStatus represents the current status of a ReplicaSet.",
     "required": [
@@ -69037,6 +69667,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.RollbackConfig": {
     "description": "DEPRECATED.",
     "properties": {
@@ -69047,6 +69679,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.RollingUpdateDaemonSet": {
     "description": "Spec to control the desired behavior of daemon set rolling update.",
     "properties": {
@@ -69056,6 +69690,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.RollingUpdateDeployment": {
     "description": "Spec to control the desired behavior of rolling update.",
     "properties": {
@@ -69069,6 +69705,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.RunAsUserStrategyOptions": {
     "description": "Run A sUser Strategy Options defines the strategy type and any options used to create the strategy.",
     "required": [
@@ -69088,6 +69726,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.SELinuxStrategyOptions": {
     "description": "SELinux  Strategy Options defines the strategy type and any options used to create the strategy.",
     "required": [
@@ -69104,6 +69744,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.Scale": {
     "description": "represents a scaling request for a resource.",
     "properties": {
@@ -69136,6 +69778,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.extensions.v1beta1.ScaleSpec": {
     "description": "describes the attributes of a scale subresource",
     "properties": {
@@ -69146,6 +69790,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.ScaleStatus": {
     "description": "represents the current status of a scale subresource.",
     "required": [
@@ -69170,6 +69816,8 @@
      }
     }
    },
+
+
    "io.k8s.api.extensions.v1beta1.SupplementalGroupsStrategyOptions": {
     "description": "SupplementalGroupsStrategyOptions defines the strategy type and options used to create the strategy.",
     "properties": {
@@ -69186,6 +69834,8 @@
      }
     }
    },
+
+
    "io.k8s.api.networking.v1.IPBlock": {
     "description": "IPBlock describes a particular CIDR (Ex. \"192.168.1.1/24\") that is allowed to the pods matched by a NetworkPolicySpec's podSelector. The except entry describes CIDRs that should not be included within this rule.",
     "required": [
@@ -69205,6 +69855,8 @@
      }
     }
    },
+
+
    "io.k8s.api.networking.v1.NetworkPolicy": {
     "description": "NetworkPolicy describes what network traffic is allowed for a set of Pods",
     "properties": {
@@ -69233,6 +69885,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.networking.v1.NetworkPolicyEgressRule": {
     "description": "NetworkPolicyEgressRule describes a particular set of traffic that is allowed out of pods matched by a NetworkPolicySpec's podSelector. The traffic must match both ports and to. This type is beta-level in 1.8",
     "properties": {
@@ -69252,6 +69906,8 @@
      }
     }
    },
+
+
    "io.k8s.api.networking.v1.NetworkPolicyIngressRule": {
     "description": "NetworkPolicyIngressRule describes a particular set of traffic that is allowed to the pods matched by a NetworkPolicySpec's podSelector. The traffic must match both ports and from.",
     "properties": {
@@ -69271,6 +69927,8 @@
      }
     }
    },
+
+
    "io.k8s.api.networking.v1.NetworkPolicyList": {
     "description": "NetworkPolicyList is a list of NetworkPolicy objects.",
     "required": [
@@ -69305,6 +69963,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.networking.v1.NetworkPolicyPeer": {
     "description": "NetworkPolicyPeer describes a peer to allow traffic from. Exactly one of its fields must be specified.",
     "properties": {
@@ -69322,6 +69982,8 @@
      }
     }
    },
+
+
    "io.k8s.api.networking.v1.NetworkPolicyPort": {
     "description": "NetworkPolicyPort describes a port to allow traffic on",
     "properties": {
@@ -69335,6 +69997,8 @@
      }
     }
    },
+
+
    "io.k8s.api.networking.v1.NetworkPolicySpec": {
     "description": "NetworkPolicySpec provides the specification of a NetworkPolicy",
     "required": [
@@ -69368,6 +70032,8 @@
      }
     }
    },
+
+
    "io.k8s.api.policy.v1beta1.Eviction": {
     "description": "Eviction evicts a pod from its node subject to certain policies and safety constraints. This is a subresource of Pod.  A request to cause such an eviction is created by POSTing to .../pods/\u003cpod name\u003e/evictions.",
     "properties": {
@@ -69396,6 +70062,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.policy.v1beta1.PodDisruptionBudget": {
     "description": "PodDisruptionBudget is an object to define the max disruption that can be caused to a collection of pods",
     "properties": {
@@ -69427,6 +70095,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.policy.v1beta1.PodDisruptionBudgetList": {
     "description": "PodDisruptionBudgetList is a collection of PodDisruptionBudgets.",
     "required": [
@@ -69459,6 +70129,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.policy.v1beta1.PodDisruptionBudgetSpec": {
     "description": "PodDisruptionBudgetSpec is a description of a PodDisruptionBudget.",
     "properties": {
@@ -69476,6 +70148,8 @@
      }
     }
    },
+
+
    "io.k8s.api.policy.v1beta1.PodDisruptionBudgetStatus": {
     "description": "PodDisruptionBudgetStatus represents information about the status of a PodDisruptionBudget. Status may trail the actual state of a system.",
     "required": [
@@ -69520,6 +70194,8 @@
      }
     }
    },
+
+
    "io.k8s.api.rbac.v1.ClusterRole": {
     "description": "ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding or ClusterRoleBinding.",
     "required": [
@@ -69554,6 +70230,9 @@
      }
     ]
    },
+
+
+
    "io.k8s.api.rbac.v1.ClusterRoleBinding": {
     "description": "ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole in the global namespace, and adds who information via Subject.",
     "required": [
@@ -69593,6 +70272,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1.ClusterRoleBindingList": {
     "description": "ClusterRoleBindingList is a collection of ClusterRoleBindings",
     "required": [
@@ -69627,6 +70308,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1.ClusterRoleList": {
     "description": "ClusterRoleList is a collection of ClusterRoles",
     "required": [
@@ -69661,6 +70344,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1.PolicyRule": {
     "description": "PolicyRule holds information that describes a policy rule, but does not contain information about who the rule applies to or which namespace the rule applies to.",
     "required": [
@@ -69704,6 +70389,8 @@
      }
     }
    },
+
+
    "io.k8s.api.rbac.v1.Role": {
     "description": "Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding.",
     "required": [
@@ -69738,6 +70425,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1.RoleBinding": {
     "description": "RoleBinding references a role, but does not contain it.  It can reference a Role in the same namespace or a ClusterRole in the global namespace. It adds who information via Subjects and namespace information by which namespace it exists in.  RoleBindings in a given namespace only have effect in that namespace.",
     "required": [
@@ -69777,6 +70466,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1.RoleBindingList": {
     "description": "RoleBindingList is a collection of RoleBindings",
     "required": [
@@ -69811,6 +70502,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1.RoleList": {
     "description": "RoleList is a collection of Roles",
     "required": [
@@ -69845,6 +70538,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1.RoleRef": {
     "description": "RoleRef contains information that points to the role being used",
     "required": [
@@ -69867,6 +70562,8 @@
      }
     }
    },
+
+
    "io.k8s.api.rbac.v1.Subject": {
     "description": "Subject contains a reference to the object or user identities a role binding applies to.  This can either hold a direct API object reference, or a value for non-objects such as user and group names.",
     "required": [
@@ -69892,6 +70589,8 @@
      }
     }
    },
+
+
    "io.k8s.api.rbac.v1alpha1.ClusterRole": {
     "description": "ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding or ClusterRoleBinding.",
     "required": [
@@ -69926,6 +70625,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1alpha1.ClusterRoleBinding": {
     "description": "ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole in the global namespace, and adds who information via Subject.",
     "required": [
@@ -69965,6 +70666,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1alpha1.ClusterRoleBindingList": {
     "description": "ClusterRoleBindingList is a collection of ClusterRoleBindings",
     "required": [
@@ -69999,6 +70702,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1alpha1.ClusterRoleList": {
     "description": "ClusterRoleList is a collection of ClusterRoles",
     "required": [
@@ -70033,6 +70738,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1alpha1.PolicyRule": {
     "description": "PolicyRule holds information that describes a policy rule, but does not contain information about who the rule applies to or which namespace the rule applies to.",
     "required": [
@@ -70076,6 +70783,8 @@
      }
     }
    },
+
+
    "io.k8s.api.rbac.v1alpha1.Role": {
     "description": "Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding.",
     "required": [
@@ -70110,6 +70819,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1alpha1.RoleBinding": {
     "description": "RoleBinding references a role, but does not contain it.  It can reference a Role in the same namespace or a ClusterRole in the global namespace. It adds who information via Subjects and namespace information by which namespace it exists in.  RoleBindings in a given namespace only have effect in that namespace.",
     "required": [
@@ -70149,6 +70860,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1alpha1.RoleBindingList": {
     "description": "RoleBindingList is a collection of RoleBindings",
     "required": [
@@ -70183,6 +70896,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1alpha1.RoleList": {
     "description": "RoleList is a collection of Roles",
     "required": [
@@ -70217,6 +70932,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1alpha1.RoleRef": {
     "description": "RoleRef contains information that points to the role being used",
     "required": [
@@ -70239,6 +70956,8 @@
      }
     }
    },
+
+
    "io.k8s.api.rbac.v1alpha1.Subject": {
     "description": "Subject contains a reference to the object or user identities a role binding applies to.  This can either hold a direct API object reference, or a value for non-objects such as user and group names.",
     "required": [
@@ -70264,6 +70983,8 @@
      }
     }
    },
+
+
    "io.k8s.api.rbac.v1beta1.ClusterRole": {
     "description": "ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding or ClusterRoleBinding.",
     "required": [
@@ -70298,6 +71019,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1beta1.ClusterRoleBinding": {
     "description": "ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole in the global namespace, and adds who information via Subject.",
     "required": [
@@ -70337,6 +71060,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1beta1.ClusterRoleBindingList": {
     "description": "ClusterRoleBindingList is a collection of ClusterRoleBindings",
     "required": [
@@ -70371,6 +71096,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1beta1.ClusterRoleList": {
     "description": "ClusterRoleList is a collection of ClusterRoles",
     "required": [
@@ -70405,6 +71132,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1beta1.PolicyRule": {
     "description": "PolicyRule holds information that describes a policy rule, but does not contain information about who the rule applies to or which namespace the rule applies to.",
     "required": [
@@ -70448,6 +71177,8 @@
      }
     }
    },
+
+
    "io.k8s.api.rbac.v1beta1.Role": {
     "description": "Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding.",
     "required": [
@@ -70482,6 +71213,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1beta1.RoleBinding": {
     "description": "RoleBinding references a role, but does not contain it.  It can reference a Role in the same namespace or a ClusterRole in the global namespace. It adds who information via Subjects and namespace information by which namespace it exists in.  RoleBindings in a given namespace only have effect in that namespace.",
     "required": [
@@ -70521,6 +71254,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1beta1.RoleBindingList": {
     "description": "RoleBindingList is a collection of RoleBindings",
     "required": [
@@ -70555,6 +71290,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1beta1.RoleList": {
     "description": "RoleList is a collection of Roles",
     "required": [
@@ -70589,6 +71326,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.rbac.v1beta1.RoleRef": {
     "description": "RoleRef contains information that points to the role being used",
     "required": [
@@ -70611,6 +71350,8 @@
      }
     }
    },
+
+
    "io.k8s.api.rbac.v1beta1.Subject": {
     "description": "Subject contains a reference to the object or user identities a role binding applies to.  This can either hold a direct API object reference, or a value for non-objects such as user and group names.",
     "required": [
@@ -70636,6 +71377,8 @@
      }
     }
    },
+
+
    "io.k8s.api.scheduling.v1alpha1.PriorityClass": {
     "description": "PriorityClass defines mapping from a priority class name to the priority integer value. The value can be any valid integer.",
     "required": [
@@ -70676,6 +71419,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.scheduling.v1alpha1.PriorityClassList": {
     "description": "PriorityClassList is a collection of priority classes.",
     "required": [
@@ -70710,6 +71455,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.settings.v1alpha1.PodPreset": {
     "description": "PodPreset is a policy resource that defines additional runtime requirements for a Pod.",
     "properties": {
@@ -70736,6 +71483,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.settings.v1alpha1.PodPresetList": {
     "description": "PodPresetList is a list of PodPreset objects.",
     "required": [
@@ -70770,6 +71519,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.settings.v1alpha1.PodPresetSpec": {
     "description": "PodPresetSpec is a description of a pod preset.",
     "properties": {
@@ -70807,6 +71558,8 @@
      }
     }
    },
+
+
    "io.k8s.api.storage.v1.StorageClass": {
     "description": "StorageClass describes the parameters for a class of storage for which PersistentVolumes can be dynamically provisioned.\n\nStorageClasses are non-namespaced; the name of the storage class according to etcd is in ObjectMeta.Name.",
     "required": [
@@ -70860,6 +71613,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.storage.v1.StorageClassList": {
     "description": "StorageClassList is a collection of storage classes.",
     "required": [
@@ -70894,6 +71649,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.storage.v1beta1.StorageClass": {
     "description": "StorageClass describes the parameters for a class of storage for which PersistentVolumes can be dynamically provisioned.\n\nStorageClasses are non-namespaced; the name of the storage class according to etcd is in ObjectMeta.Name.",
     "required": [
@@ -70947,6 +71704,8 @@
      }
     ]
    },
+
+
    "io.k8s.api.storage.v1beta1.StorageClassList": {
     "description": "StorageClassList is a collection of storage classes.",
     "required": [
@@ -70981,6 +71740,8 @@
      }
     ]
    },
+
+
    "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceDefinition": {
     "description": "CustomResourceDefinition represents a resource that should be exposed on the API server.  Its name MUST be in the format \u003c.spec.name\u003e.\u003c.spec.group\u003e.",
     "properties": {
@@ -71005,6 +71766,8 @@
      }
     }
    },
+
+
    "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceDefinitionCondition": {
     "description": "CustomResourceDefinitionCondition contains details for the current condition of this pod.",
     "required": [
@@ -71034,6 +71797,8 @@
      }
     }
    },
+
+
    "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceDefinitionList": {
     "description": "CustomResourceDefinitionList is a list of CustomResourceDefinition objects.",
     "required": [
@@ -71060,6 +71825,8 @@
      }
     }
    },
+
+
    "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceDefinitionNames": {
     "description": "CustomResourceDefinitionNames indicates the names to serve this CustomResourceDefinition",
     "required": [
@@ -71092,6 +71859,8 @@
      }
     }
    },
+
+
    "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceDefinitionSpec": {
     "description": "CustomResourceDefinitionSpec describes how a user wants their resource to appear",
     "required": [
@@ -71123,6 +71892,8 @@
      }
     }
    },
+
+
    "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceDefinitionStatus": {
     "description": "CustomResourceDefinitionStatus indicates the state of the CustomResourceDefinition",
     "required": [
@@ -71143,6 +71914,8 @@
      }
     }
    },
+
+
    "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.CustomResourceValidation": {
     "description": "CustomResourceValidation is a list of validation methods for CustomResources.",
     "properties": {
@@ -71152,6 +71925,8 @@
      }
     }
    },
+
+
    "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.ExternalDocumentation": {
     "description": "ExternalDocumentation allows referencing an external resource for extended documentation.",
     "properties": {
@@ -71163,6 +71938,8 @@
      }
     }
    },
+
+
    "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.JSON": {
     "description": "JSON represents any valid JSON value. These types are supported: bool, int64, float64, string, []interface{}, map[string]interface{} and nil.",
     "required": [
@@ -71175,6 +71952,8 @@
      }
     }
    },
+
+
    "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.JSONSchemaProps": {
     "description": "JSONSchemaProps is a JSON-Schema following Specification Draft 4 (http://json-schema.org/).",
     "properties": {
@@ -71324,6 +72103,8 @@
      }
     }
    },
+
+
    "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.JSONSchemaPropsOrArray": {
     "description": "JSONSchemaPropsOrArray represents a value that can either be a JSONSchemaProps or an array of JSONSchemaProps. Mainly here for serialization purposes.",
     "required": [
@@ -71342,6 +72123,8 @@
      }
     }
    },
+
+
    "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.JSONSchemaPropsOrBool": {
     "description": "JSONSchemaPropsOrBool represents JSONSchemaProps or a boolean value. Defaults to true for the boolean property.",
     "required": [
@@ -71357,6 +72140,8 @@
      }
     }
    },
+
+
    "io.k8s.apiextensions-apiserver.pkg.apis.apiextensions.v1beta1.JSONSchemaPropsOrStringArray": {
     "description": "JSONSchemaPropsOrStringArray represents a JSONSchemaProps or a string array.",
     "required": [
@@ -71375,6 +72160,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.api.resource.Quantity": {
     "type": "string"
    },
@@ -71425,6 +72212,8 @@
      }
     ]
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.APIGroupList": {
     "description": "APIGroupList is a list of APIGroup, to allow clients to discover the API at /apis.",
     "required": [
@@ -71455,6 +72244,8 @@
      }
     ]
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.APIResource": {
     "description": "APIResource specifies the name of a resource and whether it is namespaced.",
     "required": [
@@ -71512,6 +72303,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.APIResourceList": {
     "description": "APIResourceList is a list of APIResource, it is used to expose the name of the resources supported in a specific group and version, and if the resource is namespaced.",
     "required": [
@@ -71547,6 +72340,8 @@
      }
     ]
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.APIVersions": {
     "description": "APIVersions lists the versions that are available, to allow clients to discover the API at /api, which is the root path of the legacy v1 API.",
     "required": [
@@ -71585,6 +72380,8 @@
      }
     ]
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.DeleteOptions": {
     "description": "DeleteOptions may be provided when deleting an API object.",
     "properties": {
@@ -71752,6 +72549,8 @@
      }
     ]
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.GroupVersionForDiscovery": {
     "description": "GroupVersion contains the \"group/version\" and \"version\" string of a version. It is made a struct to keep extensibility.",
     "required": [
@@ -71769,6 +72568,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.Initializer": {
     "description": "Initializer is information about an initializer that has not yet completed.",
     "required": [
@@ -71781,6 +72582,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.Initializers": {
     "description": "Initializers tracks the progress of initialization.",
     "required": [
@@ -71802,6 +72605,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector": {
     "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.",
     "properties": {
@@ -71821,6 +72626,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement": {
     "description": "A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.",
     "required": [
@@ -71847,6 +72654,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta": {
     "description": "ListMeta describes metadata that synthetic resources must have, including lists and various status objects. A resource may have only one of {ObjectMeta, ListMeta}.",
     "properties": {
@@ -71864,6 +72673,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta": {
     "description": "ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.",
     "properties": {
@@ -71950,6 +72761,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.OwnerReference": {
     "description": "OwnerReference contains enough information to let you identify an owning object. Currently, an owning object must be in the same namespace, so there is no namespace field.",
     "required": [
@@ -71985,6 +72798,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.Patch": {
     "description": "Patch is provided to give a concrete name and type to the Kubernetes PATCH request body."
    },
@@ -71997,6 +72812,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.ServerAddressByClientCIDR": {
     "description": "ServerAddressByClientCIDR helps the client to determine the server address that they should use, depending on the clientCIDR that they match.",
     "required": [
@@ -72014,6 +72831,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.Status": {
     "description": "Status is a return value for calls that don't return other objects.",
     "properties": {
@@ -72059,6 +72878,8 @@
      }
     ]
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.StatusCause": {
     "description": "StatusCause provides more information about an api.Status failure, including cases when multiple errors are encountered.",
     "properties": {
@@ -72076,6 +72897,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.StatusDetails": {
     "description": "StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.",
     "properties": {
@@ -72109,6 +72932,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.apis.meta.v1.Time": {
     "type": "string",
     "format": "date-time"
@@ -72266,6 +73091,8 @@
      }
     ]
    },
+
+
    "io.k8s.apimachinery.pkg.runtime.RawExtension": {
     "description": "RawExtension is used to hold extensions in external versions.\n\nTo use this, make a field which has RawExtension as its type in your external, versioned struct, and Object in your internal struct. You also need to register your various plugin types.\n\n// Internal package: type MyAPIObject struct {\n\truntime.TypeMeta `json:\",inline\"`\n\tMyPlugin runtime.Object `json:\"myPlugin\"`\n} type PluginA struct {\n\tAOption string `json:\"aOption\"`\n}\n\n// External package: type MyAPIObject struct {\n\truntime.TypeMeta `json:\",inline\"`\n\tMyPlugin runtime.RawExtension `json:\"myPlugin\"`\n} type PluginA struct {\n\tAOption string `json:\"aOption\"`\n}\n\n// On the wire, the JSON will look something like this: {\n\t\"kind\":\"MyAPIObject\",\n\t\"apiVersion\":\"v1\",\n\t\"myPlugin\": {\n\t\t\"kind\":\"PluginA\",\n\t\t\"aOption\":\"foo\",\n\t},\n}\n\nSo what happens? Decode first uses json or yaml to unmarshal the serialized data into your external MyAPIObject. That causes the raw JSON to be stored, but not unpacked. The next step is to copy (using pkg/conversion) into the internal struct. The runtime package's DefaultScheme has conversion functions installed which will unpack the JSON stored in RawExtension, turning it into the correct object type, and storing it in the Object. (TODO: In the case where the object is of an unknown type, a runtime.Unknown object will be created and stored.)",
     "required": [
@@ -72279,6 +73106,8 @@
      }
     }
    },
+
+
    "io.k8s.apimachinery.pkg.util.intstr.IntOrString": {
     "type": "string",
     "format": "int-or-string"
@@ -72326,6 +73155,8 @@
      }
     }
    },
+
+
    "io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.APIService": {
     "description": "APIService represents a server for a particular GroupVersion. Name must be \"version.group\".",
     "properties": {
@@ -72350,6 +73181,8 @@
      }
     }
    },
+
+
    "io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.APIServiceCondition": {
     "required": [
      "type",
@@ -72378,6 +73211,8 @@
      }
     }
    },
+
+
    "io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.APIServiceList": {
     "description": "APIServiceList is a list of APIService objects.",
     "required": [
@@ -72403,6 +73238,8 @@
      }
     }
    },
+
+
    "io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.APIServiceSpec": {
     "description": "APIServiceSpec contains information for locating and communicating with a server. Only https is supported, though you are able to disable certificate verification.",
     "required": [
@@ -72445,6 +73282,8 @@
      }
     }
    },
+
+
    "io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.APIServiceStatus": {
     "description": "APIServiceStatus contains derived information about an API server",
     "properties": {
@@ -72459,6 +73298,8 @@
      }
     }
    },
+
+
    "io.k8s.kube-aggregator.pkg.apis.apiregistration.v1beta1.ServiceReference": {
     "description": "ServiceReference holds a reference to Service.legacy.k8s.io",
     "properties": {
@@ -72472,1259 +73313,10 @@
      }
     }
    },
-   "io.k8s.kubernetes.pkg.api.v1.AWSElasticBlockStoreVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.AWSElasticBlockStoreVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.AWSElasticBlockStoreVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Affinity": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Affinity instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Affinity"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.AttachedVolume": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.AttachedVolume instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.AttachedVolume"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.AzureDiskVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.AzureDiskVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.AzureDiskVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.AzureFileVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.AzureFileVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.AzureFileVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Binding": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Binding instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Binding"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Capabilities": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Capabilities instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Capabilities"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.CephFSVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.CephFSVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.CephFSVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.CinderVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.CinderVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.CinderVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ComponentCondition": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ComponentCondition instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ComponentCondition"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ComponentStatus": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ComponentStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ComponentStatus"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ComponentStatusList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ComponentStatusList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ComponentStatusList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ConfigMap": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ConfigMap instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ConfigMap"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ConfigMapEnvSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ConfigMapEnvSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ConfigMapEnvSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ConfigMapKeySelector": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ConfigMapKeySelector instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ConfigMapKeySelector"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ConfigMapList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ConfigMapList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ConfigMapList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ConfigMapProjection": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ConfigMapProjection instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ConfigMapProjection"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ConfigMapVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ConfigMapVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ConfigMapVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Container": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Container instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Container"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ContainerImage": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ContainerImage instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ContainerImage"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ContainerPort": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ContainerPort instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ContainerPort"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ContainerState": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ContainerState instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ContainerState"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ContainerStateRunning": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ContainerStateRunning instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ContainerStateRunning"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ContainerStateTerminated": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ContainerStateTerminated instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ContainerStateTerminated"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ContainerStateWaiting": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ContainerStateWaiting instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ContainerStateWaiting"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ContainerStatus": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ContainerStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ContainerStatus"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.DaemonEndpoint": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.DaemonEndpoint instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.DaemonEndpoint"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.DownwardAPIProjection": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.DownwardAPIProjection instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.DownwardAPIProjection"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.DownwardAPIVolumeFile": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.DownwardAPIVolumeFile instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.DownwardAPIVolumeFile"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.DownwardAPIVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.DownwardAPIVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.DownwardAPIVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.EmptyDirVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.EmptyDirVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.EmptyDirVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.EndpointAddress": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.EndpointAddress instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.EndpointAddress"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.EndpointPort": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.EndpointPort instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.EndpointPort"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.EndpointSubset": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.EndpointSubset instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.EndpointSubset"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Endpoints": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Endpoints instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Endpoints"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.EndpointsList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.EndpointsList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.EndpointsList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.EnvFromSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.EnvFromSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.EnvFromSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.EnvVar": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.EnvVar instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.EnvVar"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.EnvVarSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.EnvVarSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.EnvVarSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Event": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Event instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Event"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.EventList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.EventList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.EventList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.EventSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.EventSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.EventSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ExecAction": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ExecAction instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ExecAction"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.FCVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.FCVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.FCVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.FlexVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.FlexVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.FlexVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.FlockerVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.FlockerVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.FlockerVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.GCEPersistentDiskVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.GCEPersistentDiskVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.GCEPersistentDiskVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.GitRepoVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.GitRepoVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.GitRepoVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.GlusterfsVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.GlusterfsVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.GlusterfsVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.HTTPGetAction": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.HTTPGetAction instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.HTTPGetAction"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.HTTPHeader": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.HTTPHeader instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.HTTPHeader"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Handler": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Handler instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Handler"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.HostAlias": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.HostAlias instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.HostAlias"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.HostPathVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.HostPathVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.HostPathVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ISCSIVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ISCSIVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ISCSIVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.KeyToPath": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.KeyToPath instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.KeyToPath"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Lifecycle": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Lifecycle instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Lifecycle"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.LimitRange": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.LimitRange instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.LimitRange"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.LimitRangeItem": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.LimitRangeItem instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.LimitRangeItem"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.LimitRangeList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.LimitRangeList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.LimitRangeList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.LimitRangeSpec": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.LimitRangeSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.LimitRangeSpec"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.LoadBalancerIngress": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.LoadBalancerIngress instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.LoadBalancerIngress"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.LoadBalancerStatus": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.LoadBalancerStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.LoadBalancerStatus"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.LocalObjectReference": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.LocalObjectReference instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.LocalObjectReference"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.LocalVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.LocalVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.LocalVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NFSVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NFSVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NFSVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Namespace": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Namespace instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Namespace"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NamespaceList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NamespaceList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NamespaceList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NamespaceSpec": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NamespaceSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NamespaceSpec"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NamespaceStatus": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NamespaceStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NamespaceStatus"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Node": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Node instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Node"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NodeAddress": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NodeAddress instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NodeAddress"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NodeAffinity": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NodeAffinity instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NodeAffinity"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NodeCondition": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NodeCondition instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NodeCondition"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NodeDaemonEndpoints": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NodeDaemonEndpoints instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NodeDaemonEndpoints"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NodeList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NodeList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NodeList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NodeSelector": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NodeSelector instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NodeSelector"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NodeSelectorRequirement": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NodeSelectorRequirement instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NodeSelectorRequirement"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NodeSelectorTerm": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NodeSelectorTerm instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NodeSelectorTerm"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NodeSpec": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NodeSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NodeSpec"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NodeStatus": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NodeStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NodeStatus"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.NodeSystemInfo": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.NodeSystemInfo instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.NodeSystemInfo"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ObjectFieldSelector": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ObjectFieldSelector instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ObjectFieldSelector"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ObjectReference": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ObjectReference instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ObjectReference"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PersistentVolume": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PersistentVolume instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PersistentVolume"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PersistentVolumeClaim": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PersistentVolumeClaim instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PersistentVolumeClaim"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PersistentVolumeClaimList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PersistentVolumeClaimList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PersistentVolumeClaimList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PersistentVolumeClaimSpec": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PersistentVolumeClaimSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PersistentVolumeClaimSpec"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PersistentVolumeClaimStatus": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PersistentVolumeClaimStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PersistentVolumeClaimStatus"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PersistentVolumeClaimVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PersistentVolumeClaimVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PersistentVolumeClaimVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PersistentVolumeList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PersistentVolumeList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PersistentVolumeList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PersistentVolumeSpec": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PersistentVolumeSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PersistentVolumeSpec"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PersistentVolumeStatus": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PersistentVolumeStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PersistentVolumeStatus"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PhotonPersistentDiskVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PhotonPersistentDiskVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PhotonPersistentDiskVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Pod": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Pod instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Pod"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PodAffinity": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PodAffinity instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PodAffinity"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PodAffinityTerm": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PodAffinityTerm instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PodAffinityTerm"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PodAntiAffinity": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PodAntiAffinity instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PodAntiAffinity"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PodCondition": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PodCondition instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PodCondition"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PodList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PodList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PodList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PodSecurityContext": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PodSecurityContext instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PodSecurityContext"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PodSpec": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PodSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PodSpec"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PodStatus": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PodStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PodStatus"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PodTemplate": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PodTemplate instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PodTemplate"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PodTemplateList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PodTemplateList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PodTemplateList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PodTemplateSpec": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PodTemplateSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PodTemplateSpec"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PortworxVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PortworxVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PortworxVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.PreferredSchedulingTerm": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.PreferredSchedulingTerm instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.PreferredSchedulingTerm"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Probe": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Probe instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Probe"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ProjectedVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ProjectedVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ProjectedVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.QuobyteVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.QuobyteVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.QuobyteVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.RBDVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.RBDVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.RBDVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ReplicationController": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ReplicationController instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ReplicationController"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ReplicationControllerCondition": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ReplicationControllerCondition instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ReplicationControllerCondition"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ReplicationControllerList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ReplicationControllerList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ReplicationControllerList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ReplicationControllerSpec": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ReplicationControllerSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ReplicationControllerSpec"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ReplicationControllerStatus": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ReplicationControllerStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ReplicationControllerStatus"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ResourceFieldSelector": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ResourceFieldSelector instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ResourceFieldSelector"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ResourceQuota": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ResourceQuota instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ResourceQuota"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ResourceQuotaList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ResourceQuotaList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ResourceQuotaList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ResourceQuotaSpec": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ResourceQuotaSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ResourceQuotaSpec"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ResourceQuotaStatus": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ResourceQuotaStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ResourceQuotaStatus"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ResourceRequirements": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ResourceRequirements instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ResourceRequirements"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.SELinuxOptions": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.SELinuxOptions instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.SELinuxOptions"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ScaleIOVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ScaleIOVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ScaleIOVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Secret": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Secret instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Secret"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.SecretEnvSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.SecretEnvSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.SecretEnvSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.SecretKeySelector": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.SecretKeySelector instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.SecretKeySelector"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.SecretList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.SecretList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.SecretList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.SecretProjection": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.SecretProjection instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.SecretProjection"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.SecretVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.SecretVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.SecretVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.SecurityContext": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.SecurityContext instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.SecurityContext"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Service": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Service instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Service"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ServiceAccount": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ServiceAccount instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ServiceAccount"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ServiceAccountList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ServiceAccountList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ServiceAccountList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ServiceList": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ServiceList instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ServiceList"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ServicePort": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ServicePort instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ServicePort"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ServiceSpec": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ServiceSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ServiceSpec"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.ServiceStatus": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.ServiceStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.ServiceStatus"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.StorageOSPersistentVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.StorageOSPersistentVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.StorageOSPersistentVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.StorageOSVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.StorageOSVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.StorageOSVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.TCPSocketAction": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.TCPSocketAction instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.TCPSocketAction"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Taint": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Taint instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Taint"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Toleration": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Toleration instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Toleration"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.Volume": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.Volume instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.Volume"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.VolumeMount": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.VolumeMount instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.VolumeMount"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.VolumeProjection": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.VolumeProjection instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.VolumeProjection"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.VsphereVirtualDiskVolumeSource": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.VsphereVirtualDiskVolumeSource instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.VsphereVirtualDiskVolumeSource"
-   },
-   "io.k8s.kubernetes.pkg.api.v1.WeightedPodAffinityTerm": {
-    "description": "Deprecated. Please use io.k8s.api.core.v1.WeightedPodAffinityTerm instead.",
-    "$ref": "#/definitions/io.k8s.api.core.v1.WeightedPodAffinityTerm"
-   },
-   "io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.AdmissionHookClientConfig": {
-    "description": "Deprecated. Please use io.k8s.api.admissionregistration.v1alpha1.AdmissionHookClientConfig instead.",
-    "$ref": "#/definitions/io.k8s.api.admissionregistration.v1alpha1.AdmissionHookClientConfig"
-   },
-   "io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.ExternalAdmissionHook": {
-    "description": "Deprecated. Please use io.k8s.api.admissionregistration.v1alpha1.ExternalAdmissionHook instead.",
-    "$ref": "#/definitions/io.k8s.api.admissionregistration.v1alpha1.ExternalAdmissionHook"
-   },
-   "io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.ExternalAdmissionHookConfiguration": {
-    "description": "Deprecated. Please use io.k8s.api.admissionregistration.v1alpha1.ExternalAdmissionHookConfiguration instead.",
-    "$ref": "#/definitions/io.k8s.api.admissionregistration.v1alpha1.ExternalAdmissionHookConfiguration"
-   },
-   "io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.ExternalAdmissionHookConfigurationList": {
-    "description": "Deprecated. Please use io.k8s.api.admissionregistration.v1alpha1.ExternalAdmissionHookConfigurationList instead.",
-    "$ref": "#/definitions/io.k8s.api.admissionregistration.v1alpha1.ExternalAdmissionHookConfigurationList"
-   },
-   "io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.Initializer": {
-    "description": "Deprecated. Please use io.k8s.api.admissionregistration.v1alpha1.Initializer instead.",
-    "$ref": "#/definitions/io.k8s.api.admissionregistration.v1alpha1.Initializer"
-   },
-   "io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.InitializerConfiguration": {
-    "description": "Deprecated. Please use io.k8s.api.admissionregistration.v1alpha1.InitializerConfiguration instead.",
-    "$ref": "#/definitions/io.k8s.api.admissionregistration.v1alpha1.InitializerConfiguration"
-   },
-   "io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.InitializerConfigurationList": {
-    "description": "Deprecated. Please use io.k8s.api.admissionregistration.v1alpha1.InitializerConfigurationList instead.",
-    "$ref": "#/definitions/io.k8s.api.admissionregistration.v1alpha1.InitializerConfigurationList"
-   },
-   "io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.Rule": {
-    "description": "Deprecated. Please use io.k8s.api.admissionregistration.v1alpha1.Rule instead.",
-    "$ref": "#/definitions/io.k8s.api.admissionregistration.v1alpha1.Rule"
-   },
-   "io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.RuleWithOperations": {
-    "description": "Deprecated. Please use io.k8s.api.admissionregistration.v1alpha1.RuleWithOperations instead.",
-    "$ref": "#/definitions/io.k8s.api.admissionregistration.v1alpha1.RuleWithOperations"
-   },
-   "io.k8s.kubernetes.pkg.apis.admissionregistration.v1alpha1.ServiceReference": {
-    "description": "Deprecated. Please use io.k8s.api.admissionregistration.v1alpha1.ServiceReference instead.",
-    "$ref": "#/definitions/io.k8s.api.admissionregistration.v1alpha1.ServiceReference"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.ControllerRevision": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.ControllerRevision instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.ControllerRevision"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.ControllerRevisionList": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.ControllerRevisionList instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.ControllerRevisionList"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.Deployment": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.Deployment instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.Deployment"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.DeploymentCondition": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.DeploymentCondition instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.DeploymentCondition"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.DeploymentList": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.DeploymentList instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.DeploymentList"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.DeploymentRollback": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.DeploymentRollback instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.DeploymentRollback"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.DeploymentSpec": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.DeploymentSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.DeploymentSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.DeploymentStatus": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.DeploymentStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.DeploymentStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.DeploymentStrategy": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.DeploymentStrategy instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.DeploymentStrategy"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.RollbackConfig": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.RollbackConfig instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.RollbackConfig"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.RollingUpdateDeployment": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.RollingUpdateDeployment instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.RollingUpdateDeployment"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.RollingUpdateStatefulSetStrategy": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.RollingUpdateStatefulSetStrategy instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.RollingUpdateStatefulSetStrategy"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.Scale": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.Scale instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.Scale"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.ScaleSpec": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.ScaleSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.ScaleSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.ScaleStatus": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.ScaleStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.ScaleStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.StatefulSet": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.StatefulSet instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.StatefulSet"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.StatefulSetList": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.StatefulSetList instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.StatefulSetList"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.StatefulSetSpec": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.StatefulSetSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.StatefulSetSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.StatefulSetStatus": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.StatefulSetStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.StatefulSetStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.apps.v1beta1.StatefulSetUpdateStrategy": {
-    "description": "Deprecated. Please use io.k8s.api.apps.v1beta1.StatefulSetUpdateStrategy instead.",
-    "$ref": "#/definitions/io.k8s.api.apps.v1beta1.StatefulSetUpdateStrategy"
-   },
-   "io.k8s.kubernetes.pkg.apis.authentication.v1.TokenReview": {
-    "description": "Deprecated. Please use io.k8s.api.authentication.v1.TokenReview instead.",
-    "$ref": "#/definitions/io.k8s.api.authentication.v1.TokenReview"
-   },
-   "io.k8s.kubernetes.pkg.apis.authentication.v1.TokenReviewSpec": {
-    "description": "Deprecated. Please use io.k8s.api.authentication.v1.TokenReviewSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.authentication.v1.TokenReviewSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.authentication.v1.TokenReviewStatus": {
-    "description": "Deprecated. Please use io.k8s.api.authentication.v1.TokenReviewStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.authentication.v1.TokenReviewStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.authentication.v1.UserInfo": {
-    "description": "Deprecated. Please use io.k8s.api.authentication.v1.UserInfo instead.",
-    "$ref": "#/definitions/io.k8s.api.authentication.v1.UserInfo"
-   },
-   "io.k8s.kubernetes.pkg.apis.authentication.v1beta1.TokenReview": {
-    "description": "Deprecated. Please use io.k8s.api.authentication.v1beta1.TokenReview instead.",
-    "$ref": "#/definitions/io.k8s.api.authentication.v1beta1.TokenReview"
-   },
-   "io.k8s.kubernetes.pkg.apis.authentication.v1beta1.TokenReviewSpec": {
-    "description": "Deprecated. Please use io.k8s.api.authentication.v1beta1.TokenReviewSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.authentication.v1beta1.TokenReviewSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.authentication.v1beta1.TokenReviewStatus": {
-    "description": "Deprecated. Please use io.k8s.api.authentication.v1beta1.TokenReviewStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.authentication.v1beta1.TokenReviewStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.authentication.v1beta1.UserInfo": {
-    "description": "Deprecated. Please use io.k8s.api.authentication.v1beta1.UserInfo instead.",
-    "$ref": "#/definitions/io.k8s.api.authentication.v1beta1.UserInfo"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1.LocalSubjectAccessReview": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1.LocalSubjectAccessReview instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1.LocalSubjectAccessReview"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1.NonResourceAttributes": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1.NonResourceAttributes instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1.NonResourceAttributes"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1.ResourceAttributes": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1.ResourceAttributes instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1.ResourceAttributes"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1.SelfSubjectAccessReview": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1.SelfSubjectAccessReview instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1.SelfSubjectAccessReview"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1.SelfSubjectAccessReviewSpec": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1.SelfSubjectAccessReviewSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1.SelfSubjectAccessReviewSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1.SubjectAccessReview": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1.SubjectAccessReview instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1.SubjectAccessReview"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1.SubjectAccessReviewSpec": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1.SubjectAccessReviewSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1.SubjectAccessReviewSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1.SubjectAccessReviewStatus": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1.SubjectAccessReviewStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1.SubjectAccessReviewStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1beta1.LocalSubjectAccessReview": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1beta1.LocalSubjectAccessReview instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1beta1.LocalSubjectAccessReview"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1beta1.NonResourceAttributes": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1beta1.NonResourceAttributes instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1beta1.NonResourceAttributes"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1beta1.ResourceAttributes": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1beta1.ResourceAttributes instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1beta1.ResourceAttributes"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1beta1.SelfSubjectAccessReview": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1beta1.SelfSubjectAccessReview instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1beta1.SelfSubjectAccessReview"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1beta1.SelfSubjectAccessReviewSpec": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1beta1.SelfSubjectAccessReviewSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1beta1.SelfSubjectAccessReviewSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1beta1.SubjectAccessReview": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1beta1.SubjectAccessReview instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1beta1.SubjectAccessReview"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1beta1.SubjectAccessReviewSpec": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1beta1.SubjectAccessReviewSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1beta1.SubjectAccessReviewSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.authorization.v1beta1.SubjectAccessReviewStatus": {
-    "description": "Deprecated. Please use io.k8s.api.authorization.v1beta1.SubjectAccessReviewStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.authorization.v1beta1.SubjectAccessReviewStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.autoscaling.v1.CrossVersionObjectReference": {
-    "description": "Deprecated. Please use io.k8s.api.autoscaling.v1.CrossVersionObjectReference instead.",
-    "$ref": "#/definitions/io.k8s.api.autoscaling.v1.CrossVersionObjectReference"
-   },
-   "io.k8s.kubernetes.pkg.apis.autoscaling.v1.HorizontalPodAutoscaler": {
-    "description": "Deprecated. Please use io.k8s.api.autoscaling.v1.HorizontalPodAutoscaler instead.",
-    "$ref": "#/definitions/io.k8s.api.autoscaling.v1.HorizontalPodAutoscaler"
-   },
-   "io.k8s.kubernetes.pkg.apis.autoscaling.v1.HorizontalPodAutoscalerList": {
-    "description": "Deprecated. Please use io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerList instead.",
-    "$ref": "#/definitions/io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerList"
-   },
-   "io.k8s.kubernetes.pkg.apis.autoscaling.v1.HorizontalPodAutoscalerSpec": {
-    "description": "Deprecated. Please use io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.autoscaling.v1.HorizontalPodAutoscalerStatus": {
-    "description": "Deprecated. Please use io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.autoscaling.v1.HorizontalPodAutoscalerStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.autoscaling.v1.Scale": {
-    "description": "Deprecated. Please use io.k8s.api.autoscaling.v1.Scale instead.",
-    "$ref": "#/definitions/io.k8s.api.autoscaling.v1.Scale"
-   },
-   "io.k8s.kubernetes.pkg.apis.autoscaling.v1.ScaleSpec": {
-    "description": "Deprecated. Please use io.k8s.api.autoscaling.v1.ScaleSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.autoscaling.v1.ScaleSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.autoscaling.v1.ScaleStatus": {
-    "description": "Deprecated. Please use io.k8s.api.autoscaling.v1.ScaleStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.autoscaling.v1.ScaleStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.batch.v1.Job": {
-    "description": "Deprecated. Please use io.k8s.api.batch.v1.Job instead.",
-    "$ref": "#/definitions/io.k8s.api.batch.v1.Job"
-   },
-   "io.k8s.kubernetes.pkg.apis.batch.v1.JobCondition": {
-    "description": "Deprecated. Please use io.k8s.api.batch.v1.JobCondition instead.",
-    "$ref": "#/definitions/io.k8s.api.batch.v1.JobCondition"
-   },
-   "io.k8s.kubernetes.pkg.apis.batch.v1.JobList": {
-    "description": "Deprecated. Please use io.k8s.api.batch.v1.JobList instead.",
-    "$ref": "#/definitions/io.k8s.api.batch.v1.JobList"
-   },
-   "io.k8s.kubernetes.pkg.apis.batch.v1.JobSpec": {
-    "description": "Deprecated. Please use io.k8s.api.batch.v1.JobSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.batch.v1.JobSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.batch.v1.JobStatus": {
-    "description": "Deprecated. Please use io.k8s.api.batch.v1.JobStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.batch.v1.JobStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.batch.v2alpha1.CronJob": {
-    "description": "Deprecated. Please use io.k8s.api.batch.v2alpha1.CronJob instead.",
-    "$ref": "#/definitions/io.k8s.api.batch.v2alpha1.CronJob"
-   },
-   "io.k8s.kubernetes.pkg.apis.batch.v2alpha1.CronJobList": {
-    "description": "Deprecated. Please use io.k8s.api.batch.v2alpha1.CronJobList instead.",
-    "$ref": "#/definitions/io.k8s.api.batch.v2alpha1.CronJobList"
-   },
-   "io.k8s.kubernetes.pkg.apis.batch.v2alpha1.CronJobSpec": {
-    "description": "Deprecated. Please use io.k8s.api.batch.v2alpha1.CronJobSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.batch.v2alpha1.CronJobSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.batch.v2alpha1.CronJobStatus": {
-    "description": "Deprecated. Please use io.k8s.api.batch.v2alpha1.CronJobStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.batch.v2alpha1.CronJobStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.batch.v2alpha1.JobTemplateSpec": {
-    "description": "Deprecated. Please use io.k8s.api.batch.v2alpha1.JobTemplateSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.batch.v2alpha1.JobTemplateSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.certificates.v1beta1.CertificateSigningRequest": {
-    "description": "Deprecated. Please use io.k8s.api.certificates.v1beta1.CertificateSigningRequest instead.",
-    "$ref": "#/definitions/io.k8s.api.certificates.v1beta1.CertificateSigningRequest"
-   },
-   "io.k8s.kubernetes.pkg.apis.certificates.v1beta1.CertificateSigningRequestCondition": {
-    "description": "Deprecated. Please use io.k8s.api.certificates.v1beta1.CertificateSigningRequestCondition instead.",
-    "$ref": "#/definitions/io.k8s.api.certificates.v1beta1.CertificateSigningRequestCondition"
-   },
-   "io.k8s.kubernetes.pkg.apis.certificates.v1beta1.CertificateSigningRequestList": {
-    "description": "Deprecated. Please use io.k8s.api.certificates.v1beta1.CertificateSigningRequestList instead.",
-    "$ref": "#/definitions/io.k8s.api.certificates.v1beta1.CertificateSigningRequestList"
-   },
-   "io.k8s.kubernetes.pkg.apis.certificates.v1beta1.CertificateSigningRequestSpec": {
-    "description": "Deprecated. Please use io.k8s.api.certificates.v1beta1.CertificateSigningRequestSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.certificates.v1beta1.CertificateSigningRequestSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.certificates.v1beta1.CertificateSigningRequestStatus": {
-    "description": "Deprecated. Please use io.k8s.api.certificates.v1beta1.CertificateSigningRequestStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.certificates.v1beta1.CertificateSigningRequestStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DaemonSet": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.DaemonSet instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DaemonSet"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DaemonSetList": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.DaemonSetList instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DaemonSetList"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DaemonSetSpec": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.DaemonSetSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DaemonSetSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DaemonSetStatus": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.DaemonSetStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DaemonSetStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DaemonSetUpdateStrategy": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.DaemonSetUpdateStrategy instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DaemonSetUpdateStrategy"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.Deployment": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.Deployment instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.Deployment"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DeploymentCondition": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.DeploymentCondition instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DeploymentCondition"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DeploymentList": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.DeploymentList instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DeploymentList"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DeploymentRollback": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.DeploymentRollback instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DeploymentRollback"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DeploymentSpec": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.DeploymentSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DeploymentSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DeploymentStatus": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.DeploymentStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DeploymentStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.DeploymentStrategy": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.DeploymentStrategy instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DeploymentStrategy"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.FSGroupStrategyOptions": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.FSGroupStrategyOptions instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.FSGroupStrategyOptions"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.HTTPIngressPath": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.HTTPIngressPath instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.HTTPIngressPath"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.HTTPIngressRuleValue": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.HTTPIngressRuleValue instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.HTTPIngressRuleValue"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.HostPortRange": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.HostPortRange instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.HostPortRange"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IDRange": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.IDRange instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.IDRange"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.Ingress": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.Ingress instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.Ingress"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IngressBackend": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.IngressBackend instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.IngressBackend"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IngressList": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.IngressList instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.IngressList"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IngressRule": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.IngressRule instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.IngressRule"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IngressSpec": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.IngressSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.IngressSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IngressStatus": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.IngressStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.IngressStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.IngressTLS": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.IngressTLS instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.IngressTLS"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.NetworkPolicy": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.NetworkPolicy instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.NetworkPolicy"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.NetworkPolicyIngressRule": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.NetworkPolicyIngressRule instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.NetworkPolicyIngressRule"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.NetworkPolicyList": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.NetworkPolicyList instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.NetworkPolicyList"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.NetworkPolicyPeer": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.NetworkPolicyPeer instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.NetworkPolicyPeer"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.NetworkPolicyPort": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.NetworkPolicyPort instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.NetworkPolicyPort"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.NetworkPolicySpec": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.NetworkPolicySpec instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.NetworkPolicySpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.PodSecurityPolicy": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.PodSecurityPolicy instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.PodSecurityPolicy"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.PodSecurityPolicyList": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.PodSecurityPolicyList instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.PodSecurityPolicyList"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.PodSecurityPolicySpec": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.PodSecurityPolicySpec instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.PodSecurityPolicySpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ReplicaSet": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.ReplicaSet instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.ReplicaSet"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ReplicaSetCondition": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.ReplicaSetCondition instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.ReplicaSetCondition"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ReplicaSetList": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.ReplicaSetList instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.ReplicaSetList"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ReplicaSetSpec": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.ReplicaSetSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.ReplicaSetSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ReplicaSetStatus": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.ReplicaSetStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.ReplicaSetStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.RollbackConfig": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.RollbackConfig instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.RollbackConfig"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.RollingUpdateDaemonSet": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.RollingUpdateDaemonSet instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.RollingUpdateDaemonSet"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.RollingUpdateDeployment": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.RollingUpdateDeployment instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.RollingUpdateDeployment"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.RunAsUserStrategyOptions": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.RunAsUserStrategyOptions instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.RunAsUserStrategyOptions"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.SELinuxStrategyOptions": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.SELinuxStrategyOptions instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.SELinuxStrategyOptions"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.Scale": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.Scale instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.Scale"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ScaleSpec": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.ScaleSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.ScaleSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.ScaleStatus": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.ScaleStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.ScaleStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.extensions.v1beta1.SupplementalGroupsStrategyOptions": {
-    "description": "Deprecated. Please use io.k8s.api.extensions.v1beta1.SupplementalGroupsStrategyOptions instead.",
-    "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.SupplementalGroupsStrategyOptions"
-   },
-   "io.k8s.kubernetes.pkg.apis.networking.v1.NetworkPolicy": {
-    "description": "Deprecated. Please use io.k8s.api.networking.v1.NetworkPolicy instead.",
-    "$ref": "#/definitions/io.k8s.api.networking.v1.NetworkPolicy"
-   },
-   "io.k8s.kubernetes.pkg.apis.networking.v1.NetworkPolicyIngressRule": {
-    "description": "Deprecated. Please use io.k8s.api.networking.v1.NetworkPolicyIngressRule instead.",
-    "$ref": "#/definitions/io.k8s.api.networking.v1.NetworkPolicyIngressRule"
-   },
-   "io.k8s.kubernetes.pkg.apis.networking.v1.NetworkPolicyList": {
-    "description": "Deprecated. Please use io.k8s.api.networking.v1.NetworkPolicyList instead.",
-    "$ref": "#/definitions/io.k8s.api.networking.v1.NetworkPolicyList"
-   },
-   "io.k8s.kubernetes.pkg.apis.networking.v1.NetworkPolicyPeer": {
-    "description": "Deprecated. Please use io.k8s.api.networking.v1.NetworkPolicyPeer instead.",
-    "$ref": "#/definitions/io.k8s.api.networking.v1.NetworkPolicyPeer"
-   },
-   "io.k8s.kubernetes.pkg.apis.networking.v1.NetworkPolicyPort": {
-    "description": "Deprecated. Please use io.k8s.api.networking.v1.NetworkPolicyPort instead.",
-    "$ref": "#/definitions/io.k8s.api.networking.v1.NetworkPolicyPort"
-   },
-   "io.k8s.kubernetes.pkg.apis.networking.v1.NetworkPolicySpec": {
-    "description": "Deprecated. Please use io.k8s.api.networking.v1.NetworkPolicySpec instead.",
-    "$ref": "#/definitions/io.k8s.api.networking.v1.NetworkPolicySpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.policy.v1beta1.Eviction": {
-    "description": "Deprecated. Please use io.k8s.api.policy.v1beta1.Eviction instead.",
-    "$ref": "#/definitions/io.k8s.api.policy.v1beta1.Eviction"
-   },
-   "io.k8s.kubernetes.pkg.apis.policy.v1beta1.PodDisruptionBudget": {
-    "description": "Deprecated. Please use io.k8s.api.policy.v1beta1.PodDisruptionBudget instead.",
-    "$ref": "#/definitions/io.k8s.api.policy.v1beta1.PodDisruptionBudget"
-   },
-   "io.k8s.kubernetes.pkg.apis.policy.v1beta1.PodDisruptionBudgetList": {
-    "description": "Deprecated. Please use io.k8s.api.policy.v1beta1.PodDisruptionBudgetList instead.",
-    "$ref": "#/definitions/io.k8s.api.policy.v1beta1.PodDisruptionBudgetList"
-   },
-   "io.k8s.kubernetes.pkg.apis.policy.v1beta1.PodDisruptionBudgetSpec": {
-    "description": "Deprecated. Please use io.k8s.api.policy.v1beta1.PodDisruptionBudgetSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.policy.v1beta1.PodDisruptionBudgetSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.policy.v1beta1.PodDisruptionBudgetStatus": {
-    "description": "Deprecated. Please use io.k8s.api.policy.v1beta1.PodDisruptionBudgetStatus instead.",
-    "$ref": "#/definitions/io.k8s.api.policy.v1beta1.PodDisruptionBudgetStatus"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.ClusterRole": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1alpha1.ClusterRole instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1alpha1.ClusterRole"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.ClusterRoleBinding": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1alpha1.ClusterRoleBinding instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1alpha1.ClusterRoleBinding"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.ClusterRoleBindingList": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1alpha1.ClusterRoleBindingList instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1alpha1.ClusterRoleBindingList"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.ClusterRoleList": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1alpha1.ClusterRoleList instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1alpha1.ClusterRoleList"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.PolicyRule": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1alpha1.PolicyRule instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1alpha1.PolicyRule"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.Role": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1alpha1.Role instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1alpha1.Role"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.RoleBinding": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1alpha1.RoleBinding instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1alpha1.RoleBinding"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.RoleBindingList": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1alpha1.RoleBindingList instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1alpha1.RoleBindingList"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.RoleList": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1alpha1.RoleList instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1alpha1.RoleList"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.RoleRef": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1alpha1.RoleRef instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1alpha1.RoleRef"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1alpha1.Subject": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1alpha1.Subject instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1alpha1.Subject"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1beta1.ClusterRole": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1beta1.ClusterRole instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1beta1.ClusterRole"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1beta1.ClusterRoleBinding": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1beta1.ClusterRoleBinding instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1beta1.ClusterRoleBinding"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1beta1.ClusterRoleBindingList": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1beta1.ClusterRoleBindingList instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1beta1.ClusterRoleBindingList"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1beta1.ClusterRoleList": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1beta1.ClusterRoleList instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1beta1.ClusterRoleList"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1beta1.PolicyRule": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1beta1.PolicyRule instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1beta1.PolicyRule"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1beta1.Role": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1beta1.Role instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1beta1.Role"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1beta1.RoleBinding": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1beta1.RoleBinding instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1beta1.RoleBinding"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1beta1.RoleBindingList": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1beta1.RoleBindingList instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1beta1.RoleBindingList"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1beta1.RoleList": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1beta1.RoleList instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1beta1.RoleList"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1beta1.RoleRef": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1beta1.RoleRef instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1beta1.RoleRef"
-   },
-   "io.k8s.kubernetes.pkg.apis.rbac.v1beta1.Subject": {
-    "description": "Deprecated. Please use io.k8s.api.rbac.v1beta1.Subject instead.",
-    "$ref": "#/definitions/io.k8s.api.rbac.v1beta1.Subject"
-   },
-   "io.k8s.kubernetes.pkg.apis.settings.v1alpha1.PodPreset": {
-    "description": "Deprecated. Please use io.k8s.api.settings.v1alpha1.PodPreset instead.",
-    "$ref": "#/definitions/io.k8s.api.settings.v1alpha1.PodPreset"
-   },
-   "io.k8s.kubernetes.pkg.apis.settings.v1alpha1.PodPresetList": {
-    "description": "Deprecated. Please use io.k8s.api.settings.v1alpha1.PodPresetList instead.",
-    "$ref": "#/definitions/io.k8s.api.settings.v1alpha1.PodPresetList"
-   },
-   "io.k8s.kubernetes.pkg.apis.settings.v1alpha1.PodPresetSpec": {
-    "description": "Deprecated. Please use io.k8s.api.settings.v1alpha1.PodPresetSpec instead.",
-    "$ref": "#/definitions/io.k8s.api.settings.v1alpha1.PodPresetSpec"
-   },
-   "io.k8s.kubernetes.pkg.apis.storage.v1.StorageClass": {
-    "description": "Deprecated. Please use io.k8s.api.storage.v1.StorageClass instead.",
-    "$ref": "#/definitions/io.k8s.api.storage.v1.StorageClass"
-   },
-   "io.k8s.kubernetes.pkg.apis.storage.v1.StorageClassList": {
-    "description": "Deprecated. Please use io.k8s.api.storage.v1.StorageClassList instead.",
-    "$ref": "#/definitions/io.k8s.api.storage.v1.StorageClassList"
-   },
-   "io.k8s.kubernetes.pkg.apis.storage.v1beta1.StorageClass": {
-    "description": "Deprecated. Please use io.k8s.api.storage.v1beta1.StorageClass instead.",
-    "$ref": "#/definitions/io.k8s.api.storage.v1beta1.StorageClass"
-   },
-   "io.k8s.kubernetes.pkg.apis.storage.v1beta1.StorageClassList": {
-    "description": "Deprecated. Please use io.k8s.api.storage.v1beta1.StorageClassList instead.",
-    "$ref": "#/definitions/io.k8s.api.storage.v1beta1.StorageClassList"
-   }
+ 
   },
+
+
   "securityDefinitions": {
    "BearerToken": {
     "description": "Bearer Token authentication",
@@ -73733,9 +73325,12 @@
     "in": "header"
    }
   },
+
+
   "security": [
    {
     "BearerToken": []
    }
   ]
+
  }
