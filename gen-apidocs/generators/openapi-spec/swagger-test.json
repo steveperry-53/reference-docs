@@ -4970,6 +4970,26 @@
      }
     }
    },
+    
+   "io.k8s.api.core.v1.Capabilities": {
+    "description": "Adds and removes POSIX capabilities from running containers.",
+    "properties": {
+     "add": {
+      "description": "Added capabilities",
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "drop": {
+      "description": "Removed capabilities",
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   },
 
    "io.k8s.api.core.v1.PodSpec": {
     "description": "PodSpec is a description of a pod.",
