@@ -6721,5 +6721,192 @@
      }
     ]
    },
-
+     
+   "io.k8s.api.apps.v1beta2.Deployment": {
+    "description": "Deployment enables declarative updates for Pods and ReplicaSets.",
+    "properties": {
+     "apiVersion": {
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+      "type": "string"
+     },
+     "kind": {
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+      "type": "string"
+     },
+     "metadata": {
+      "description": "Standard object metadata.",
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
+     },
+     "spec": {
+      "description": "Specification of the desired behavior of the Deployment.",
+      "$ref": "#/definitions/io.k8s.api.apps.v1beta2.DeploymentSpec"
+     },
+     "status": {
+      "description": "Most recently observed status of the Deployment.",
+      "$ref": "#/definitions/io.k8s.api.apps.v1beta2.DeploymentStatus"
+     }
+    },
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "Deployment",
+      "version": "v1beta2"
+     }
+    ]
+   },
+     
+   "io.k8s.api.apps.v1beta2.DeploymentSpec": {
+    "description": "DeploymentSpec is the specification of the desired behavior of the Deployment.",
+    "required": [
+     "template"
+    ],
+    "properties": {
+     "minReadySeconds": {
+      "description": "Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)",
+      "type": "integer",
+      "format": "int32"
+     },
+     "paused": {
+      "description": "Indicates that the deployment is paused.",
+      "type": "boolean"
+     },
+     "progressDeadlineSeconds": {
+      "description": "The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. Defaults to 600s.",
+      "type": "integer",
+      "format": "int32"
+     },
+     "replicas": {
+      "description": "Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.",
+      "type": "integer",
+      "format": "int32"
+     },
+     "revisionHistoryLimit": {
+      "description": "The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. Defaults to 10.",
+      "type": "integer",
+      "format": "int32"
+     },
+     "selector": {
+      "description": "Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment.",
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
+     },
+     "strategy": {
+      "description": "The deployment strategy to use to replace existing pods with new ones.",
+      "$ref": "#/definitions/io.k8s.api.apps.v1beta2.DeploymentStrategy"
+     },
+     "template": {
+      "description": "Template describes the pods that will be created.",
+      "$ref": "#/definitions/io.k8s.api.core.v1.PodTemplateSpec"
+     }
+    }
+   },
+     
+   "io.k8s.api.apps.v1beta2.DeploymentStrategy": {
+    "description": "DeploymentStrategy describes how to replace existing pods with new ones.",
+    "properties": {
+     "rollingUpdate": {
+      "description": "Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.",
+      "$ref": "#/definitions/io.k8s.api.apps.v1beta2.RollingUpdateDeployment"
+     },
+     "type": {
+      "description": "Type of deployment. Can be \"Recreate\" or \"RollingUpdate\". Default is RollingUpdate.",
+      "type": "string"
+     }
+    }
+   },
+     
+   "io.k8s.api.apps.v1beta2.RollingUpdateDeployment": {
+    "description": "Spec to control the desired behavior of rolling update.",
+    "properties": {
+     "maxSurge": {
+      "description": "The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new RC can be scaled up immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired pods. Once old pods have been killed, new RC can be scaled up further, ensuring that total number of pods running at any time during the update is atmost 130% of desired pods.",
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
+     },
+     "maxUnavailable": {
+      "description": "The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0 if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old RC can be scaled down to 70% of desired pods immediately when the rolling update starts. Once new pods are ready, old RC can be scaled down further, followed by scaling up the new RC, ensuring that the total number of pods available at all times during the update is at least 70% of desired pods.",
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
+     }
+    }
+   },
+     
+   "io.k8s.api.apps.v1beta2.DeploymentStatus": {
+    "description": "DeploymentStatus is the most recently observed status of the Deployment.",
+    "properties": {
+     "availableReplicas": {
+      "description": "Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.",
+      "type": "integer",
+      "format": "int32"
+     },
+     "collisionCount": {
+      "description": "Count of hash collisions for the Deployment. The Deployment controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.",
+      "type": "integer",
+      "format": "int32"
+     },
+     "conditions": {
+      "description": "Represents the latest available observations of a deployment's current state.",
+      "type": "array",
+      "items": {
+       "$ref": "#/definitions/io.k8s.api.apps.v1beta2.DeploymentCondition"
+      },
+      "x-kubernetes-patch-merge-key": "type",
+      "x-kubernetes-patch-strategy": "merge"
+     },
+     "observedGeneration": {
+      "description": "The generation observed by the deployment controller.",
+      "type": "integer",
+      "format": "int64"
+     },
+     "readyReplicas": {
+      "description": "Total number of ready pods targeted by this deployment.",
+      "type": "integer",
+      "format": "int32"
+     },
+     "replicas": {
+      "description": "Total number of non-terminated pods targeted by this deployment (their labels match the selector).",
+      "type": "integer",
+      "format": "int32"
+     },
+     "unavailableReplicas": {
+      "description": "Total number of unavailable pods targeted by this deployment. This is the total number of pods that are still required for the deployment to have 100% available capacity. They may either be pods that are running but not yet available or pods that still have not been created.",
+      "type": "integer",
+      "format": "int32"
+     },
+     "updatedReplicas": {
+      "description": "Total number of non-terminated pods targeted by this deployment that have the desired template spec.",
+      "type": "integer",
+      "format": "int32"
+     },
+     
+      "io.k8s.api.apps.v1beta2.DeploymentCondition": {
+    "description": "DeploymentCondition describes the state of a deployment at a certain point.",
+    "required": [
+     "type",
+     "status"
+    ],
+    "properties": {
+     "lastTransitionTime": {
+      "description": "Last time the condition transitioned from one status to another.",
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+     },
+     "lastUpdateTime": {
+      "description": "The last time this condition was updated.",
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+     },
+     "message": {
+      "description": "A human readable message indicating details about the transition.",
+      "type": "string"
+     },
+     "reason": {
+      "description": "The reason for the condition's last transition.",
+      "type": "string"
+     },
+     "status": {
+      "description": "Status of the condition, one of True, False, Unknown.",
+      "type": "string"
+     },
+     "type": {
+      "description": "Type of deployment condition.",
+      "type": "string"
+     }
+    }
+   }
  }
