@@ -3916,76 +3916,7 @@
      }
     ]
    },
-
-   "io.k8s.api.apps.v1beta1.DeploymentCondition": {
-    "description": "DeploymentCondition describes the state of a deployment at a certain point.",
-    "required": [
-     "type",
-     "status"
-    ],
-    "properties": {
-     "lastTransitionTime": {
-      "description": "Last time the condition transitioned from one status to another.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
-     },
-     "lastUpdateTime": {
-      "description": "The last time this condition was updated.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
-     },
-     "message": {
-      "description": "A human readable message indicating details about the transition.",
-      "type": "string"
-     },
-     "reason": {
-      "description": "The reason for the condition's last transition.",
-      "type": "string"
-     },
-     "status": {
-      "description": "Status of the condition, one of True, False, Unknown.",
-      "type": "string"
-     },
-     "type": {
-      "description": "Type of deployment condition.",
-      "type": "string"
-     }
-    }
-   },
-
-   "io.k8s.api.apps.v1beta1.DeploymentList": {
-    "description": "DeploymentList is a list of Deployments.",
-    "required": [
-     "items"
-    ],
-    "properties": {
-     "apiVersion": {
-      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
-      "type": "string"
-     },
-     "items": {
-      "description": "Items is the list of Deployments.",
-      "type": "array",
-      "items": {
-       "$ref": "#/definitions/io.k8s.api.apps.v1beta1.Deployment"
-      }
-     },
-     "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
-      "type": "string"
-     },
-     "metadata": {
-      "description": "Standard list metadata.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta"
-     }
-    },
-    "x-kubernetes-group-version-kind": [
-     {
-      "group": "apps",
-      "kind": "DeploymentList",
-      "version": "v1beta1"
-     }
-    ]
-   },
-
+    
    "io.k8s.api.apps.v1beta1.DeploymentSpec": {
     "description": "DeploymentSpec is the specification of the desired behavior of the Deployment.",
     "required": [
@@ -4084,6 +4015,77 @@
      }
     }
    },
+
+   "io.k8s.api.apps.v1beta1.DeploymentCondition": {
+    "description": "DeploymentCondition describes the state of a deployment at a certain point.",
+    "required": [
+     "type",
+     "status"
+    ],
+    "properties": {
+     "lastTransitionTime": {
+      "description": "Last time the condition transitioned from one status to another.",
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+     },
+     "lastUpdateTime": {
+      "description": "The last time this condition was updated.",
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
+     },
+     "message": {
+      "description": "A human readable message indicating details about the transition.",
+      "type": "string"
+     },
+     "reason": {
+      "description": "The reason for the condition's last transition.",
+      "type": "string"
+     },
+     "status": {
+      "description": "Status of the condition, one of True, False, Unknown.",
+      "type": "string"
+     },
+     "type": {
+      "description": "Type of deployment condition.",
+      "type": "string"
+     }
+    }
+   },
+
+   "io.k8s.api.apps.v1beta1.DeploymentList": {
+    "description": "DeploymentList is a list of Deployments.",
+    "required": [
+     "items"
+    ],
+    "properties": {
+     "apiVersion": {
+      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
+      "type": "string"
+     },
+     "items": {
+      "description": "Items is the list of Deployments.",
+      "type": "array",
+      "items": {
+       "$ref": "#/definitions/io.k8s.api.apps.v1beta1.Deployment"
+      }
+     },
+     "kind": {
+      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+      "type": "string"
+     },
+     "metadata": {
+      "description": "Standard list metadata.",
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta"
+     }
+    },
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "DeploymentList",
+      "version": "v1beta1"
+     }
+    ]
+   },
+
+   
 
    "io.k8s.api.apps.v1beta1.DeploymentStrategy": {
     "description": "DeploymentStrategy describes how to replace existing pods with new ones.",
@@ -6004,7 +6006,7 @@
      },
      "initializers": {
       "description": "An initializer is a controller which enforces some system invariant at object creation time. This field is a list of initializers that have not yet acted on this object. If nil or empty, this object has been completely initialized. Otherwise, the object is considered uninitialized and is hidden (in list/watch and get calls) from clients that haven't explicitly asked to observe uninitialized objects.\n\nWhen an object is created, the system will populate this list with the current set of initializers. Only privileged users may set or modify this list. Once it is empty, it may not be modified further by any user.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Initializers"
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1."
      },
      "labels": {
       "description": "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels",
@@ -6049,6 +6051,7 @@
     "type": "string",
     "format": "date-time"
    },
+    
    "io.k8s.apimachinery.pkg.apis.meta.v1.WatchEvent": {
     "description": "Event represents a single event to a watched resource.",
     "required": [
