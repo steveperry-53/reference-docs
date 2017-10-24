@@ -4100,6 +4100,17 @@
      }
     }
    },
+    
+   "io.k8s.api.apps.v1beta1.RollbackConfig": {
+    "description": "DEPRECATED.",
+    "properties": {
+     "revision": {
+      "description": "The revision to rollback to. If set to 0, rollback to the last revision.",
+      "type": "integer",
+      "format": "int64"
+     }
+    }
+   },
 
    "io.k8s.api.apps.v1beta1.RollingUpdateDeployment": {
     "description": "Spec to control the desired behavior of rolling update.",
@@ -5302,6 +5313,122 @@
      }
     }
    },
+    
+   "io.k8s.api.core.v1.EmptyDirVolumeSource": {
+    "description": "Represents an empty directory for a pod. Empty directory volumes support ownership management and SELinux relabeling.",
+    "properties": {
+     "medium": {
+      "description": "What type of storage medium should back this directory. The default is \"\" which means to use the node's default medium. Must be an empty string (default) or Memory. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir",
+      "type": "string"
+     },
+     "sizeLimit": {
+      "description": "Total amount of local storage required for this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. The default is nil which means that the limit is undefined. More info: http://kubernetes.io/docs/user-guide/volumes#emptydir",
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
+     }
+    }
+   },
+    
+   "io.k8s.api.core.v1.Toleration": {
+    "description": "The pod this Toleration is attached to tolerates any taint that matches the triple \u003ckey,value,effect\u003e using the matching operator \u003coperator\u003e.",
+    "properties": {
+     "effect": {
+      "description": "Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.",
+      "type": "string"
+     },
+     "key": {
+      "description": "Key is the taint key that the toleration applies to. Empty means match all taint keys. If the key is empty, operator must be Exists; this combination means to match all values and all keys.",
+      "type": "string"
+     },
+     "operator": {
+      "description": "Operator represents a key's relationship to the value. Valid operators are Exists and Equal. Defaults to Equal. Exists is equivalent to wildcard for value, so that a pod can tolerate all taints of a particular category.",
+      "type": "string"
+     },
+     "tolerationSeconds": {
+      "description": "TolerationSeconds represents the period of time the toleration (which must be of effect NoExecute, otherwise this field is ignored) tolerates the taint. By default, it is not set, which means tolerate the taint forever (do not evict). Zero and negative values will be treated as 0 (evict immediately) by the system.",
+      "type": "integer",
+      "format": "int64"
+     },
+     "value": {
+      "description": "Value is the taint value the toleration matches to. If the operator is Exists, the value should be empty, otherwise just a regular string.",
+      "type": "string"
+     }
+    }
+   },
+   
+   "io.k8s.api.core.v1.LocalObjectReference": {
+    "description": "LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.",
+    "properties": {
+     "name": {
+      "description": "Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names",
+      "type": "string"
+     }
+    }
+   },
+    
+   "io.k8s.api.core.v1.ResourceRequirements": {
+    "description": "ResourceRequirements describes the compute resource requirements.",
+    "properties": {
+     "limits": {
+      "description": "Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/",
+      "type": "object",
+      "additionalProperties": {
+       "$ref": "#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
+      }
+     },
+     "requests": {
+      "description": "Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/",
+      "type": "object",
+      "additionalProperties": {
+       "$ref": "#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
+      }
+     }
+    }
+   },
+    
+   "io.k8s.api.core.v1.ExecAction": {
+    "description": "ExecAction describes a \"run in container\" action.",
+    "properties": {
+     "command": {
+      "description": "Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.",
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   },
+    
+   "io.k8s.api.core.v1.Lifecycle": {
+    "description": "Lifecycle describes actions that the management system should take in response to container lifecycle events. For the PostStart and PreStop lifecycle handlers, management of the container blocks until the action is complete, unless the container process fails, in which case the handler is aborted.",
+    "properties": {
+     "postStart": {
+      "description": "PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks",
+      "$ref": "#/definitions/io.k8s.api.core.v1.Handler"
+     },
+     "preStop": {
+      "description": "PreStop is called immediately before a container is terminated. The container is terminated after the handler completes. The reason for termination is passed to the handler. Regardless of the outcome of the handler, the container is eventually terminated. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks",
+      "$ref": "#/definitions/io.k8s.api.core.v1.Handler"
+     }
+    }
+   },
+    
+   "io.k8s.api.core.v1.Affinity": {
+    "description": "Affinity is a group of affinity scheduling rules.",
+    "properties": {
+     "nodeAffinity": {
+      "description": "Describes node affinity scheduling rules for the pod.",
+      "$ref": "#/definitions/io.k8s.api.core.v1.NodeAffinity"
+     },
+     "podAffinity": {
+      "description": "Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).",
+      "$ref": "#/definitions/io.k8s.api.core.v1.PodAffinity"
+     },
+     "podAntiAffinity": {
+      "description": "Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).",
+      "$ref": "#/definitions/io.k8s.api.core.v1.PodAntiAffinity"
+     }
+    }
+   },
 
    "io.k8s.api.core.v1.SecurityContext": {
     "description": "SecurityContext holds security configuration that will be applied to a container. Some fields are present in both SecurityContext and PodSecurityContext.  When both are set, the values in SecurityContext take precedence.",
@@ -5959,7 +6086,99 @@
      }
     }
    },
-
+    
+   "io.k8s.apimachinery.pkg.util.intstr.IntOrString": {
+    "type": "string",
+    "format": "int-or-string"
+   },
+    
+   "io.k8s.apimachinery.pkg.apis.meta.v1.Initializers": {
+    "description": "Initializers tracks the progress of initialization.",
+    "required": [
+     "pending"
+    ],
+    "properties": {
+     "pending": {
+      "description": "Pending is a list of initializers that must execute in order before this object is visible. When the last pending initializer is removed, and no failing result is set, the initializers struct will be set to nil and the object is considered as initialized and visible to all clients.",
+      "type": "array",
+      "items": {
+       "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Initializer"
+      },
+      "x-kubernetes-patch-merge-key": "name",
+      "x-kubernetes-patch-strategy": "merge"
+     },
+     "result": {
+      "description": "If result is set with the Failure field, the object will be persisted to storage and then deleted, ensuring that other clients can observe the deletion.",
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Status"
+     }
+    }
+   },
+        
+   "io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector": {
+    "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.",
+    "properties": {
+     "matchExpressions": {
+      "description": "matchExpressions is a list of label selector requirements. The requirements are ANDed.",
+      "type": "array",
+      "items": {
+       "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement"
+      }
+     },
+     "matchLabels": {
+      "description": "matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed.",
+      "type": "object",
+      "additionalProperties": {
+       "type": "string"
+      }
+     }
+    }
+   },
+    
+   "io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelectorRequirement": {
+    "description": "A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.",
+    "required": [
+     "key",
+     "operator"
+    ],
+    "properties": {
+     "key": {
+      "description": "key is the label key that the selector applies to.",
+      "type": "string",
+      "x-kubernetes-patch-merge-key": "key",
+      "x-kubernetes-patch-strategy": "merge"
+     },
+     "operator": {
+      "description": "operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.",
+      "type": "string"
+     },
+     "values": {
+      "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.",
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   },
+    
+   "io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta": {
+    "description": "ListMeta describes metadata that synthetic resources must have, including lists and various status objects. A resource may have only one of {ObjectMeta, ListMeta}.",
+    "properties": {
+     "continue": {
+      "description": "continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response.",
+      "type": "string"
+     },
+     "resourceVersion": {
+      "description": "String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency",
+      "type": "string"
+     },
+     "selfLink": {
+      "description": "selfLink is a URL representing this object. Populated by the system. Read-only.",
+      "type": "string"
+     }
+    }
+   },
+    
    "io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta": {
     "description": "ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.",
     "properties": {
