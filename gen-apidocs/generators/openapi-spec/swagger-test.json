@@ -5613,6 +5613,7 @@
      }
     }
    },
+    
    "io.k8s.api.core.v1.SecretKeySelector": {
     "description": "SecretKeySelector selects a key of a Secret.",
     "required": [
@@ -5632,7 +5633,24 @@
       "type": "boolean"
      }
     }
-   }, 
+   },
+    
+   "io.k8s.api.core.v1.ObjectFieldSelector": {
+    "description": "ObjectFieldSelector selects an APIVersioned field of an object.",
+    "required": [
+     "fieldPath"
+    ],
+    "properties": {
+     "apiVersion": {
+      "description": "Version of the schema the FieldPath is written in terms of, defaults to \"v1\".",
+      "type": "string"
+     },
+     "fieldPath": {
+      "description": "Path of the field to select in the specified API version.",
+      "type": "string"
+     }
+    }
+   },
     
    "io.k8s.api.core.v1.ConfigMapEnvSource": {
     "description": "ConfigMapEnvSource selects a ConfigMap to populate the environment variables with.\n\nThe contents of the target ConfigMap's Data field will represent the key-value pairs as environment variables.",
