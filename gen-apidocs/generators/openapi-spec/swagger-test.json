@@ -5429,6 +5429,25 @@
      }
     }
    },
+    
+   "io.k8s.api.core.v1.PreferredSchedulingTerm": {
+    "description": "An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).",
+    "required": [
+     "weight",
+     "preference"
+    ],
+    "properties": {
+     "preference": {
+      "description": "A node selector term, associated with the corresponding weight.",
+      "$ref": "#/definitions/io.k8s.api.core.v1.NodeSelectorTerm"
+     },
+     "weight": {
+      "description": "Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.",
+      "type": "integer",
+      "format": "int32"
+     }
+    }
+   },
 
    "io.k8s.api.core.v1.SecurityContext": {
     "description": "SecurityContext holds security configuration that will be applied to a container. Some fields are present in both SecurityContext and PodSecurityContext.  When both are set, the values in SecurityContext take precedence.",
