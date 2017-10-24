@@ -5635,6 +5635,27 @@
     }
    },
     
+   "io.k8s.api.core.v1.ResourceFieldSelector": {
+    "description": "ResourceFieldSelector represents container resources (cpu, memory) and their output format",
+    "required": [
+     "resource"
+    ],
+    "properties": {
+     "containerName": {
+      "description": "Container name: required for volumes, optional for env vars",
+      "type": "string"
+     },
+     "divisor": {
+      "description": "Specifies the output format of the exposed resources, defaults to \"1\"",
+      "$ref": "#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
+     },
+     "resource": {
+      "description": "Required: resource to select",
+      "type": "string"
+     }
+    }
+   },
+    
    "io.k8s.api.core.v1.ObjectFieldSelector": {
     "description": "ObjectFieldSelector selects an APIVersioned field of an object.",
     "required": [
