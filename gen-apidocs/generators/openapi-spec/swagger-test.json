@@ -5448,8 +5448,24 @@
      }
     }
    },
+  
+   "io.k8s.api.core.v1.NodeSelector": {
+    "description": "A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.",
+    "required": [
+     "nodeSelectorTerms"
+    ],
+    "properties": {
+     "nodeSelectorTerms": {
+      "description": "Required. A list of node selector terms. The terms are ORed.",
+      "type": "array",
+      "items": {
+       "$ref": "#/definitions/io.k8s.api.core.v1.NodeSelectorTerm"
+      }
+     }
+    }
+   },
     
-    "io.k8s.api.core.v1.NodeSelectorRequirement": {
+   "io.k8s.api.core.v1.NodeSelectorRequirement": {
     "description": "A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.",
     "required": [
      "key",
