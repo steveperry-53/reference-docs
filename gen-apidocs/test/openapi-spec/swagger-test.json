@@ -3770,7 +3770,6 @@
      "description": "Standard object metadata.",
      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
     },
-    "hello": "steve",
     "spec": {
      "description": "Specification of the desired behavior of the Deployment.",
      "$ref": "#/definitions/io.k8s.api.apps.v1beta1.DeploymentSpec"
