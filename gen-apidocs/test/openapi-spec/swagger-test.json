@@ -3955,7 +3955,7 @@
       "type": "integer",
       "format": "int32"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
