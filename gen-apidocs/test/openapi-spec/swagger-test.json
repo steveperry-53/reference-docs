@@ -3988,14 +3988,7 @@
       "description": "Type of deployment condition.",
       "type": "string"
      }
-    },
-    "x-kubernetes-group-version-kind": [
-     {
-      "group": "apps",
-      "kind": "DeploymentCondition",
-      "version": "v1beta1"
-     }
-    ]
+    }
    },
    "io.k8s.api.apps.v1beta1.DeploymentStrategy": {
     "description": "DeploymentStrategy describes how to replace existing pods with new ones.",
