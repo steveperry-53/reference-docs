@@ -33,7 +33,7 @@
     },
     "x-kubernetes-group-version-kind": [
      {
-      "group": "rbac.authorization.k8s.io",
+      "group": "rbac",
       "kind": "ClusterRole",
       "version": "v1"
      }
@@ -80,7 +80,14 @@
        "type": "string"
       }
      }
-    }
+    },
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "rbac",
+      "kind": "PolicyRule",
+      "version": "v1"
+     }
+    ]
    },
    "io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta": {
     "description": "ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.",
