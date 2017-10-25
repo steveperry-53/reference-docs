@@ -4,11 +4,7 @@
    "title": "Kubernetes",
    "version": "v1.8.0"
   },
-
-
   "paths": {
-
-
    "/api/": {
     "get": {
      "description": "get available API versions",
@@ -42,8 +38,6 @@
      }
     }
    },
-
-
    "/api/v1/": {
     "get": {
      "description": "get available resources",
@@ -76,10 +70,7 @@
       }
      }
     }
-   },
-
-  
-   
+   },   
    "/apis/apps/v1beta1/namespaces/{namespace}/deployments": {
     "get": {
      "description": "list or watch objects of kind Deployment",
@@ -331,9 +322,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
+   },  
    "/apis/apps/v1beta1/namespaces/{namespace}/deployments/{name}": {
     "get": {
      "description": "read the specified Deployment",
@@ -569,9 +558,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
+   },   
    "/apis/apps/v1beta1/namespaces/{namespace}/deployments/{name}/rollback": {
     "post": {
      "description": "create rollback of a Deployment",
@@ -614,7 +601,7 @@
      "x-kubernetes-action": "post",
      "x-kubernetes-group-version-kind": {
       "group": "apps",
-      "kind": "DeploymentRollback",
+      "kind": "Deployment",
       "version": "v1beta1"
      }
     },
@@ -644,8 +631,6 @@
      }
     ]
    },
-   
-   
    "/apis/apps/v1beta1/namespaces/{namespace}/deployments/{name}/scale": {
     "get": {
      "description": "read scale of the specified Deployment",
@@ -678,7 +663,7 @@
      "x-kubernetes-action": "get",
      "x-kubernetes-group-version-kind": {
       "group": "apps",
-      "kind": "Scale",
+      "kind": "Deployment",
       "version": "v1beta1"
      }
     },
@@ -723,7 +708,7 @@
      "x-kubernetes-action": "put",
      "x-kubernetes-group-version-kind": {
       "group": "apps",
-      "kind": "Scale",
+      "kind": "Deployment",
       "version": "v1beta1"
      }
     },
@@ -770,7 +755,7 @@
      "x-kubernetes-action": "patch",
      "x-kubernetes-group-version-kind": {
       "group": "apps",
-      "kind": "Scale",
+      "kind": "Deployment",
       "version": "v1beta1"
      }
     },
@@ -799,9 +784,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
+   },   
    "/apis/apps/v1beta1/namespaces/{namespace}/deployments/{name}/status": {
     "get": {
      "description": "read status of the specified Deployment",
@@ -955,10 +938,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
-  
+   },  
    "/apis/apps/v1beta1/watch/deployments": {
     "get": {
      "description": "watch individual changes to a list of Deployment",
@@ -1062,9 +1042,7 @@
       "in": "query"
      }
     ]
-   },
-   
-  
+   },  
    "/apis/apps/v1beta1/watch/namespaces/{namespace}/deployments": {
     "get": {
      "description": "watch individual changes to a list of Deployment",
@@ -1176,9 +1154,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
+   },   
    "/apis/apps/v1beta1/watch/namespaces/{namespace}/deployments/{name}": {
     "get": {
      "description": "watch changes to an object of kind Deployment",
@@ -1298,10 +1274,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
-  
+   },  
    "/apis/apps/v1beta2/deployments": {
     "get": {
      "description": "list or watch objects of kind Deployment",
@@ -1405,9 +1378,7 @@
       "in": "query"
      }
     ]
-   },
-   
-  
+   }, 
    "/apis/apps/v1beta2/namespaces/{namespace}/deployments": {
     "get": {
      "description": "list or watch objects of kind Deployment",
@@ -1659,9 +1630,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
+   },   
    "/apis/apps/v1beta2/namespaces/{namespace}/deployments/{name}": {
     "get": {
      "description": "read the specified Deployment",
@@ -1897,9 +1866,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
+   },   
    "/apis/apps/v1beta2/namespaces/{namespace}/deployments/{name}/scale": {
     "get": {
      "description": "read scale of the specified Deployment",
@@ -1932,7 +1899,7 @@
      "x-kubernetes-action": "get",
      "x-kubernetes-group-version-kind": {
       "group": "apps",
-      "kind": "Scale",
+      "kind": "Deployment",
       "version": "v1beta2"
      }
     },
@@ -1977,7 +1944,7 @@
      "x-kubernetes-action": "put",
      "x-kubernetes-group-version-kind": {
       "group": "apps",
-      "kind": "Scale",
+      "kind": "Deployment",
       "version": "v1beta2"
      }
     },
@@ -2024,7 +1991,7 @@
      "x-kubernetes-action": "patch",
      "x-kubernetes-group-version-kind": {
       "group": "apps",
-      "kind": "Scale",
+      "kind": "Deployment",
       "version": "v1beta2"
      }
     },
@@ -2053,9 +2020,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
+   },   
    "/apis/apps/v1beta2/namespaces/{namespace}/deployments/{name}/status": {
     "get": {
      "description": "read status of the specified Deployment",
@@ -2209,10 +2174,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
-  
+   }, 
    "/apis/apps/v1beta2/watch/deployments": {
     "get": {
      "description": "watch individual changes to a list of Deployment",
@@ -2316,10 +2278,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
-  
+   },  
    "/apis/apps/v1beta2/watch/namespaces/{namespace}/deployments": {
     "get": {
      "description": "watch individual changes to a list of Deployment",
@@ -2431,9 +2390,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
+   },  
    "/apis/apps/v1beta2/watch/namespaces/{namespace}/deployments/{name}": {
     "get": {
      "description": "watch changes to an object of kind Deployment",
@@ -2553,9 +2510,7 @@
       "in": "query"
      }
     ]
-   },
-   
-  
+   },  
    "/apis/extensions/v1beta1/deployments": {
     "get": {
      "description": "list or watch objects of kind Deployment",
@@ -2660,9 +2615,7 @@
      }
     ]
    },
-   
-   
-  "/apis/extensions/v1beta1/namespaces/{namespace}/deployments": {
+   "/apis/extensions/v1beta1/namespaces/{namespace}/deployments": {
     "get": {
      "description": "list or watch objects of kind Deployment",
      "consumes": [
@@ -2913,9 +2866,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
+   },   
    "/apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}": {
     "get": {
      "description": "read the specified Deployment",
@@ -3151,9 +3102,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
+   },  
    "/apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/rollback": {
     "post": {
      "description": "create rollback of a Deployment",
@@ -3196,7 +3145,7 @@
      "x-kubernetes-action": "post",
      "x-kubernetes-group-version-kind": {
       "group": "extensions",
-      "kind": "DeploymentRollback",
+      "kind": "Deployment",
       "version": "v1beta1"
      }
     },
@@ -3225,9 +3174,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
+   },  
    "/apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/scale": {
     "get": {
      "description": "read scale of the specified Deployment",
@@ -3260,7 +3207,7 @@
      "x-kubernetes-action": "get",
      "x-kubernetes-group-version-kind": {
       "group": "extensions",
-      "kind": "Scale",
+      "kind": "Deployment",
       "version": "v1beta1"
      }
     },
@@ -3305,7 +3252,7 @@
      "x-kubernetes-action": "put",
      "x-kubernetes-group-version-kind": {
       "group": "extensions",
-      "kind": "Scale",
+      "kind": "Deployment",
       "version": "v1beta1"
      }
     },
@@ -3352,7 +3299,7 @@
      "x-kubernetes-action": "patch",
      "x-kubernetes-group-version-kind": {
       "group": "extensions",
-      "kind": "Scale",
+      "kind": "Deployment",
       "version": "v1beta1"
      }
     },
@@ -3381,9 +3328,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
+   },  
    "/apis/extensions/v1beta1/namespaces/{namespace}/deployments/{name}/status": {
     "get": {
      "description": "read status of the specified Deployment",
@@ -3537,9 +3482,7 @@
       "in": "query"
      }
     ]
-   },
-  
-  
+   }, 
    "/apis/extensions/v1beta1/watch/deployments": {
     "get": {
      "description": "watch individual changes to a list of Deployment",
@@ -3644,8 +3587,6 @@
      }
     ]
    },
-   
-  
    "/apis/extensions/v1beta1/watch/namespaces/{namespace}/deployments": {
     "get": {
      "description": "watch individual changes to a list of Deployment",
@@ -3757,9 +3698,7 @@
       "in": "query"
      }
     ]
-   },
-   
-   
+   },   
    "/apis/extensions/v1beta1/watch/namespaces/{namespace}/deployments/{name}": {
     "get": {
      "description": "watch changes to an object of kind Deployment",
@@ -3881,9 +3820,7 @@
     ]
    },
   },
-  
   "definitions": {
-
    "io.k8s.api.apps.v1beta1.Deployment": {
     "description": "DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Deployment. See the release notes for more information. Deployment enables declarative updates for Pods and ReplicaSets.",
     "properties": {
@@ -3915,8 +3852,7 @@
       "version": "v1beta1"
      }
     ]
-   },
-    
+   },   
    "io.k8s.api.apps.v1beta1.DeploymentSpec": {
     "description": "DeploymentSpec is the specification of the desired behavior of the Deployment.",
     "required": [
@@ -3964,8 +3900,14 @@
       "$ref": "#/definitions/io.k8s.api.core.v1.PodTemplateSpec"
      }
     }
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "DeploymentSpec",
+      "version": "v1beta1"
+     }
+    ]
    },
-
    "io.k8s.api.apps.v1beta1.DeploymentStatus": {
     "description": "DeploymentStatus is the most recently observed status of the Deployment.",
     "properties": {
@@ -4014,8 +3956,14 @@
       "format": "int32"
      }
     }
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "DeploymentStatus",
+      "version": "v1beta1"
+     }
+    ]
    },
-
    "io.k8s.api.apps.v1beta1.DeploymentCondition": {
     "description": "DeploymentCondition describes the state of a deployment at a certain point.",
     "required": [
@@ -4048,45 +3996,14 @@
       "type": "string"
      }
     }
-   },
-
-   "io.k8s.api.apps.v1beta1.DeploymentList": {
-    "description": "DeploymentList is a list of Deployments.",
-    "required": [
-     "items"
-    ],
-    "properties": {
-     "apiVersion": {
-      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
-      "type": "string"
-     },
-     "items": {
-      "description": "Items is the list of Deployments.",
-      "type": "array",
-      "items": {
-       "$ref": "#/definitions/io.k8s.api.apps.v1beta1.Deployment"
-      }
-     },
-     "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
-      "type": "string"
-     },
-     "metadata": {
-      "description": "Standard list metadata.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta"
-     }
-    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
-      "kind": "DeploymentList",
+      "kind": "DeploymentCondition",
       "version": "v1beta1"
      }
     ]
    },
-
-   
-
    "io.k8s.api.apps.v1beta1.DeploymentStrategy": {
     "description": "DeploymentStrategy describes how to replace existing pods with new ones.",
     "properties": {
@@ -4099,8 +4016,14 @@
       "type": "string"
      }
     }
-   },
-    
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "DeploymentStrategy",
+      "version": "v1beta1"
+     }
+    ]
+   },    
    "io.k8s.api.apps.v1beta1.RollbackConfig": {
     "description": "DEPRECATED.",
     "properties": {
@@ -4110,8 +4033,14 @@
       "format": "int64"
      }
     }
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "RollbackConfig",
+      "version": "v1beta1"
+     }
+    ]
    },
-
    "io.k8s.api.apps.v1beta1.RollingUpdateDeployment": {
     "description": "Spec to control the desired behavior of rolling update.",
     "properties": {
