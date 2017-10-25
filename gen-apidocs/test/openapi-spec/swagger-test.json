@@ -4018,7 +4018,7 @@
       "type": "integer",
       "format": "int64"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4190,7 +4190,7 @@
       "description": "Type of deployment condition.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4241,7 +4241,7 @@
       "description": "Template describes the pods that will be created.",
       "$ref": "#/definitions/io.k8s.api.core.v1.PodTemplateSpec"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4297,7 +4297,7 @@
       "type": "integer",
       "format": "int32"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4317,7 +4317,7 @@
       "description": "Type of deployment. Can be \"Recreate\" or \"RollingUpdate\". Default is RollingUpdate.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4397,7 +4397,7 @@
       "description": "label selector for pods that should match the replicas count. This is a serializated version of both map-based and more expressive set-based selectors. This is done to avoid introspection in the clients. The string will be in the same format as the query-param syntax. If the target type only supports map-based selectors, both this field and map-based selector field are populated. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4516,7 +4516,7 @@
       "description": "Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4553,7 +4553,7 @@
       "description": "Protocol for port. Must be UDP or TCP. Defaults to \"TCP\".",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4604,7 +4604,7 @@
       "description": "Source for the environment variable's value. Cannot be used if value is not empty.",
       "$ref": "#/definitions/io.k8s.api.core.v1.EnvVarSource"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4632,7 +4632,7 @@
       "description": "Selects a key of a secret in the pod's namespace",
       "$ref": "#/definitions/io.k8s.api.core.v1.SecretKeySelector"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4670,7 +4670,7 @@
       "description": "Scheme to use for connecting to the host. Defaults to HTTP.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4694,7 +4694,7 @@
       "description": "The header field value",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4717,7 +4717,7 @@
       "description": "IP address of the host file entry.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4775,7 +4775,7 @@
        "$ref": "#/definitions/io.k8s.api.core.v1.PodAffinityTerm"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4828,7 +4828,7 @@
        "$ref": "#/definitions/io.k8s.api.core.v1.PodAffinityTerm"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4868,7 +4868,7 @@
       "description": "Type is the type of the condition. Currently only Ready. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4906,7 +4906,7 @@
        "format": "int64"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4932,7 +4932,7 @@
        "type": "string"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5081,7 +5081,7 @@
       "x-kubernetes-patch-merge-key": "name",
       "x-kubernetes-patch-strategy": "merge,retainKeys"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
