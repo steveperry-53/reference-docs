@@ -96,7 +96,7 @@
      },
      "x-kubernetes-action": "list",
      "x-kubernetes-group-version-kind": {
-      "group": "rbac.authorization.k8s.io",
+      "group": "rbac",
       "kind": "ClusterRole",
       "version": "v1"
      }
@@ -141,7 +141,7 @@
      },
      "x-kubernetes-action": "post",
      "x-kubernetes-group-version-kind": {
-      "group": "rbac.authorization.k8s.io",
+      "group": "rbac",
       "kind": "ClusterRole",
       "version": "v1"
      }
@@ -234,7 +234,7 @@
      },
      "x-kubernetes-action": "deletecollection",
      "x-kubernetes-group-version-kind": {
-      "group": "rbac.authorization.k8s.io",
+      "group": "rbac",
       "kind": "ClusterRole",
       "version": "v1"
      }
@@ -277,13 +277,11 @@
       }
      }
     },
-    "x-kubernetes-group-version-kind": [
-     {
+    "x-kubernetes-group-version-kind": {
       "group": "rbac",
       "kind": "ClusterRole",
       "version": "v1"
      }
-    ]
    },
    "io.k8s.api.rbac.v1.PolicyRule": {
     "description": "PolicyRule holds information that describes a policy rule, but does not contain information about who the rule applies to or which namespace the rule applies to.",
@@ -327,23 +325,19 @@
       }
      }
     },
-    "x-kubernetes-group-version-kind": [
-     {
+    "x-kubernetes-group-version-kind": {
       "group": "rbac",
       "kind": "PolicyRule",
       "version": "v1"
      }
-    ]
    },
    "io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta": {
     "description": "ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.",
-    "x-kubernetes-group-version-kind": [
-     {
+    "x-kubernetes-group-version-kind": {
       "group": "meta",
       "kind": "ObjectMeta",
       "version": "v1"
-     }
-    ],
+     },
     "properties": {
      "annotations": {
       "description": "Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations",
