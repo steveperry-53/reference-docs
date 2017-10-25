@@ -5,72 +5,6 @@
    "version": "v1.8.0"
   },
   "paths": {
-   "/api/": {
-    "get": {
-     "description": "get available API versions",
-     "consumes": [
-      "application/json",
-      "application/yaml",
-      "application/vnd.kubernetes.protobuf"
-     ],
-     "produces": [
-      "application/json",
-      "application/yaml",
-      "application/vnd.kubernetes.protobuf"
-     ],
-     "schemes": [
-      "https"
-     ],
-     "tags": [
-      "core"
-     ],
-     "operationId": "getCoreAPIVersions",
-     "responses": {
-      "200": {
-       "description": "OK",
-       "schema": {
-        "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.APIVersions"
-       }
-      },
-      "401": {
-       "description": "Unauthorized"
-      }
-     }
-    }
-   },
-   "/api/v1/": {
-    "get": {
-     "description": "get available resources",
-     "consumes": [
-      "application/json",
-      "application/yaml",
-      "application/vnd.kubernetes.protobuf"
-     ],
-     "produces": [
-      "application/json",
-      "application/yaml",
-      "application/vnd.kubernetes.protobuf"
-     ],
-     "schemes": [
-      "https"
-     ],
-     "tags": [
-      "core_v1"
-     ],
-     "operationId": "getCoreV1APIResources",
-     "responses": {
-      "200": {
-       "description": "OK",
-       "schema": {
-        "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.APIResourceList"
-       }
-      },
-      "401": {
-       "description": "Unauthorized"
-      }
-     }
-    }
-   },   
    "/apis/apps/v1beta1/namespaces/{namespace}/deployments": {
     "get": {
      "description": "list or watch objects of kind Deployment",
@@ -3827,23 +3761,22 @@
      "apiVersion": {
       "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
       "type": "string"
-     },
-     "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
-      "type": "string"
-     },
-     "metadata": {
-      "description": "Standard object metadata.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
-     },
-     "spec": {
-      "description": "Specification of the desired behavior of the Deployment.",
-      "$ref": "#/definitions/io.k8s.api.apps.v1beta1.DeploymentSpec"
-     },
-     "status": {
-      "description": "Most recently observed status of the Deployment.",
-      "$ref": "#/definitions/io.k8s.api.apps.v1beta1.DeploymentStatus"
-     }
+    },
+    "kind": {
+     "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
+     "type": "string"
+    },
+    "metadata": {
+     "description": "Standard object metadata.",
+     "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
+    },
+    "spec": {
+     "description": "Specification of the desired behavior of the Deployment.",
+     "$ref": "#/definitions/io.k8s.api.apps.v1beta1.DeploymentSpec"
+    },
+    "status": {
+     "description": "Most recently observed status of the Deployment.",
+     "$ref": "#/definitions/io.k8s.api.apps.v1beta1.DeploymentStatus"
     },
     "x-kubernetes-group-version-kind": [
      {
@@ -3852,7 +3785,7 @@
       "version": "v1beta1"
      }
     ]
-   },   
+   },
    "io.k8s.api.apps.v1beta1.DeploymentSpec": {
     "description": "DeploymentSpec is the specification of the desired behavior of the Deployment.",
     "required": [
@@ -6902,6 +6835,5 @@
       "version": "v1beta1"
      }
     ]
-   } 
+   }
   }
-}

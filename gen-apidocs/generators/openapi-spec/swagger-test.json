@@ -4,73 +4,7 @@
    "title": "Kubernetes",
    "version": "v1.8.0"
   },
-  "paths": {
-   "/api/": {
-    "get": {
-     "description": "get available API versions",
-     "consumes": [
-      "application/json",
-      "application/yaml",
-      "application/vnd.kubernetes.protobuf"
-     ],
-     "produces": [
-      "application/json",
-      "application/yaml",
-      "application/vnd.kubernetes.protobuf"
-     ],
-     "schemes": [
-      "https"
-     ],
-     "tags": [
-      "core"
-     ],
-     "operationId": "getCoreAPIVersions",
-     "responses": {
-      "200": {
-       "description": "OK",
-       "schema": {
-        "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.APIVersions"
-       }
-      },
-      "401": {
-       "description": "Unauthorized"
-      }
-     }
-    }
-   },
-   "/api/v1/": {
-    "get": {
-     "description": "get available resources",
-     "consumes": [
-      "application/json",
-      "application/yaml",
-      "application/vnd.kubernetes.protobuf"
-     ],
-     "produces": [
-      "application/json",
-      "application/yaml",
-      "application/vnd.kubernetes.protobuf"
-     ],
-     "schemes": [
-      "https"
-     ],
-     "tags": [
-      "core_v1"
-     ],
-     "operationId": "getCoreV1APIResources",
-     "responses": {
-      "200": {
-       "description": "OK",
-       "schema": {
-        "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.APIResourceList"
-       }
-      },
-      "401": {
-       "description": "Unauthorized"
-      }
-     }
-    }
-   },   
+  "paths": { 
    "/apis/apps/v1beta1/namespaces/{namespace}/deployments": {
     "get": {
      "description": "list or watch objects of kind Deployment",
@@ -3899,7 +3833,7 @@
       "description": "Template describes the pods that will be created.",
       "$ref": "#/definitions/io.k8s.api.core.v1.PodTemplateSpec"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -3955,7 +3889,7 @@
       "type": "integer",
       "format": "int32"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -3995,7 +3929,7 @@
       "description": "Type of deployment condition.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4015,7 +3949,7 @@
       "description": "Type of deployment. Can be \"Recreate\" or \"RollingUpdate\". Default is RollingUpdate.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4032,7 +3966,7 @@
       "type": "integer",
       "format": "int64"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4052,7 +3986,7 @@
       "description": "The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0 if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old RC can be scaled down to 70% of desired pods immediately when the rolling update starts. Once new pods are ready, old RC can be scaled down further, followed by scaling up the new RC, ensuring that the total number of pods available at all times during the update is at least 70% of desired pods.",
       "$ref": "#/definitions/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4101,7 +4035,7 @@
       "type": "integer",
       "format": "int32"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4132,7 +4066,7 @@
       "description": "label selector for pods that should match the replicas count. This is a serializated version of both map-based and more expressive set-based selectors. This is done to avoid introspection in the clients. The string will be in the same format as the query-param syntax. If the target type only supports map-based selectors, both this field and map-based selector field are populated. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4204,7 +4138,7 @@
       "description": "Type of deployment condition.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4255,7 +4189,7 @@
       "description": "Template describes the pods that will be created.",
       "$ref": "#/definitions/io.k8s.api.core.v1.PodTemplateSpec"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4311,7 +4245,7 @@
       "type": "integer",
       "format": "int32"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4331,7 +4265,7 @@
       "description": "Type of deployment. Can be \"Recreate\" or \"RollingUpdate\". Default is RollingUpdate.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4380,7 +4314,7 @@
       "type": "integer",
       "format": "int32"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4411,7 +4345,7 @@
       "description": "label selector for pods that should match the replicas count. This is a serializated version of both map-based and more expressive set-based selectors. This is done to avoid introspection in the clients. The string will be in the same format as the query-param syntax. If the target type only supports map-based selectors, both this field and map-based selector field are populated. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4530,7 +4464,7 @@
       "description": "Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4567,7 +4501,7 @@
       "description": "Protocol for port. Must be UDP or TCP. Defaults to \"TCP\".",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4591,7 +4525,7 @@
       "description": "The Secret to select from",
       "$ref": "#/definitions/io.k8s.api.core.v1.SecretEnvSource"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4618,7 +4552,7 @@
       "description": "Source for the environment variable's value. Cannot be used if value is not empty.",
       "$ref": "#/definitions/io.k8s.api.core.v1.EnvVarSource"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4646,7 +4580,7 @@
       "description": "Selects a key of a secret in the pod's namespace",
       "$ref": "#/definitions/io.k8s.api.core.v1.SecretKeySelector"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4684,7 +4618,7 @@
       "description": "Scheme to use for connecting to the host. Defaults to HTTP.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4708,7 +4642,7 @@
       "description": "The header field value",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4731,7 +4665,7 @@
       "description": "IP address of the host file entry.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4789,7 +4723,7 @@
        "$ref": "#/definitions/io.k8s.api.core.v1.PodAffinityTerm"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4816,7 +4750,7 @@
       "description": "This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. For PreferredDuringScheduling pod anti-affinity, empty topologyKey is interpreted as \"all topologies\" (\"all topologies\" here means all the topologyKeys indicated by scheduler command-line argument --failure-domains); for affinity and for RequiredDuringScheduling pod anti-affinity, empty topologyKey is not allowed.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4842,7 +4776,7 @@
        "$ref": "#/definitions/io.k8s.api.core.v1.PodAffinityTerm"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4882,7 +4816,7 @@
       "description": "Type is the type of the condition. Currently only Ready. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4920,7 +4854,7 @@
        "format": "int64"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -4946,7 +4880,7 @@
        "type": "string"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5095,7 +5029,7 @@
       "x-kubernetes-patch-merge-key": "name",
       "x-kubernetes-patch-strategy": "merge,retainKeys"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5158,7 +5092,7 @@
       "description": "RFC 3339 date and time at which the object was acknowledged by the Kubelet. This is before the Kubelet pulled the container image(s) for the pod.",
       "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5206,7 +5140,7 @@
       "description": "Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status",
       "$ref": "#/definitions/io.k8s.api.core.v1.PodSpec"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5255,7 +5189,7 @@
       "type": "integer",
       "format": "int32"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5283,7 +5217,7 @@
       "description": "User is a SELinux user label that applies to the container.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5303,7 +5237,7 @@
       "description": "Total amount of local storage required for this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. The default is nil which means that the limit is undefined. More info: http://kubernetes.io/docs/user-guide/volumes#emptydir",
       "$ref": "#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5336,7 +5270,7 @@
       "description": "Value is the taint value the toleration matches to. If the operator is Exists, the value should be empty, otherwise just a regular string.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5352,7 +5286,7 @@
       "description": "Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5378,7 +5312,7 @@
        "$ref": "#/definitions/io.k8s.apimachinery.pkg.api.resource.Quantity"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5397,7 +5331,7 @@
        "type": "string"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5417,7 +5351,7 @@
       "description": "PreStop is called immediately before a container is terminated. The container is terminated after the handler completes. The reason for termination is passed to the handler. Regardless of the outcome of the handler, the container is eventually terminated. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks",
       "$ref": "#/definitions/io.k8s.api.core.v1.Handler"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5441,7 +5375,7 @@
       "description": "Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).",
       "$ref": "#/definitions/io.k8s.api.core.v1.PodAntiAffinity"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5466,7 +5400,7 @@
       "type": "integer",
       "format": "int32"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5488,7 +5422,7 @@
        "$ref": "#/definitions/io.k8s.api.core.v1.NodeSelectorTerm"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5519,7 +5453,7 @@
        "type": "string"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5541,7 +5475,7 @@
        "$ref": "#/definitions/io.k8s.api.core.v1.NodeSelectorRequirement"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5582,7 +5516,7 @@
       "description": "The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.",
       "$ref": "#/definitions/io.k8s.api.core.v1.SELinuxOptions"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5606,7 +5540,7 @@
       "description": "TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported",
       "$ref": "#/definitions/io.k8s.api.core.v1.TCPSocketAction"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5629,7 +5563,7 @@
       "description": "Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.",
       "$ref": "#/definitions/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5649,7 +5583,7 @@
       "description": "Specify whether the Secret must be defined",
       "type": "boolean"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5676,7 +5610,7 @@
       "description": "Specify whether the Secret or it's key must be defined",
       "type": "boolean"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5703,7 +5637,7 @@
       "description": "Required: resource to select",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5726,7 +5660,7 @@
       "description": "Path of the field to select in the specified API version.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5746,7 +5680,7 @@
       "description": "Specify whether the ConfigMap must be defined",
       "type": "boolean"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5773,7 +5707,7 @@
       "description": "Specify whether the ConfigMap or it's key must be defined",
       "type": "boolean"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5796,7 +5730,7 @@
       "description": "If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.",
       "$ref": "#/definitions/io.k8s.api.core.v1.NodeSelector"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5814,7 +5748,7 @@
      "emptyDir": {
       "description": "EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir",
       "$ref": "#/definitions/io.k8s.api.core.v1.EmptyDirVolumeSource"
-     }
+     },
      "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5850,7 +5784,7 @@
       "description": "Path within the volume from which the container's volume should be mounted. Defaults to \"\" (volume's root).",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5875,7 +5809,7 @@
       "type": "integer",
       "format": "int32"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -5947,7 +5881,7 @@
       "description": "Type of deployment condition.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "extensions",
@@ -6076,7 +6010,7 @@
       "description": "Template describes the pods that will be created.",
       "$ref": "#/definitions/io.k8s.api.core.v1.PodTemplateSpec"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "extensions",
@@ -6132,7 +6066,7 @@
       "type": "integer",
       "format": "int32"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "extensions",
@@ -6152,7 +6086,7 @@
       "description": "Type of deployment. Can be \"Recreate\" or \"RollingUpdate\". Default is RollingUpdate.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "extensions",
@@ -6160,7 +6094,7 @@
       "version": "v1beta1"
      }
     ]
-   }
+   },
    "io.k8s.api.extensions.v1beta1.Scale": {
     "description": "represents a scaling request for a resource.",
     "properties": {
@@ -6201,7 +6135,7 @@
       "type": "integer",
       "format": "int32"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "extensions",
@@ -6232,7 +6166,7 @@
       "description": "label selector for pods that should match the replicas count. This is a serializated version of both map-based and more expressive set-based selectors. This is done to avoid introspection in the clients. The string will be in the same format as the query-param syntax. If the target type only supports map-based selectors, both this field and map-based selector field are populated. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "extensions",
@@ -6243,7 +6177,7 @@
    },    
    "io.k8s.apimachinery.pkg.util.intstr.IntOrString": {
     "type": "string",
-    "format": "int-or-string"
+    "format": "int-or-string",
     "x-kubernetes-group-version-kind": [
      {
       "group": "todo",
@@ -6262,7 +6196,7 @@
       "description": "name of the process that is responsible for initializing this object.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
@@ -6317,7 +6251,7 @@
     ]
    },
    "io.k8s.apimachinery.pkg.api.resource.Quantity": {
-    "type": "string"
+    "type": "string",
     "x-kubernetes-group-version-kind": [
      {
       "group": "resource",
@@ -6357,7 +6291,7 @@
       "description": "UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
@@ -6381,7 +6315,7 @@
       "description": "A machine-readable description of the cause of the error. If this value is empty there is no information available.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
@@ -6409,7 +6343,7 @@
       "description": "If result is set with the Failure field, the object will be persisted to storage and then deleted, ensuring that other clients can observe the deletion.",
       "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Status"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
@@ -6435,7 +6369,7 @@
        "type": "string"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
@@ -6468,7 +6402,7 @@
        "type": "string"
       }
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
@@ -6492,7 +6426,7 @@
       "description": "selfLink is a URL representing this object. Populated by the system. Read-only.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
@@ -6585,7 +6519,7 @@
       "description": "UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
@@ -6596,7 +6530,7 @@
    },
    "io.k8s.apimachinery.pkg.apis.meta.v1.Time": {
     "type": "string",
-    "format": "date-time"
+    "format": "date-time",
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
@@ -6638,7 +6572,7 @@
       "description": "UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
@@ -6744,7 +6678,7 @@
       "description": "Template describes the pods that will be created.",
       "$ref": "#/definitions/io.k8s.api.core.v1.PodTemplateSpec"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -6764,7 +6698,7 @@
       "description": "Type of deployment. Can be \"Recreate\" or \"RollingUpdate\". Default is RollingUpdate.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -6784,7 +6718,7 @@
       "description": "The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0 if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old RC can be scaled down to 70% of desired pods immediately when the rolling update starts. Once new pods are ready, old RC can be scaled down further, followed by scaling up the new RC, ensuring that the total number of pods available at all times during the update is at least 70% of desired pods.",
       "$ref": "#/definitions/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -6840,7 +6774,7 @@
       "type": "integer",
       "format": "int32"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -6880,84 +6814,12 @@
       "description": "Type of deployment condition.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
       "kind": "DeploymentCondition",
       "version": "v1beta2"
-     }
-    ]
-   },
-   "io.k8s.api.extensions.v1beta1.Deployment": {
-    "description": "DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Deployment. See the release notes for more information. Deployment enables declarative updates for Pods and ReplicaSets.",
-    "properties": {
-     "apiVersion": {
-      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
-      "type": "string"
-     },
-     "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
-      "type": "string"
-     },
-     "metadata": {
-      "description": "Standard object metadata.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta"
-     },
-     "spec": {
-      "description": "Specification of the desired behavior of the Deployment.",
-      "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DeploymentSpec"
-     },
-     "status": {
-      "description": "Most recently observed status of the Deployment.",
-      "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DeploymentStatus"
-     }
-    },
-    "x-kubernetes-group-version-kind": [
-     {
-      "group": "extensions",
-      "kind": "Deployment",
-      "version": "v1beta1"
-     }
-    ]
-   },
-   "io.k8s.api.extensions.v1beta1.DeploymentCondition": {
-    "description": "DeploymentCondition describes the state of a deployment at a certain point.",
-    "required": [
-     "type",
-     "status"
-    ],
-    "properties": {
-     "lastTransitionTime": {
-      "description": "Last time the condition transitioned from one status to another.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
-     },
-     "lastUpdateTime": {
-      "description": "The last time this condition was updated.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.Time"
-     },
-     "message": {
-      "description": "A human readable message indicating details about the transition.",
-      "type": "string"
-     },
-     "reason": {
-      "description": "The reason for the condition's last transition.",
-      "type": "string"
-     },
-     "status": {
-      "description": "Status of the condition, one of True, False, Unknown.",
-      "type": "string"
-     },
-     "type": {
-      "description": "Type of deployment condition.",
-      "type": "string"
-     }
-    }
-    "x-kubernetes-group-version-kind": [
-     {
-      "group": "extensions",
-      "kind": "DeploymentCondition",
-      "version": "v1beta1"
      }
     ]
    },
@@ -6972,7 +6834,7 @@
       "description": "The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0 if MaxSurge is 0. By default, a fixed value of 1 is used. Example: when this is set to 30%, the old RC can be scaled down to 70% of desired pods immediately when the rolling update starts. Once new pods are ready, old RC can be scaled down further, followed by scaling up the new RC, ensuring that the total number of pods available at all times during the update is at least 70% of desired pods.",
       "$ref": "#/definitions/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "extensions",
@@ -6980,176 +6842,5 @@
       "version": "v1beta1"
      }
     ]
-   },
-   "io.k8s.api.extensions.v1beta1.DeploymentRollback": {
-    "description": "DEPRECATED. DeploymentRollback stores the information required to rollback a deployment.",
-    "required": [
-     "name",
-     "rollbackTo"
-    ],
-    "properties": {
-     "apiVersion": {
-      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
-      "type": "string"
-     },
-     "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
-      "type": "string"
-     },
-     "name": {
-      "description": "Required: This must match the Name of a deployment.",
-      "type": "string"
-     },
-     "rollbackTo": {
-      "description": "The config of this deployment rollback.",
-      "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.RollbackConfig"
-     },
-     "updatedAnnotations": {
-      "description": "The annotations to be updated to a deployment",
-      "type": "object",
-      "additionalProperties": {
-       "type": "string"
-      }
-     }
-    },
-    "x-kubernetes-group-version-kind": [
-     {
-      "group": "extensions",
-      "kind": "DeploymentRollback",
-      "version": "v1beta1"
-     }
-    ]
-   },
-   "io.k8s.api.extensions.v1beta1.DeploymentSpec": {
-    "description": "DeploymentSpec is the specification of the desired behavior of the Deployment.",
-    "required": [
-     "template"
-    ],
-    "properties": {
-     "minReadySeconds": {
-      "description": "Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)",
-      "type": "integer",
-      "format": "int32"
-     },
-     "paused": {
-      "description": "Indicates that the deployment is paused and will not be processed by the deployment controller.",
-      "type": "boolean"
-     },
-     "progressDeadlineSeconds": {
-      "description": "The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. This is not set by default.",
-      "type": "integer",
-      "format": "int32"
-     },
-     "replicas": {
-      "description": "Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.",
-      "type": "integer",
-      "format": "int32"
-     },
-     "revisionHistoryLimit": {
-      "description": "The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified.",
-      "type": "integer",
-      "format": "int32"
-     },
-     "rollbackTo": {
-      "description": "DEPRECATED. The config this deployment is rolling back to. Will be cleared after rollback is done.",
-      "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.RollbackConfig"
-     },
-     "selector": {
-      "description": "Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.LabelSelector"
-     },
-     "strategy": {
-      "description": "The deployment strategy to use to replace existing pods with new ones.",
-      "x-kubernetes-patch-strategy": "retainKeys",
-      "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DeploymentStrategy"
-     },
-     "template": {
-      "description": "Template describes the pods that will be created.",
-      "$ref": "#/definitions/io.k8s.api.core.v1.PodTemplateSpec"
-     }
-    }
-    "x-kubernetes-group-version-kind": [
-     {
-      "group": "extensions",
-      "kind": "DeploymentSpec",
-      "version": "v1beta1"
-     }
-    ]
-   },
-   "io.k8s.api.extensions.v1beta1.DeploymentStatus": {
-    "description": "DeploymentStatus is the most recently observed status of the Deployment.",
-    "properties": {
-     "availableReplicas": {
-      "description": "Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.",
-      "type": "integer",
-      "format": "int32"
-     },
-     "collisionCount": {
-      "description": "Count of hash collisions for the Deployment. The Deployment controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.",
-      "type": "integer",
-      "format": "int32"
-     },
-     "conditions": {
-      "description": "Represents the latest available observations of a deployment's current state.",
-      "type": "array",
-      "items": {
-       "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.DeploymentCondition"
-      },
-      "x-kubernetes-patch-merge-key": "type",
-      "x-kubernetes-patch-strategy": "merge"
-     },
-     "observedGeneration": {
-      "description": "The generation observed by the deployment controller.",
-      "type": "integer",
-      "format": "int64"
-     },
-     "readyReplicas": {
-      "description": "Total number of ready pods targeted by this deployment.",
-      "type": "integer",
-      "format": "int32"
-     },
-     "replicas": {
-      "description": "Total number of non-terminated pods targeted by this deployment (their labels match the selector).",
-      "type": "integer",
-      "format": "int32"
-     },
-     "unavailableReplicas": {
-      "description": "Total number of unavailable pods targeted by this deployment. This is the total number of pods that are still required for the deployment to have 100% available capacity. They may either be pods that are running but not yet available or pods that still have not been created.",
-      "type": "integer",
-      "format": "int32"
-     },
-     "updatedReplicas": {
-      "description": "Total number of non-terminated pods targeted by this deployment that have the desired template spec.",
-      "type": "integer",
-      "format": "int32"
-     }
-    }
-    "x-kubernetes-group-version-kind": [
-     {
-      "group": "extensions",
-      "kind": "DeploymentStatus",
-      "version": "v1beta1"
-     }
-    ]
-   },
-   "io.k8s.api.extensions.v1beta1.DeploymentStrategy": {
-    "description": "DeploymentStrategy describes how to replace existing pods with new ones.",
-    "properties": {
-     "rollingUpdate": {
-      "description": "Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.",
-      "$ref": "#/definitions/io.k8s.api.extensions.v1beta1.RollingUpdateDeployment"
-     },
-     "type": {
-      "description": "Type of deployment. Can be \"Recreate\" or \"RollingUpdate\". Default is RollingUpdate.",
-      "type": "string"
-     }
-    }
-    "x-kubernetes-group-version-kind": [
-     {
-      "group": "extensions",
-      "kind": "DeploymentStrategy",
-      "version": "v1beta1"
-     }
-    ]
    }
- }
+}
