@@ -6303,7 +6303,7 @@
     ]
    },
    "io.k8s.apimachinery.pkg.api.resource.Quantity": {
-    "type": "string"
+    "type": "string",
     "x-kubernetes-group-version-kind": [
      {
       "group": "resource",
@@ -6582,7 +6582,7 @@
    },
    "io.k8s.apimachinery.pkg.apis.meta.v1.Time": {
     "type": "string",
-    "format": "date-time"
+    "format": "date-time",
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
