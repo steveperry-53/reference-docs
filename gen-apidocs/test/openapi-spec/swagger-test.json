@@ -4,7 +4,8 @@
    "title": "Kubernetes",
    "version": "v1.8.0"
   },
-  "/apis/apps/v1beta1/namespaces/{namespace}/deployments": {
+  "paths": {
+   "/apis/apps/v1beta1/namespaces/{namespace}/deployments": {
     "get": {
      "description": "list or watch objects of kind Deployment",
      "consumes": [
