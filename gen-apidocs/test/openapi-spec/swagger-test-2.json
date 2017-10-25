@@ -4,8 +4,6 @@
    "title": "Kubernetes",
    "version": "v1.8.0"
   },
-  "paths": { 
-  }
   "definitions": {
    "io.k8s.api.rbac.v1.ClusterRole": {
     "description": "ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding or ClusterRoleBinding.",
