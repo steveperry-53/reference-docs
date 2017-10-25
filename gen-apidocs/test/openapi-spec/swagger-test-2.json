@@ -460,7 +460,7 @@
       "in": "query"
      }
     ]
-   },
+   }
   }
   "definitions": {
    "io.k8s.api.rbac.v1.ClusterRole": {
