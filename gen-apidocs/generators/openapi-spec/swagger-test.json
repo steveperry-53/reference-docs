@@ -4053,8 +4053,14 @@
       "$ref": "#/definitions/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
      }
     }
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "RollingUpdateDeployment",
+      "version": "v1beta1"
+     }
+    ]
    },
-
    "io.k8s.api.apps.v1beta1.Scale": {
     "description": "Scale represents a scaling request for a resource.",
     "properties": {
@@ -4087,7 +4093,6 @@
      }
     ]
    },
-
    "io.k8s.api.apps.v1beta1.ScaleSpec": {
     "description": "ScaleSpec describes the attributes of a scale subresource",
     "properties": {
@@ -4097,8 +4102,14 @@
       "format": "int32"
      }
     }
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "ScaleSpec",
+      "version": "v1beta1"
+     }
+    ]
    },
-
    "io.k8s.api.apps.v1beta1.ScaleStatus": {
     "description": "ScaleStatus represents the current status of a scale subresource.",
     "required": [
@@ -4122,8 +4133,14 @@
       "type": "string"
      }
     }
-   },
-    
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "ScaleStatus",
+      "version": "v1beta1"
+     }
+    ]
+   },    
    "io.k8s.api.apps.v1beta2.Deployment": {
     "description": "Deployment enables declarative updates for Pods and ReplicaSets.",
     "properties": {
@@ -4156,7 +4173,6 @@
      }
     ]
    },
-
    "io.k8s.api.apps.v1beta2.DeploymentCondition": {
     "description": "DeploymentCondition describes the state of a deployment at a certain point.",
     "required": [
@@ -4189,43 +4205,14 @@
       "type": "string"
      }
     }
-   },
-
-   "io.k8s.api.apps.v1beta2.DeploymentList": {
-    "description": "DeploymentList is a list of Deployments.",
-    "required": [
-     "items"
-    ],
-    "properties": {
-     "apiVersion": {
-      "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources",
-      "type": "string"
-     },
-     "items": {
-      "description": "Items is the list of Deployments.",
-      "type": "array",
-      "items": {
-       "$ref": "#/definitions/io.k8s.api.apps.v1beta2.Deployment"
-      }
-     },
-     "kind": {
-      "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds",
-      "type": "string"
-     },
-     "metadata": {
-      "description": "Standard list metadata.",
-      "$ref": "#/definitions/io.k8s.apimachinery.pkg.apis.meta.v1.ListMeta"
-     }
-    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
-      "kind": "DeploymentList",
+      "kind": "Deployment",
       "version": "v1beta2"
      }
     ]
    },
-
    "io.k8s.api.apps.v1beta2.DeploymentSpec": {
     "description": "DeploymentSpec is the specification of the desired behavior of the Deployment.",
     "required": [
@@ -4269,8 +4256,14 @@
       "$ref": "#/definitions/io.k8s.api.core.v1.PodTemplateSpec"
      }
     }
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "DeploymentSpec",
+      "version": "v1beta2"
+     }
+    ]
    },
-
    "io.k8s.api.apps.v1beta2.DeploymentStatus": {
     "description": "DeploymentStatus is the most recently observed status of the Deployment.",
     "properties": {
@@ -4319,8 +4312,14 @@
       "format": "int32"
      }
     }
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "DeploymentStatus",
+      "version": "v1beta2"
+     }
+    ]
    },
-
    "io.k8s.api.apps.v1beta2.DeploymentStrategy": {
     "description": "DeploymentStrategy describes how to replace existing pods with new ones.",
     "properties": {
@@ -4333,8 +4332,14 @@
       "type": "string"
      }
     }
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "DeploymentStrategy",
+      "version": "v1beta2"
+     }
+    ]
    },
-
    "io.k8s.api.apps.v1beta2.Scale": {
     "description": "Scale represents a scaling request for a resource.",
     "properties": {
@@ -4367,7 +4372,6 @@
      }
     ]
    },
-
    "io.k8s.api.apps.v1beta2.ScaleSpec": {
     "description": "ScaleSpec describes the attributes of a scale subresource",
     "properties": {
@@ -4377,8 +4381,14 @@
       "format": "int32"
      }
     }
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "ScaleSpec",
+      "version": "v1beta2"
+     }
+    ]
    },
-
    "io.k8s.api.apps.v1beta2.ScaleStatus": {
     "description": "ScaleStatus represents the current status of a scale subresource.",
     "required": [
@@ -4402,37 +4412,14 @@
       "type": "string"
      }
     }
-   },
-    
-   "io.k8s.api.autoscaling.v1.ScaleSpec": {
-    "description": "ScaleSpec describes the attributes of a scale subresource.",
-    "properties": {
-     "replicas": {
-      "description": "desired number of instances for the scaled object.",
-      "type": "integer",
-      "format": "int32"
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "apps",
+      "kind": "ScaleStatus",
+      "version": "v1beta2"
      }
-    }
-   },
-
-  "io.k8s.api.autoscaling.v1.ScaleStatus": {
-    "description": "ScaleStatus represents the current status of a scale subresource.",
-    "required": [
-     "replicas"
-    ],
-    "properties": {
-     "replicas": {
-      "description": "actual number of observed instances of the scaled object.",
-      "type": "integer",
-      "format": "int32"
-     },
-     "selector": {
-      "description": "label query over pods that should match the replicas count. This is same as the label selector but in the string format to avoid introspection by clients. The string will be in the same format as the query-param syntax. More info about label selectors: http://kubernetes.io/docs/user-guide/labels#label-selectors",
-      "type": "string"
-     }
-    }
-   },
-
+    ]
+   },    
    "io.k8s.api.core.v1.Container": {
     "description": "A single application container that you want to run within a pod.",
     "required": [
@@ -4544,8 +4531,14 @@
       "type": "string"
      }
     }
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "core",
+      "kind": "Container",
+      "version": "v1"
+     }
+    ]
    },
-
    "io.k8s.api.core.v1.ContainerPort": {
     "description": "ContainerPort represents a network port in a single container.",
     "required": [
@@ -4575,6 +4568,13 @@
       "type": "string"
      }
     }
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "core",
+      "kind": "ContainerPort",
+      "version": "v1"
+     }
+    ]
    },
 
    "io.k8s.api.core.v1.EnvFromSource": {
@@ -4593,8 +4593,14 @@
       "$ref": "#/definitions/io.k8s.api.core.v1.SecretEnvSource"
      }
     }
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "core",
+      "kind": "EnvFromSource",
+      "version": "v1"
+     }
+    ]
    },
-
    "io.k8s.api.core.v1.EnvVar": {
     "description": "EnvVar represents an environment variable present in a Container.",
     "required": [
@@ -4614,6 +4620,13 @@
       "$ref": "#/definitions/io.k8s.api.core.v1.EnvVarSource"
      }
     }
+    "x-kubernetes-group-version-kind": [
+     {
+      "group": "core",
+      "kind": "EnvVar",
+      "version": "v1"
+     }
+    ]
    },
 
    "io.k8s.api.core.v1.EnvVarSource": {
