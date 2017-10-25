@@ -6229,7 +6229,7 @@
    },    
    "io.k8s.apimachinery.pkg.util.intstr.IntOrString": {
     "type": "string",
-    "format": "int-or-string"
+    "format": "int-or-string",
     "x-kubernetes-group-version-kind": [
      {
       "group": "todo",
