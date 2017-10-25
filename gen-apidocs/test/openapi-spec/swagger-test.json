@@ -3988,7 +3988,7 @@
       "description": "Type of deployment condition.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4008,7 +4008,7 @@
       "description": "Type of deployment. Can be \"Recreate\" or \"RollingUpdate\". Default is RollingUpdate.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4045,7 +4045,7 @@
       "description": "The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0 if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old RC can be scaled down to 70% of desired pods immediately when the rolling update starts. Once new pods are ready, old RC can be scaled down further, followed by scaling up the new RC, ensuring that the total number of pods available at all times during the update is at least 70% of desired pods.",
       "$ref": "#/definitions/io.k8s.apimachinery.pkg.util.intstr.IntOrString"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4094,7 +4094,7 @@
       "type": "integer",
       "format": "int32"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -4125,7 +4125,7 @@
       "description": "label selector for pods that should match the replicas count. This is a serializated version of both map-based and more expressive set-based selectors. This is done to avoid introspection in the clients. The string will be in the same format as the query-param syntax. If the target type only supports map-based selectors, both this field and map-based selector field are populated. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
