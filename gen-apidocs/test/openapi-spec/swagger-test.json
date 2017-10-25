@@ -3955,14 +3955,7 @@
       "type": "integer",
       "format": "int32"
      }
-    },
-    "x-kubernetes-group-version-kind": [
-     {
-      "group": "apps",
-      "kind": "DeploymentStatus",
-      "version": "v1beta1"
-     }
-    ]
+    }
    },
    "io.k8s.api.apps.v1beta1.DeploymentCondition": {
     "description": "DeploymentCondition describes the state of a deployment at a certain point.",
