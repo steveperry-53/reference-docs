@@ -5800,7 +5800,7 @@
      "emptyDir": {
       "description": "EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir",
       "$ref": "#/definitions/io.k8s.api.core.v1.EmptyDirVolumeSource"
-     }
+     },
      "x-kubernetes-group-version-kind": [
      {
       "group": "core",
@@ -6343,7 +6343,7 @@
       "description": "UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
@@ -6478,7 +6478,7 @@
       "description": "selfLink is a URL representing this object. Populated by the system. Read-only.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
@@ -6624,7 +6624,7 @@
       "description": "UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "meta",
@@ -6750,7 +6750,7 @@
       "description": "Type of deployment. Can be \"Recreate\" or \"RollingUpdate\". Default is RollingUpdate.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
@@ -6866,7 +6866,7 @@
       "description": "Type of deployment condition.",
       "type": "string"
      }
-    }
+    },
     "x-kubernetes-group-version-kind": [
      {
       "group": "apps",
