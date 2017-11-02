@@ -11,13 +11,6 @@ import (
 func main() {
 	fmt.Println("Study")
 
-	var def api.Definitions
-	def = api.Definitions {
-		ByGroupVersionKind: map[string]*api.Definition{},
-		ByKind:             map[string]api.SortDefinitionsByVersion{},
-	}
-	fmt.Println(def)
-
 	var doc *loads.Document
 	var err error
 	doc, err = loads.JSONSpec("test-spec.json")
@@ -49,10 +42,19 @@ func main() {
 				var exts spec.Extensions  // map[string]interface{}
 				exts = sch.Extensions
 
-				var g, v, k string
-				var ok bool
-				g, v, k, ok = GetGroupVersionKind(exts)
-				fmt.Println("   ", g, v, k, ok)
+				var group, version, kind string
+				group, version, kind, _ = GetGroupVersionKind(exts)
+
+				def  := api.Definition{
+					Name: kind,
+					Group: api.ApiGroup(group),
+					Version: api.ApiVersion(version),
+					Kind: api.ApiKind(kind),
+					ShowGroup: true,
+					Resource: "",
+				}
+
+				fmt.Println("    def:", def.Name, def.Group, def.Version, def.Kind, def.ShowGroup)
 			}
 		}
 	}
