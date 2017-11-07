@@ -208,7 +208,7 @@ func (d Definition) Description() string {
 	return d.schema.Description
 }
 
-func VisitDefinitions(specs []*loads.Document, fn func(definition *Definition)) {
+func VisitDefinitionsInApiSpec(specs []*loads.Document, fn func(definition *Definition)) {
 	groups := map[string]string{}
 	for _, spec := range specs {
 		for name, spec := range spec.Spec().Definitions {
@@ -286,7 +286,7 @@ func GetDefinitions(specs []*loads.Document) Definitions {
 		ByGroupVersionKind: map[string]*Definition{},
 		ByKind:             map[string]SortDefinitionsByVersion{},
 	}
-	VisitDefinitions(specs, func(definition *Definition) {
+	VisitDefinitionsInApiSpec(specs, func(definition *Definition) {
 		d.Put(definition)
 	})
 	d.InitializeFieldsForAll()

@@ -32,7 +32,7 @@ copycli: cli
 
 api: cleanapi
 	go run gen-apidocs/main.go --config-dir=gen-apidocs/generators --munge-groups=false
-	docker run -v $(shell pwd)/gen-apidocs/generators/includes:/source -v $(shell pwd)/gen-apidocs/generators/build:/build -v $(shell pwd)/gen-apidocs/generators/:/manifest pwittrock/brodocs
+	# docker run -v $(shell pwd)/gen-apidocs/generators/includes:/source -v $(shell pwd)/gen-apidocs/generators/build:/build -v $(shell pwd)/gen-apidocs/generators/:/manifest pwittrock/brodocs
 
 # Build api docs
 cleanapi:

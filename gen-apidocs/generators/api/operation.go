@@ -123,7 +123,7 @@ type HttpResponse struct {
 }
 
 // VisitOperations calls fn once for each operation found in the collection of Documents
-func VisitOperations(specs []*loads.Document, fn func(operation Operation)) {
+func VisitOperationsInApiSpec(specs []*loads.Document, fn func(operation Operation)) {
 	for _, d := range specs {
 		for path, item := range d.Spec().Paths.Paths {
 			for method, operation := range getOperationsForItem(item) {

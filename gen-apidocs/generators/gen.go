@@ -16,11 +16,12 @@ limitations under the License.
 
 package generators
 
+import "fmt"
 import "github.com/kubernetes-incubator/reference-docs/gen-apidocs/generators/api"
 
 func GenerateFiles() {
 	config := api.NewConfig()
-
-	PrintInfo(config)
-	WriteTemplates(config)
+	fmt.Println(config.ExampleLocation)
+//	PrintInfo(config)
+//	WriteTemplates(config)
 }
