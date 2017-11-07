@@ -87,7 +87,9 @@ func NewConfig() *Config {
 
 	specs := LoadOpenApiSpec()
 
-	if friendlyOperationNames := loadFriendlyOperationNames(); friendlyOperationNames != nil {
+	var friendlyOperationNames FriendlyOperationNames
+
+	if friendlyOperationNames = loadFriendlyOperationNames(); friendlyOperationNames != nil {
 		fmt.Println()
 		fmt.Println("Loaded friendly operation names", len(friendlyOperationNames))
 	} else {
@@ -95,7 +97,7 @@ func NewConfig() *Config {
 		return nil
 	}
 
-	if ok := checkFriendlyOperationNames(specs); ok {
+	if ok := checkFriendlyOperationNames(specs, friendlyOperationNames); ok {
 		fmt.Println()
 		fmt.Println("Successfully checked friendly operation names.")
 	} else {
@@ -604,10 +606,12 @@ func loadFriendlyOperationNames()FriendlyOperationNames {
 	return nil
 }
 
-func checkFriendlyOperationNames(specs []*loads.Document) bool {
+func checkFriendlyOperationNames(specs []*loads.Document, friendlyNames FriendlyOperationNames) bool {
 
 	VisitOperations(specs, func(operation Operation) {
-		fmt.Printf(".")
+		if _, ok := friendlyNames[operation.ID]; !ok {
+			fmt.Println("No friendly name found for", operation.ID)
+		}
 	})
 
 	return true
