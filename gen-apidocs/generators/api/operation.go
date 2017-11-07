@@ -27,6 +27,8 @@ import (
 
 var BuildOps = flag.Bool("build-operations", true, "If true build operations in the docs.")
 
+type FriendlyOperationNames map[string]string
+
 // OperationCategory defines a group of related operations
 type OperationCategory struct {
 	// Name is the display name of this group

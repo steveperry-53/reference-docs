@@ -87,9 +87,26 @@ func NewConfig() *Config {
 
 	specs := LoadOpenApiSpec()
 
-	loadOperationFriendlyNames()
+	if friendlyOperationNames := loadFriendlyOperationNames(); friendlyOperationNames != nil {
+		fmt.Println()
+		fmt.Println("Loaded friendly operation names", len(friendlyOperationNames))
+	} else {
+		fmt.Println("Failed to load friendly operation names.")
+		return nil
+	}
 
-	checkOperationFriendlyNames(specs)
+	if ok := checkFriendlyOperationNames(specs); ok {
+		fmt.Println()
+		fmt.Println("Successfully checked friendly operation names.")
+	} else {
+		fmt.Println("Some operations do not have friendly names.")
+		return nil
+	}
+
+
+
+
+
 	config := loadYamlConfig()
 
 	// Initialize all of the operations
@@ -565,20 +582,18 @@ func doScaleIdHack(version, name, match string) (string, string) {
 	return version, name
 }
 
-func loadOperationFriendlyNames() {
+func loadFriendlyOperationNames()FriendlyOperationNames {
 
-	type FriendlyNamesStruct struct {
-		FriendlyNamesMap map[string]string	`yaml:"friendly_names,omitempty"`
-	}
+	f := filepath.Join(*ConfigDir, "config-op-names.yaml")
 
-	var friendlyNames FriendlyNames
+	if contents, err := ioutil.ReadFile(f); err == nil {
 
-	contents, err := ioutil.ReadFile("/home/seperry53/src/github.com/kubernetes-incubator/reference-docs/gen-apidocs/generators/config-op-names.yaml")
+		friendlyOperationNames := FriendlyOperationNames{}
 
-	if err == nil {
-		fmt.Println("Successfully read config-op-names.yaml")
-		if err = yaml.Unmarshal(contents, friendlyNames); err == nil {
-			fmt.Println("Successfully unmarshaled YAML")
+		if err = yaml.Unmarshal(contents, &friendlyOperationNames); err == nil {
+
+			return friendlyOperationNames
+
 		} else {
 			fmt.Println("Failed to unmarshal YAML", err)
 		}
@@ -586,11 +601,14 @@ func loadOperationFriendlyNames() {
 		fmt.Println("Failed to read config-op-names.yaml", err)
 	}
 
+	return nil
 }
 
-func checkOperationFriendlyNames(specs []*loads.Document) {
+func checkFriendlyOperationNames(specs []*loads.Document) bool {
 
 	VisitOperations(specs, func(operation Operation) {
 		fmt.Printf(".")
 	})
+
+	return true
 }
