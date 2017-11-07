@@ -85,8 +85,12 @@ func (config *Config) genConfigFromTags(specs []*loads.Document) {
 
 func NewConfig() *Config {
 
-	config := loadYamlConfig()
 	specs := LoadOpenApiSpec()
+
+	loadOperationFriendlyNames()
+
+	checkOperationFriendlyNames(specs)
+	config := loadYamlConfig()
 
 	// Initialize all of the operations
 	config.Definitions = GetDefinitions(specs)
@@ -127,7 +131,7 @@ func NewConfig() *Config {
 		}
 		config.ResourceCategories = categories
 	}
-	PrintAllDefinitionVersions(config)
+//	PrintOperations(config)
 
 	return config
 }
@@ -559,4 +563,34 @@ func doScaleIdHack(version, name, match string) (string, string) {
 	version = string(out)
 
 	return version, name
+}
+
+func loadOperationFriendlyNames() {
+
+	type FriendlyNamesStruct struct {
+		FriendlyNamesMap map[string]string	`yaml:"friendly_names,omitempty"`
+	}
+
+	var friendlyNames FriendlyNames
+
+	contents, err := ioutil.ReadFile("/home/seperry53/src/github.com/kubernetes-incubator/reference-docs/gen-apidocs/generators/config-op-names.yaml")
+
+	if err == nil {
+		fmt.Println("Successfully read config-op-names.yaml")
+		if err = yaml.Unmarshal(contents, friendlyNames); err == nil {
+			fmt.Println("Successfully unmarshaled YAML")
+		} else {
+			fmt.Println("Failed to unmarshal YAML", err)
+		}
+	} else {
+		fmt.Println("Failed to read config-op-names.yaml", err)
+	}
+
+}
+
+func checkOperationFriendlyNames(specs []*loads.Document) {
+
+	VisitOperations(specs, func(operation Operation) {
+		fmt.Printf(".")
+	})
 }

@@ -267,3 +267,33 @@ func PrintResourceCategory(rc *ResourceCategory) {
 		PrintResource(r)
 	}
 }
+
+func PrintOperations(config *Config) {
+	fmt.Println()
+	fmt.Println("PrintOperations")
+
+	ops := config.Operations
+
+	var yesFriendlyName []string
+	var noFriendlyName []string
+
+	for _, op := range ops {
+		if op.Type.Name == "" {
+			noFriendlyName = append(noFriendlyName, "\"" + op.ID + "\": \"TODO\"")
+		} else {
+			yesFriendlyName = append(yesFriendlyName, "\"" + op.ID + "\": " + "\"" + op.Type.Name + "\"")
+		}
+	}
+
+	for _, op := range yesFriendlyName {
+		fmt.Println(op)
+	}
+
+	for _, op := range noFriendlyName {
+		fmt.Println(op)
+	}
+
+	fmt.Println(len(ops))
+	fmt.Println(len(yesFriendlyName))
+	fmt.Println(len(noFriendlyName))
+}

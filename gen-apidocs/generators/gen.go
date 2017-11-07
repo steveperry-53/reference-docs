@@ -19,7 +19,6 @@ package generators
 import "github.com/kubernetes-incubator/reference-docs/gen-apidocs/generators/api"
 
 func GenerateFiles() {
-	// Load the yaml config
 	config := api.NewConfig()
 
 	PrintInfo(config)
