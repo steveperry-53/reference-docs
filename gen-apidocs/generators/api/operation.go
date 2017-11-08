@@ -27,31 +27,22 @@ import (
 
 var BuildOps = flag.Bool("build-operations", true, "If true build operations in the docs.")
 
+
+type FriendlyOperationName struct {
+	Name       string
+	Operations []*Operation
+}
+
 type FriendlyOperationNames map[string]string
 
 // OperationCategory defines a group of related operations
 type OperationCategory struct {
 	// Name is the display name of this group
-	Name string `yaml:",omitempty"`
+	Name string
 	// Operations are the collection of Operations in this group
-	OperationTypes []OperationType `yaml:"operation_types,omitempty"`
+	FriendlyNames []FriendlyOperationName
 	// Default is true if this is the default operation group for operations that do not match any other groups
-	Default bool `yaml:",omitempty"`
-
-	Operations []*Operation
-}
-
-// Operation defines a highlevel operation type such as Read, Replace, Patch
-type OperationType struct {
-	// Name is the display name of this operation
-	Name string `yaml:",omitempty"`
-	// Match is the regular expression of operation IDs that match this group where '${resource}' matches the resource name.
-	Match string `yaml:",omitempty"`
-}
-
-// GetOperationId returns the ID of the operation for the given definition
-func (ot OperationType) GetOperationId(definition string) string {
-	return strings.Replace(ot.Match, "${resource}", definition, -1)
+	Default bool
 }
 
 type Operations map[string]*Operation
@@ -60,7 +51,7 @@ type Operation struct {
 	item          spec.PathItem
 	op            *spec.Operation
 	ID            string
-	Type          OperationType
+	FriendlyName  string
 	Path          string
 	HttpMethod    string
 	Definition    *Definition

@@ -63,11 +63,11 @@ func PrintInfo(config *api.Config) {
 		for name, d := range definitions.GetAllDefinitions() {
 			if !d.InToc && len(d.OperationCategories) > 0 && !d.IsOldVersion && !d.IsInlined {
 				fmt.Printf("[%s]\n", name)
-				for _, oc := range d.OperationCategories {
-					for _, o := range oc.Operations {
-						fmt.Printf("\t [%s]\n", o.ID)
-					}
-				}
+				//for _, oc := range d.OperationCategories {
+				//	for _, o := range oc.Operations {
+				//		fmt.Printf("\t [%s]\n", o.ID)
+				//	}
+				//}
 			}
 		}
 	}
@@ -111,25 +111,6 @@ func PrintDebug(config *api.Config) {
 			}
 			for _, oc := range d.OperationCategories {
 				fmt.Printf("\t Operation Category [%s]\n", oc.Name)
-				for _, o := range oc.Operations {
-					fmt.Printf("\t\t %s (%s) Type: %s\n", o.Type.Name, o.Path, o.Definition.Name)
-					if len(o.PathParams) > 0 {
-						fmt.Printf("\t\t\t Path Params\n")
-						for _, p := range o.PathParams {
-							fmt.Printf("\t\t\t %s:%s - (%s)\n", p.Name, p.Type, p.Description)
-						}
-					}
-					if len(o.QueryParams) > 0 {
-						fmt.Printf("\t\t\t Query Params\n")
-						for _, p := range o.QueryParams {
-							fmt.Printf("\t\t\t %s:%s - (%s)\n", p.Name, p.Type, p.Description)
-						}
-					}
-					fmt.Printf("\t\t\t Responses\n")
-					for _, hr := range o.HttpResponses {
-						fmt.Printf("\t\t\t %s:%s - (%s)\n", hr.Code, hr.Type, hr.Definition.Name)
-					}
-				}
 			}
 		}
 	}
@@ -148,9 +129,6 @@ func PrintDebug(config *api.Config) {
 			}
 			for _, oc := range d.OperationCategories {
 				fmt.Printf("\t Operation Category [%s]\n", oc.Name)
-				for _, o := range oc.Operations {
-					fmt.Printf("\t\t %s (%s) Type: %s\n", o.Type.Name, o.Path, o.Definition.Name)
-				}
 			}
 		}
 	}

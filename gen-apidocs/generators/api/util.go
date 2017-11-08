@@ -153,16 +153,6 @@ func PrintResourcesInResourceCategory(rc ResourceCategory) {
 	}
 }
 
-func PrintTypesInOperationCategory(oc OperationCategory) {
-	fmt.Println()
-	fmt.Println("----------------------------")
-	fmt.Println("Types in operation category")
-	fmt.Println("   ", oc.Name)
-	for _, t := range oc.OperationTypes {
-		fmt.Println("      ", t.Name)
-	}
-}
-
 func PrintDefinition(config *Config, gvk string) {
 	fmt.Println()
 	fmt.Println("----------------------------")
@@ -278,10 +268,10 @@ func PrintOperations(config *Config) {
 	var noFriendlyName []string
 
 	for _, op := range ops {
-		if op.Type.Name == "" {
+		if op.FriendlyName == "" {
 			noFriendlyName = append(noFriendlyName, "\"" + op.ID + "\": \"TODO\"")
 		} else {
-			yesFriendlyName = append(yesFriendlyName, "\"" + op.ID + "\": " + "\"" + op.Type.Name + "\"")
+			yesFriendlyName = append(yesFriendlyName, "\"" + op.ID + "\": " + "\"" + op.FriendlyName + "\"")
 		}
 	}
 

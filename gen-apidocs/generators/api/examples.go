@@ -133,7 +133,7 @@ func (ce CurlExample) GetRequest(o *Operation) string {
 		return "Coming Soon"
 	}
 
-	switch o.Type.Name {
+	switch o.FriendlyName {
 	case "Create":
 		return fmt.Sprintf("$ kubectl proxy\n$ curl -X POST -H 'Content-Type: application/yaml' --data '\n%s' http://127.0.0.1:8001%s", y, strings.Replace(o.Path, "{namespace}", "default", -1))
 	case "Delete":
@@ -170,7 +170,7 @@ func (ce CurlExample) GetResponse(o *Operation) string {
 	if len(j) <= 0 && len(c.Name) <= 0 {
 		return "Coming Soon"
 	}
-	switch o.Type.Name {
+	switch o.FriendlyName {
 	case "Create":
 		return fmt.Sprintf("%s", j)
 	case "Delete":
@@ -228,7 +228,7 @@ func (ke KubectlExample) GetRequest(o *Operation) string {
 	if len(y) <= 0 && len(c.Name) <= 0 {
 		return "Coming Soon"
 	}
-	switch o.Type.Name {
+	switch o.FriendlyName {
 	case "Create":
 		return fmt.Sprintf("$ echo '%s' | kubectl create -f -", y)
 	case "Delete":
@@ -255,7 +255,7 @@ func (ke KubectlExample) GetResponse(o *Operation) string {
 	if len(j) <= 0 && len(c.Name) <= 0 {
 		return "Coming Soon"
 	}
-	switch o.Type.Name {
+	switch o.FriendlyName {
 	case "Create":
 		return fmt.Sprintf("%s \"%s\" created", t, name)
 	case "Delete":
