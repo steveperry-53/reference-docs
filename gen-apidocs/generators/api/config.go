@@ -28,7 +28,7 @@ import (
 //	"sort"
 	"strings"
 //	"unicode"
-
+//	"reflect"
 	"github.com/go-openapi/loads"
 )
 
@@ -103,22 +103,23 @@ func NewConfig() *Config {
 
 	config.initOperationCategories(friendlyOperationNames)
 	fmt.Println("Initialized operation categories")
-	fmt.Println("   Temporary verification:", config.OperationCategories[1])
 
-	// What's next?
-	// Finishing initializing operations.
+	fmt.Println("Temporary test")
+	for _, oc := range config.OperationCategories {
+		fmt.Println(oc.Name)
+		for _, fn := range oc.FriendlyNames {
+			fmt.Println("   ", fn.Name, len(fn.Operations))
+			for _, o := range fn.Operations {
+				fmt.Println("      ", o.ID)
+			}
+		}
+	}
 	// We have operation categories and operatio friendly names.
 	// What else do we need?
-	//   Each OperationCategory has an Operations field that points to a []*Operation.
-	//   We need to create those slices and hook them up.
-	//   For each Operation in our map, get the key, which is the operation ID.
-	//   Use the operation ID to get the operation friendly name from the map of friendlyOperationNames.
-	//   Say I look an an Operation and figure out that its friendly name is Create.
-	//   Now I need to find its operation category.
-	//      Go through the slice of OperationCategory.
-	//      For each category, go through the OperationFriendlyNames.
-	//      If you find a match, you know the category.
-	//         For that OperationCategory append a *Operation to its Operations field. 
+	// Each OperationCategory has a FriendlyNames field that is a []FriendlyName.
+	// Each Friendlyname has a Name field and an Operations field that is a []*Operation.
+	// The slices of pointer to Operation are now initialized.
+	// Next: Verify that those are correct.
 
 	return config
 }
@@ -272,23 +273,20 @@ func (config *Config) initOperationCategories(frOpNames FriendlyOperationNames) 
 
 		if found {
 
-			// We have the friendly name of the operation and a pointer to the Operation.
-			fmt.Println("Found", friendlyName)
 			if opPointer != nil {
 
 				var opCat OperationCategory
+				var j int
 
-				for _, opCat = range config.OperationCategories {
+				for j, opCat = range config.OperationCategories {
 
 					var opFrName FriendlyOperationName
 
-					for _, opFrName = range opCat.FriendlyNames {
+					var k int
+					for k, opFrName = range opCat.FriendlyNames {
 
 						if strings.Compare(opFrName.Name, friendlyName) == 0 {
-							fmt.Println("opFrName.Name matches friendlyName.")
-							if opPointer != nil {
-								fmt.Println(".")
-							}
+							config.OperationCategories[j].FriendlyNames[k].Operations = append(opFrName.Operations, opPointer)
 						}
 					}
 				}
