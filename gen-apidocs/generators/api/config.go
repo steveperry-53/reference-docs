@@ -105,21 +105,32 @@ func NewConfig() *Config {
 	fmt.Println("Initialized operation categories")
 
 	fmt.Println("Temporary test")
+	opCount := 0
 	for _, oc := range config.OperationCategories {
 		fmt.Println(oc.Name)
 		for _, fn := range oc.FriendlyNames {
 			fmt.Println("   ", fn.Name, len(fn.Operations))
 			for _, o := range fn.Operations {
 				fmt.Println("      ", o.ID)
+				opCount = opCount + 1
 			}
 		}
+	}
+	fmt.Println("opCount", opCount)
+
+	for opId, op := range config.Operations {
+		fmt.Println(opId, op.HttpMethod)
 	}
 	// We have operation categories and operatio friendly names.
 	// What else do we need?
 	// Each OperationCategory has a FriendlyNames field that is a []FriendlyName.
 	// Each Friendlyname has a Name field and an Operations field that is a []*Operation.
-	// The slices of pointer to Operation are now initialized.
-	// Next: Verify that those are correct.
+	//
+	// What other Operation fields need to be initialized?
+	//   Fill in the FriendlyName field. Done.
+	//   Path field. Done.
+	//   HttpMethod field. Done.
+	//   Definition field. TODO
 
 	return config
 }
@@ -261,8 +272,141 @@ func (config *Config) initOperationCategories(frOpNames FriendlyOperationNames) 
 		},
 	}
 
+	statusCategory := OperationCategory{
+		Name: "Status Operations:",
+		FriendlyNames: []FriendlyOperationName{
+			FriendlyOperationName{
+				Name: "Patch Status",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Read Status",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Replace Status",
+				Operations: []*Operation{},
+			},
+		},
+	}
+
+	proxyCategory := OperationCategory{
+		Name: "Proxy Operations:",
+		FriendlyNames: []FriendlyOperationName{
+			FriendlyOperationName{
+				Name: "Create Connect Portforward",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Create Connect Proxy",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Create Connect Proxy Path",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Create Proxy",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Create Proxy Path",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Delete Connect Proxy",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Delete Connect Proxy Path",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Delete Proxy",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Delete Proxy Path",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Get Connect Portforward",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Get Connect Proxy",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Get Connect Proxy Path",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Get Proxy",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Get Proxy Path",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Head Connect Proxy",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Head Connect Proxy Path",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Replace Connect Proxy",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Replace Connect Proxy Path",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Replace Proxy",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Replace Proxy Path",
+				Operations: []*Operation{},
+			},
+		},
+	}
+
+	miscCategory := OperationCategory{
+		Name: "Misc Operations:",
+		FriendlyNames: []FriendlyOperationName{
+			FriendlyOperationName{
+				Name: "Read Scale",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Replace Scale",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Patch Scale",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Rollback",
+				Operations: []*Operation{},
+			},
+			FriendlyOperationName{
+				Name: "Read Log",
+				Operations: []*Operation{},
+			},
+		},
+	}
+
 	config.OperationCategories = append(config.OperationCategories, writeCategory)
 	config.OperationCategories = append(config.OperationCategories, readCategory)
+	config.OperationCategories = append(config.OperationCategories, statusCategory)
+	config.OperationCategories = append(config.OperationCategories, proxyCategory)
+	config.OperationCategories = append(config.OperationCategories, miscCategory)
 
 	var opID string
 	var opPointer *Operation
@@ -281,12 +425,13 @@ func (config *Config) initOperationCategories(frOpNames FriendlyOperationNames) 
 				for j, opCat = range config.OperationCategories {
 
 					var opFrName FriendlyOperationName
-
 					var k int
+
 					for k, opFrName = range opCat.FriendlyNames {
 
 						if strings.Compare(opFrName.Name, friendlyName) == 0 {
 							config.OperationCategories[j].FriendlyNames[k].Operations = append(opFrName.Operations, opPointer)
+							opPointer.FriendlyName = opFrName.Name
 						}
 					}
 				}
