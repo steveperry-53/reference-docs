@@ -30,6 +30,7 @@ import (
 //	"unicode"
 //	"reflect"
 	"github.com/go-openapi/loads"
+	"github.com/go-openapi/spec"
 )
 
 var AllowErrors = flag.Bool("allow-errors", false, "If true, don't fail on errors.")
@@ -118,9 +119,13 @@ func NewConfig() *Config {
 	}
 	fmt.Println("opCount", opCount)
 
-	for opId, op := range config.Operations {
-		fmt.Println(opId, op.HttpMethod)
-	}
+	config.initOperationParameters()
+
+	fmt.Println("Initialized operation parameters.")
+
+	//for opId, op := range config.Operations {
+	//	fmt.Println(opId, op.ExampleConfig)
+	//}
 	// We have operation categories and operatio friendly names.
 	// What else do we need?
 	// Each OperationCategory has a FriendlyNames field that is a []FriendlyName.
@@ -130,7 +135,13 @@ func NewConfig() *Config {
 	//   Fill in the FriendlyName field. Done.
 	//   Path field. Done.
 	//   HttpMethod field. Done.
-	//   Definition field. TODO
+	//   Definition field. Currently nil.Save for later.
+	//   BodyParams field. Currently [].
+	//   QueryParams fiekd. Currently [].
+	//   PathParams field. Currently [].
+	//      See Definition.initializeOperationParameters. Why is this a method of Definition? I think it should be a method of Operation. Or a method of Config.
+	//   HttpResponses field. Currently [].
+	//   ExampleConfig field. Currently {    } 
 
 	return config
 }
@@ -441,4 +452,62 @@ func (config *Config) initOperationCategories(frOpNames FriendlyOperationNames) 
 			fmt.Println("Friendly name not found for", opID)
 		}
 	}
+}
+
+func (config *Config) initOperationParameters() {
+
+	for _, operation := range config.Operations {
+
+		var pathItem spec.PathItem 
+
+		pathItem = operation.item
+
+		var p spec.Parameter
+
+		for _, p = range pathItem.Parameters {
+
+			switch p.In {
+			case path:
+				operation.PathParams = append(operation.PathParams, todo.parameterToField(p)
+			case query:
+				operation.PathParams = append(operation.PathParams, todo.parameterToField(p)
+			case body:
+				operation.PathParams = append(operation.PathParams, todo.parameterToField(p)
+			default:
+				panic("")
+			}
+		}
+	}
+}
+
+func (config *Config) parameterToField(parameter spec.Parameter) *Field {
+	
+	field := &Field{
+		Name: parameter.Name,
+		Description: strings.Replace(parameter.Description, "\n", " ", -1),
+	}
+
+	// parameter.Schema is a spec.Schema.
+	if parameter.Schema != nil {
+
+		// GetTypeName returns a string that is the display name of the Schema.
+		field.Type = GetTypeName(*parameter.Schema)
+
+		var fieldDef *Definition
+		var f bool
+
+		// What are we trying to do here?
+		// The Field struct has a Definition field that is a *Definition.
+		// We are trying to set that field.
+		// What do we have to work with?
+		//    We have a spec.Schema
+		//    Apparently we can get gvk from the spec.Schema.
+		//       This happens in GetDefinitionVersionKind, which has a bunch of pattern matching.
+		//       Rewrite this code.
+		if fieldDef, f = config.Definitions.GetForSchema(*parameter.Schema); f {
+			field.Definition  = fieldDef
+		}
+	}
+
+	return field
 }
