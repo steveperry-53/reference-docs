@@ -90,6 +90,9 @@ func NewConfig() *Config {
 	// Initialize all of the operations
 	config.Definitions = GetDefinitions(specs)
 
+	// In the descriptions, replace unicode escape sequences with HTML entities.
+	config.createDescriptionsWithEntities()
+
 	if *UseTags {
 		// Initialize the config and ToC from the tags on definitions
 		config.genConfigFromTags(specs)
@@ -556,4 +559,20 @@ func doScaleIdHack(version, name, match string) (string, string) {
 	version = string(out)
 
 	return version, name
+}
+
+func (config *Config) createDescriptionsWithEntities () {
+
+	// The OpenAPI spec has escape sequences like \u003c. When the spec is unmarshaled,
+	// the escape sequences get converted to ordinary characters. For example,
+	// \u003c gets converted to a regular < character. But we can't use  regular <
+	// and > characters in our HTML document. This function replaces the regular
+	// < and > characters with HTML entities.
+	
+	for _, definition := range config.Definitions.GetAllDefinitions() {
+		d := definition.Description()
+		d = strings.Replace(d, "<", "&lt;", -1)
+		d = strings.Replace(d, ">", "&gt;", -1)
+		definition.DescriptionWithEntities = d
+	}
 }
